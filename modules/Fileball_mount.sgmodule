@@ -6,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Script]
-Fileball_mount-request = type=http-request, pattern="(?i)(?:^http://(aliyun|quark|pikpak)\\.example\\.com)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Fileball_mount-request.js, requires-body=true, binary-body-mode=false, timeout=10
+Fileball_mount-request = type=http-request, pattern="(?i)(?:^http://(aliyun|quark|pikpak)\\.example\\.com)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Fileball_mount-request.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% aliyun.example.com, quark.example.com, pikpak.example.com,

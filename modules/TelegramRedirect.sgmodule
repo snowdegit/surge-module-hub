@@ -8,7 +8,7 @@
 #!arguments-desc=参数沿用上游默认值；修改后重新启用模块。
 
 [Script]
-TelegramRedirect-request = type=http-request, pattern="(?i)(?:^https://t\\.me/([A-Za-z][A-Za-z0-9_]{3,30}[A-Za-z0-9])/?$)|(?:^https://t\\.me/\\+([A-Za-z0-9_-]+)/?$)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/TelegramRedirect-request.js, requires-body=true, binary-body-mode=false, timeout=10, argument="{\"app\":\"{{{app}}}\"}"
+TelegramRedirect-request = type=http-request, pattern="(?i)(?:^https://t\\.me/([A-Za-z][A-Za-z0-9_]{3,30}[A-Za-z0-9])/?$)|(?:^https://t\\.me/\\+([A-Za-z0-9_-]+)/?$)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/TelegramRedirect-request.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=10, argument="{\"app\":\"{{{app}}}\"}"
 
 [MITM]
 hostname = %APPEND% t.me

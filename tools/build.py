@@ -250,14 +250,14 @@ function __invoke(index,defaults,literal,binary,needsBody){
   binary=any(e.get('options',{}).get('binary_body_mode')=='true' for e in entries)
   needsbody=any(e.get('options',{}).get('requires_body')=='true' or 'body' in e['code'] for e in entries)
   timeout=max([int(e.get('options',{}).get('timeout','10')) for e in entries]+[10])
-  out['Script'].append(f'{item["id"]}-{direction} = type=http-{direction}, pattern={json.dumps("(?i)"+"|".join(patterns))}, script-path={BASE}/scripts/{filename}, requires-body={str(needsbody).lower()}, binary-body-mode={str(binary).lower()}, timeout={timeout}'+(', argument='+json.dumps(argument) if args else ''))
+  out['Script'].append(f'{item["id"]}-{direction} = type=http-{direction}, pattern={json.dumps("(?i)"+"|".join(patterns))}, script-path={BASE}/scripts/{filename}?v=20261115.2, requires-body={str(needsbody).lower()}, binary-body-mode={str(binary).lower()}, timeout={timeout}'+(', argument='+json.dumps(argument) if args else ''))
  for e in dispatch.get('tasks',[]):
   filename=item['id']+'-'+e['name']+'.js'
   gate=e['options'].get('enable','true');gate_key=re.fullmatch(r'\$\{([^}]+)\}',gate)
   guard='if(!__cast(__settings['+json.dumps(gate_key[1])+'],'+json.dumps(args[gate_key[1]])+'))return __finish({});' if gate_key else ''
   code='(function(){\n'+prefix+'\n'+'\n'.join(functions)+'\n'+guard+'\n'+e['code']+'\n})();'
   (P/'scripts'/filename).write_text(code)
-  line=f'{item["id"]}-{e["name"]} = type={e["kind"]}, script-path={BASE}/scripts/{filename}, timeout={e["options"].get("timeout","30")}'
+  line=f'{item["id"]}-{e["name"]} = type={e["kind"]}, script-path={BASE}/scripts/{filename}?v=20261115.2, timeout={e["options"].get("timeout","30")}'
   if e['kind']=='cron':line+=', cronexp='+json.dumps('{{{'+namesmap[e['cron_key']]+'}}}' if e.get('cron_key') else e['cron'])
   if args:line+=', argument='+json.dumps(argument)
   # Surge offers enabled on script entries; preserve explicit optional tasks disabled by default.

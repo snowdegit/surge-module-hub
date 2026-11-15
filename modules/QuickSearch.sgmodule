@@ -6,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Script]
-QuickSearch-request = type=http-request, pattern="(?i)(?:^https://duckduckgo\\.com/\\?q=bd\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=bdimg\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=gimg\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=b\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=wk\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=qm\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=gh\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=(?!(?:bd|bdimg|gimg|b|wk|qm|gh)\\+)([^&]+).+)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/QuickSearch-request.js, requires-body=true, binary-body-mode=false, timeout=10
+QuickSearch-request = type=http-request, pattern="(?i)(?:^https://duckduckgo\\.com/\\?q=bd\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=bdimg\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=gimg\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=b\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=wk\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=qm\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=gh\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=(?!(?:bd|bdimg|gimg|b|wk|qm|gh)\\+)([^&]+).+)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/QuickSearch-request.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% duckduckgo.com

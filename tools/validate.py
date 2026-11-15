@@ -18,7 +18,7 @@ for r in cat:
    try:re.compile(pattern)
    except re.error as e:errors.append({'module':r['id'],'pattern':pattern,'error':str(e)})
  for u in re.findall(r'https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/([^\s,\"]+)',s):
-  if not (P/u).exists():errors.append({'module':r['id'],'missing_file':u})
+  if not (P/u.split('?',1)[0]).exists():errors.append({'module':r['id'],'missing_file':u})
 report={'modules':len(cat),'scripts':len(list((P/'scripts').glob('*.js'))),'jq_expressions':len(exprs),'errors':errors,'native_surge_validation':False,'device_validation':False}
 (P/'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 print(json.dumps(report,ensure_ascii=False,indent=2))

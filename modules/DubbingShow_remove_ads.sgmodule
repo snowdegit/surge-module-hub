@@ -12,7 +12,7 @@ http-response-jq (?i)^https://iosapi\.peiyinxiu\.com/Api/Friend/GetRecommendUser
 http-response-jq (?i)^https://iosapi\.peiyinxiu\.com/api/Union/HomeData '(. as $__original | try del(.obj.data) catch $__original)'
 
 [Script]
-DubbingShow_remove_ads-response = type=http-response, pattern="(?i)(?:^https://iosapi\\.peiyinxiu\\.com/Api/Film/GetConfigValue)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/DubbingShow_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
+DubbingShow_remove_ads-response = type=http-response, pattern="(?i)(?:^https://iosapi\\.peiyinxiu\\.com/Api/Film/GetConfigValue)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/DubbingShow_remove_ads-response.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% iosapi.peiyinxiu.com

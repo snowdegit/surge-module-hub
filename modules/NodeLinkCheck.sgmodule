@@ -6,4 +6,4 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Script]
-NodeLinkCheck-task-1 = type=generic, script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/NodeLinkCheck-task-1.js, timeout=30
+NodeLinkCheck-task-1 = type=generic, script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/NodeLinkCheck-task-1.js?v=20261115.2, timeout=30

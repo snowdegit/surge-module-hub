@@ -11,7 +11,7 @@
 (?i)^https://gw\.xiaocantech\.com/g/pa data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-XiaoCan_remove_ads-request = type=http-request, pattern="(?i)(?:^https://gw\\.xiaocantech\\.com/rpc)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/XiaoCan_remove_ads-request.js, requires-body=false, binary-body-mode=false, timeout=10
+XiaoCan_remove_ads-request = type=http-request, pattern="(?i)(?:^https://gw\\.xiaocantech\\.com/rpc)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/XiaoCan_remove_ads-request.js?v=20261115.2, requires-body=false, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% gw.xiaocantech.com, web2.realtech-inc.com, sdk.1rtb.net

@@ -11,7 +11,7 @@
 DOMAIN-SUFFIX, jsdelivr.net, {{{proxy_policy}}}
 
 [Script]
-BoxJs-request = type=http-request, pattern="(?i)(?:^https?://(.+\\.)?boxjs\\.(com|net))", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/BoxJs-request.js, requires-body=true, binary-body-mode=false, timeout=120
+BoxJs-request = type=http-request, pattern="(?i)(?:^https?://(.+\\.)?boxjs\\.(com|net))", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/BoxJs-request.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=120
 
 [MITM]
 hostname = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net

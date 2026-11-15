@@ -11,7 +11,7 @@
 DOMAIN, scripthub.vercel.app, {{{proxy_policy}}}
 
 [Script]
-Script-Hub-request = type=http-request, pattern="(?i)(?:^https?://script\\.hub/($|edit/|reload))|(?:^https?://script\\.hub/file/_start_/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module))|(?:^https?://script\\.hub/file/_start_/.+type=rule-set)|(?:^https?://script\\.hub/convert/)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Script-Hub-request.js, requires-body=false, binary-body-mode=false, timeout=300
+Script-Hub-request = type=http-request, pattern="(?i)(?:^https?://script\\.hub/($|edit/|reload))|(?:^https?://script\\.hub/file/_start_/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module))|(?:^https?://script\\.hub/file/_start_/.+type=rule-set)|(?:^https?://script\\.hub/convert/)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Script-Hub-request.js?v=20261115.2, requires-body=false, binary-body-mode=false, timeout=300
 
 [MITM]
 hostname = %APPEND% script.hub, *.script.hub

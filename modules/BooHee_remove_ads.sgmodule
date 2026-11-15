@@ -19,7 +19,7 @@ http-response-jq (?i)^https://api\.boohee\.com/open-interface/v1/string/market_p
 (?i)^https://api\.boohee\.com/meta-interface/v1/index/sensor-banners\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-BooHee_remove_ads-response = type=http-response, pattern="(?i)(?:^https://api\\.boohee\\.com/meta-interface/v1/index/plaza-flow\\?)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/BooHee_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
+BooHee_remove_ads-response = type=http-response, pattern="(?i)(?:^https://api\\.boohee\\.com/meta-interface/v1/index/plaza-flow\\?)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/BooHee_remove_ads-response.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% api.boohee.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, lego.boohee.com, status.boohee.com

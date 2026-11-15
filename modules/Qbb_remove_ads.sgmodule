@@ -19,7 +19,7 @@ DOMAIN, apimall.qbb6.com, REJECT
 (?i)^https://apimall\.qbb6\.com/mall/homepage/data/get/v\d$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-Qbb_remove_ads-response = type=http-response, pattern="(?i)(?:^https://api\\.qbb6\\.com/commons/self/button/group/get/v\\d\\?)|(?:^https://apipt\\.qbb6\\.com/parenting/pt/homepage/get/v\\d\\?)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Qbb_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
+Qbb_remove_ads-response = type=http-response, pattern="(?i)(?:^https://api\\.qbb6\\.com/commons/self/button/group/get/v\\d\\?)|(?:^https://apipt\\.qbb6\\.com/parenting/pt/homepage/get/v\\d\\?)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Qbb_remove_ads-response.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% api.qbb6.com, apicommunity.qbb6.com, apipt.qbb6.com, apiuser.qbb6.com, apimall.qbb6.com
