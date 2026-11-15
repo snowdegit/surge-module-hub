@@ -1,0 +1,18 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=Script-Hub · Surge iOS
+#!desc=将其他工具的Rewrite、Rule和JavaScript资源转换为Loon能识别的格式，使用前请在本插件的详情页面为[PROXY]项分配代理策略。在插件列表中点击此插件上的链接查看使用方法。
+#!author=xream[https://github.com/xream], Keywos[https://github.com/Keywos], CKYB[https://github.com/CKYB], 小白脸
+# Source: https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Rule]
+DOMAIN, scripthub.vercel.app, PROXY
+
+[Script]
+Script-Hub-request = type=http-request, pattern="(?i)(?:^https?://script\\.hub/($|edit/|reload))|(?:^https?://script\\.hub/file/_start_/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module))|(?:^https?://script\\.hub/file/_start_/.+type=rule-set)|(?:^https?://script\\.hub/convert/)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Script-Hub-request.js?v=20261115.2, requires-body=false, binary-body-mode=false, timeout=300
+
+[MITM]
+hostname = %APPEND% script.hub, *.script.hub
+h2 = true

@@ -1,0 +1,15 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=Google搜索重定向 · Surge iOS
+#!desc=将Google搜索重定向至.com域名，如遇频繁跳转请禁用本插件。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/Google.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Script]
+Google-request = type=http-request, pattern="(?i)(?:^https?://(www.)?(g|google)\\.cn)|(?:^https?://(ditu|maps).google\\.cn)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Google-request.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=10
+
+[MITM]
+hostname = %APPEND% www.google.cn
+h2 = true

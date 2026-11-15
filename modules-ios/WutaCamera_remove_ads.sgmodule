@@ -1,0 +1,16 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=无他相机去广告 · Surge iOS
+#!desc=移除开屏广告、拍摄页面广告、右小角广告，精简底栏。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/WutaCamera_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://api-release\.wuta-cam\.com/ad_tree$ '(. as $__original | try del(.regular.splash) catch $__original) | (. as $__original | try del(.big_day) catch $__original) | (. as $__original | try del(.big_day_overrides) catch $__original) | (. as $__original | try del(.regular.home_bottom_right_entry_v2) catch $__original) | (. as $__original | try del(.regular.pic_upload_alert) catch $__original) | (. as $__original | try del(.regular.retouching_before_icon) catch $__original)'
+http-response-jq (?i)^https://api-release\.wuta-cam\.com/ad_tree$ '.regular.homepage_25_bottom_nav_bar|=map(.button_list|=map(select(.name|IN("home","me"))))'
+
+[MITM]
+hostname = %APPEND% api-release.wuta-cam.com
+h2 = true

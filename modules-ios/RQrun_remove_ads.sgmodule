@@ -1,0 +1,15 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=RQrun去广告 · Surge iOS
+#!desc=移除开屏广告
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/RQrun_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Map Local]
+(?i)^https://api\.rq\.run/Api/Spreadimg/spreadimg_type_list$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api.rq.run
+h2 = true

@@ -1,0 +1,19 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=易校园去广告 · Surge iOS
+#!desc=移除开屏广告、横幅广告、弹窗广告、悬浮广告、文末广告、消息广告、校园头条，精简首页金刚位和我的页面。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/YiSchool_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://compus\.xiaofubao\.com/compus/user/getUserExt$ '(. as $__original | try del(.data.adPopSwitch) catch $__original) | (. as $__original | try del(.data.adSplashSwitch) catch $__original)'
+http-response-jq (?i)^https://compus\.xiaofubao\.com/compus/application/getHomeAppList$ '.rows|=map(select(.appCode=="kechengbiao_app1" or .appCode=="siliuji" or .appCode=="NEWJIAOFEIDATING"))'
+
+[Map Local]
+(?i)^https://compus\.xiaofubao\.com/compus/advertising/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% compus.xiaofubao.com
+h2 = true

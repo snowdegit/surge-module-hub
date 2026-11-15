@@ -7,6 +7,7 @@ import argparse, datetime, json, os, pathlib, urllib.request
 P = pathlib.Path(__file__).resolve().parents[1]
 ap = argparse.ArgumentParser()
 ap.add_argument('--api-url', required=True)
+ap.add_argument('--output', default='test-results/native-report.json')
 args = ap.parse_args()
 key = os.environ.get('SURGE_TEST_API_KEY')
 if not key:
@@ -20,7 +21,7 @@ report = {
     'profile_modified': False, 'module_load_tested': False,
     'real_app_tested': False, 'scripts': [],
 }
-out = P/'test-results/native-report.json'
+out = P/args.output
 def save():
     rows = report['scripts']
     checks = [c for r in rows for c in r.get('dispatch', [])]
@@ -46,6 +47,7 @@ for file in sorted((P/'scripts').glob('*.js')):
         req = urllib.request.Request(args.api_url.rstrip('/')+'/v1/scripting/evaluate', data=json.dumps({'script_text':script,'mock_type':'generic','timeout':8}).encode(), headers={'X-Key':key,'Content-Type':'application/json'})
         with opener.open(req, timeout=25) as r:
             report['surge_version'] = r.headers.get('X-Surge-Version')
+            report['surge_system'] = r.headers.get('X-System')
             report['surge_build'] = r.headers.get('X-Surge-Build')
             response = json.load(r)
         result = response.get('result')

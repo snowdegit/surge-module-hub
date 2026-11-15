@@ -7,6 +7,7 @@ import argparse, datetime, json, os, pathlib, urllib.request
 P = pathlib.Path(__file__).resolve().parents[1]
 ap = argparse.ArgumentParser()
 ap.add_argument('--api-url', required=True)
+ap.add_argument('--output', default='test-results/native-behavior-report.json')
 args = ap.parse_args()
 key = os.environ.get('SURGE_TEST_API_KEY')
 if not key:
@@ -57,7 +58,7 @@ for c in cases:
     try:
         req=urllib.request.Request(args.api_url.rstrip('/')+'/v1/scripting/evaluate',data=json.dumps({'script_text':script,'mock_type':'generic','timeout':8}).encode(),headers={'X-Key':key,'Content-Type':'application/json'})
         with opener.open(req,timeout=20) as r:
-            report['surge_version']=r.headers.get('X-Surge-Version');response=json.load(r)
+            report['surge_version']=r.headers.get('X-Surge-Version');report['surge_system']=r.headers.get('X-System');response=json.load(r)
         result=response.get('result')
         if not isinstance(result,dict):raise ValueError(str(response)[:1000])
         row.update(result)
@@ -65,6 +66,6 @@ for c in cases:
     report['cases'].append(row)
     print(json.dumps(row,ensure_ascii=False),flush=True)
 report['summary']={'checks':len(cases),'passed':sum(c.get('passed',False) for c in report['cases']),'failed':sum(not c.get('passed',False) for c in report['cases'])}
-(P/'test-results/native-behavior-report.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+(P/args.output).write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print(json.dumps(report['summary']))
 raise SystemExit(bool(report['summary']['failed']))

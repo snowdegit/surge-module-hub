@@ -1,0 +1,21 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=网易邮箱大师去广告 · Surge iOS
+#!desc=移除网易邮箱大师开屏广告、签到任务提醒，精简侧拉抽屉和我的页面。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/MailMaster_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://appconf\.mail\.163\.com/mailmaster/api/page/v2/conf\.do$ '(. as $__original | try del(.data.functionOperatorInfoList) catch $__original) | (. as $__original | try del(.data.memberOperator) catch $__original) | (. as $__original | try del(.data.activityTabInfoList) catch $__original)'
+http-response-jq (?i)^https://appconf\.mail\.163\.com/mailmaster/api/config/function\.do$ '.data.config[] |= if .result.tools then .result.tools |= map(select(.name == "邮件追踪" or .name == "替身邮箱")) else . end | del(.data.config[] | select(.functionName == "Function-AD"))'
+
+[Map Local]
+(?i)^https://appconf\.mail\.163\.com/mailmaster/api/http/urlConfig\.do$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://dashi\.163\.com/task-center-api/fapi/task/list$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://appconf\.mail\.163\.com/mailoperating/mailmaster/api/operator/get$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% appconf.mail.163.com, dashi.163.com
+h2 = true

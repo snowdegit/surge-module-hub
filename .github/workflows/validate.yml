@@ -12,6 +12,7 @@ jobs:
         with:
           node-version: '22'
       - run: python3 tools/validate.py
+      - run: python3 tools/build_ios.py
       - name: Full inventory (known upstream blockers remain in report)
         run: python3 tools/full_test.py --allow-blocked
       - run: node --max-old-space-size=192 --test tests/*.test.cjs

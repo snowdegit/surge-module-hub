@@ -1,0 +1,21 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=快递100去广告 · Surge iOS
+#!desc=移除横幅广告、弹窗广告，精简首页。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/KuaiDi100_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https?://p\.kuaidi100\.com/mobile/mobileapi\.do$ '(. as $__original | try del(.adsplash) catch $__original) | (. as $__original | try del(.adIsConsumable) catch $__original) | (. as $__original | try del(.adProductId) catch $__original) | (. as $__original | try del(.nologin_tips) catch $__original) | (. as $__original | try del(.index_banner) catch $__original) | (. as $__original | try del(.me_banner) catch $__original) | (. as $__original | try del(.index_banner_shadow) catch $__original) | (. as $__original | try del(.adshongbao) catch $__original) | (. as $__original | try del(.adsapp_homepage_ticket_pop) catch $__original) | (. as $__original | try del(.adsoptimizationsend) catch $__original) | (. as $__original | try del(.adsapp_activity_ad_array) catch $__original) | (. as $__original | try del(.adbanner) catch $__original) | (. as $__original | try del(.adposition) catch $__original) | (. as $__original | try del(.adShowAgainTime) catch $__original)'
+http-response-jq (?i)^https?://p\.kuaidi100\.com/apicenter/xcx\.dox '(. as $__original | try del(.data.secondMenuList) catch $__original)'
+
+[Map Local]
+(?i)^https?://p\.kuaidi100\.com/advertisement/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https?://p\.kuaidi100\.com/e-commerce/act/actInfo\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https?://p\.kuaidi100\.com/apicenter/card\.dox data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% p.kuaidi100.com
+h2 = true

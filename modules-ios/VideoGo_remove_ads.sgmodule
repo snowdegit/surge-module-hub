@@ -1,0 +1,20 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=萤石云视频去广告 · Surge iOS
+#!desc=移除开屏广告、首页推广、我的页面推广。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/VideoGo_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Map Local]
+(?i)^https://api\.ys7\.com/api/ads data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://i\.ys7\.com/api/user/tabList data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.ys7\.com/v3/config/service/entrance/bannerInfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.ys7\.com/v3/intelligent-app/apps/linkage data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.ys7\.com/v3/configurations/gray/info\?grayTypes=185 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.ys7\.com/v3/videoclips/square/video/query data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api.ys7.com, i.ys7.com
+h2 = true

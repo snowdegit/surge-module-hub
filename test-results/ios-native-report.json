@@ -1,0 +1,3608 @@
+{
+  "timestamp": "2026-11-15T12:38:01.523000+00:00",
+  "scope": "Surge native JavaScript parsing and synthetic dispatch/adapters. Upstream functions replaced by probes; no real application traffic.",
+  "profile_modified": false,
+  "module_load_tested": false,
+  "real_app_tested": false,
+  "scripts": [
+    {
+      "file": "1.1.1.1-request.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 14,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 14,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 14,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 16,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 16
+        },
+        {
+          "line": 16,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "1.1.1.1-response.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 15
+        },
+        {
+          "variant": "override",
+          "line": 15,
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 15
+        },
+        {
+          "line": 17,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 17,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 17,
+          "passed": true,
+          "variant": "negative"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "12306_remove_ads-request.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 21,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 21
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 21
+        }
+      ]
+    },
+    {
+      "file": "AliYunDrive_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 22
+        },
+        {
+          "line": 22,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 22,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 23
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 23
+        },
+        {
+          "line": 23,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "AppleWeatherEnhancer-response.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 31
+        },
+        {
+          "line": 31,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 31
+        },
+        {
+          "line": 33,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 33
+        },
+        {
+          "variant": "negative",
+          "line": 33,
+          "passed": true
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "AutoHome_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 53,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 53,
+          "passed": true
+        },
+        {
+          "line": 53,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 55,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 55,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 55,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 57,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "line": 57,
+          "passed": true
+        },
+        {
+          "line": 57,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 59,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 59,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 59,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "line": 61,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 61
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 61
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 63
+        },
+        {
+          "variant": "override",
+          "line": 63,
+          "passed": true
+        },
+        {
+          "line": 63,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "Auto_Join_TF-request.js",
+      "dispatch": [
+        {
+          "line": 25,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "line": 25,
+          "passed": true
+        },
+        {
+          "line": 25,
+          "passed": true,
+          "variant": "negative"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "Auto_Join_TF-task-1.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 26,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 26
+        }
+      ]
+    },
+    {
+      "file": "Auto_Join_TF-task-2.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 27,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 27,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "BabyTree_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 21,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 21,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 21,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 22,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 22,
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "line": 22,
+          "passed": true
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 23,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "BaiduSearchWebpage_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 14,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 14,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 14,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "Baidu_input_method_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 24
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 24
+        },
+        {
+          "variant": "negative",
+          "line": 24,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "BiliComic_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 27,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 27
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 27
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 28
+        },
+        {
+          "line": 28,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 28
+        }
+      ]
+    },
+    {
+      "file": "Bilibili_remove_ads-request.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 68,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 68,
+          "passed": true
+        },
+        {
+          "line": 68,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 70
+        },
+        {
+          "line": 70,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 70,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "Bilibili_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 72,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 72
+        },
+        {
+          "line": 72,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 74
+        },
+        {
+          "line": 74,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 74,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "Bixin_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 46,
+          "passed": true
+        },
+        {
+          "line": 46,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 46,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 48,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 48,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 48
+        }
+      ]
+    },
+    {
+      "file": "BooHee_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 33,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 33,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "line": 33,
+          "passed": true
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "BoxJs-request.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 17,
+          "passed": true
+        },
+        {
+          "line": 17,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 17,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "CaixinMedia_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 24,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 24,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "line": 24,
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 26
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 26
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 26
+        },
+        {
+          "variant": "default",
+          "line": 28,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 28
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 28
+        },
+        {
+          "variant": "default",
+          "line": 30,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 30,
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 30
+        },
+        {
+          "line": 32,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 32,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 32,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 33,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 33,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "line": 33,
+          "passed": true
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "Chelaile_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 34,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "line": 34,
+          "passed": true
+        },
+        {
+          "line": 34,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "ColorfulClouds_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 23
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 23
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "DjDuoDuo_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 14,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 14,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 14,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "Douyu_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 30
+        },
+        {
+          "line": 30,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "line": 30,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "DubbingShow_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 23,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "Fileball_mount-request.js",
+      "dispatch": [
+        {
+          "line": 14,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 14
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 14
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "FlyerTea_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 20,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 20,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "line": 20,
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 21
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 21
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 21
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "FollowRSS_checkin-task-1.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 19,
+          "passed": true
+        },
+        {
+          "line": 19,
+          "passed": true,
+          "variant": "override"
+        }
+      ]
+    },
+    {
+      "file": "Google-request.js",
+      "dispatch": [],
+      "parse_passed": true
+    },
+    {
+      "file": "HUPU_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 24
+        },
+        {
+          "variant": "override",
+          "line": 24,
+          "passed": true
+        },
+        {
+          "line": 24,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 25
+        },
+        {
+          "line": 25,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 25
+        },
+        {
+          "line": 26,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 26
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 26
+        },
+        {
+          "line": 27,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 27
+        },
+        {
+          "line": 27,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "IPATool-request.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 14,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 14,
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "line": 14,
+          "passed": true
+        },
+        {
+          "line": 16,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 16,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "line": 16,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "IThome_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 21,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 21
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 21
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "JD_Price-request.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 14,
+          "passed": true
+        },
+        {
+          "line": 14,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 14,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "JD_Price-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 16,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 16,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 16,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "JD_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 22,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 22
+        },
+        {
+          "line": 22,
+          "passed": true,
+          "variant": "negative"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "KebidaDushu_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 25,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "line": 25,
+          "passed": true
+        },
+        {
+          "line": 25,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 26,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 26,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 26,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 27
+        },
+        {
+          "line": 27,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 27,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "line": 28,
+          "passed": true
+        },
+        {
+          "line": 28,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 28,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 29,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 29,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 29,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 30
+        },
+        {
+          "variant": "override",
+          "line": 30,
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 30
+        },
+        {
+          "line": 31,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 31
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 31
+        },
+        {
+          "line": 32,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 32,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "line": 32,
+          "passed": true
+        },
+        {
+          "line": 33,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "line": 33,
+          "passed": true
+        },
+        {
+          "line": 33,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "KuaiKanComic_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 51,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 51
+        },
+        {
+          "line": 51,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 53,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 53,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 53
+        },
+        {
+          "variant": "default",
+          "line": 55,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 55
+        },
+        {
+          "variant": "negative",
+          "line": 55,
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "line": 57,
+          "passed": true
+        },
+        {
+          "line": 57,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 57,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "MKZ_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 23
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 23,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "MaiMai_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 23,
+          "passed": true
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "MeituMYXJ_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 24
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 24
+        },
+        {
+          "line": 24,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "MotorFans_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 30,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 30
+        },
+        {
+          "variant": "negative",
+          "line": 30,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "NetEaseGodlike_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 26,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 26,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "line": 26,
+          "passed": true
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "NeteaseCloudMusic_remove_ads-response.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 49
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 49
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 49
+        },
+        {
+          "line": 50,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "line": 50,
+          "passed": true
+        },
+        {
+          "line": 50,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "line": 51,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 51
+        },
+        {
+          "line": 51,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 52
+        },
+        {
+          "line": 52,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 52
+        },
+        {
+          "variant": "default",
+          "line": 53,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 53,
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 53
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 54
+        },
+        {
+          "line": 54,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 54,
+          "passed": true,
+          "variant": "negative"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "NeteaseNews_remove_ads-response.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 27,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 27
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 27
+        },
+        {
+          "line": 29,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 29
+        },
+        {
+          "variant": "negative",
+          "line": 29,
+          "passed": true
+        },
+        {
+          "line": 31,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 31
+        },
+        {
+          "line": 31,
+          "passed": true,
+          "variant": "negative"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "NodeLinkCheck-task-1.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 14
+        },
+        {
+          "line": 14,
+          "variant": "override",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "Node_detection_tool-task-1.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 14,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 14,
+          "passed": true,
+          "variant": "override"
+        }
+      ]
+    },
+    {
+      "file": "Node_detection_tool-task-2.js",
+      "dispatch": [
+        {
+          "line": 15,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "line": 15,
+          "passed": true
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "Node_detection_tool-task-3.js",
+      "dispatch": [
+        {
+          "line": 16,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "line": 16,
+          "passed": true
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "PICC_Insurance_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 19,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 19,
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 19
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 21
+        },
+        {
+          "variant": "override",
+          "line": 21,
+          "passed": true
+        },
+        {
+          "line": 21,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "PinDuoDuo_remove_ads-response.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 72,
+          "passed": true
+        },
+        {
+          "line": 72,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 72
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "PuPuMall_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 18,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 18,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 18,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 19,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 19
+        },
+        {
+          "variant": "negative",
+          "line": 19,
+          "passed": true
+        },
+        {
+          "line": 20,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 20,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 20
+        },
+        {
+          "line": 21,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 21
+        },
+        {
+          "line": 21,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 22
+        },
+        {
+          "line": 22,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 22,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 23,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "QQ_Redirect-request.js",
+      "dispatch": [],
+      "parse_passed": true
+    },
+    {
+      "file": "Qbb_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 33,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "line": 33,
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 33
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 35
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 35
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 35
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "QuickSearch-request.js",
+      "parse_passed": true,
+      "dispatch": []
+    },
+    {
+      "file": "RedPaper_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 31,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 31
+        },
+        {
+          "line": 31,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 33,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 33,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 33
+        },
+        {
+          "line": 35,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 35,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 35,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 37,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 37,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 37
+        },
+        {
+          "variant": "default",
+          "line": 39,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 39
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 39
+        },
+        {
+          "variant": "default",
+          "line": 41,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 41
+        },
+        {
+          "line": 41,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 43,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 43,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 43
+        },
+        {
+          "line": 45,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 45
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 45
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 47
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 47
+        },
+        {
+          "line": 47,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 49
+        },
+        {
+          "line": 49,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 49,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 51
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 51
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 51
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 53
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 53
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 53
+        }
+      ]
+    },
+    {
+      "file": "Remove_ads_by_keli-response.js",
+      "dispatch": [],
+      "parse_passed": true
+    },
+    {
+      "file": "RiskBird_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 19,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 19,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 19,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "Script-Hub-request.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 20,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 20,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 20,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 22,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 22,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 22,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 24
+        },
+        {
+          "variant": "override",
+          "line": 24,
+          "passed": true
+        },
+        {
+          "line": 24,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 26
+        },
+        {
+          "line": 26,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 26,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "ShoujiDesk_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 19
+        },
+        {
+          "line": 19,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 19,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "ShuQiCenterReader_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 24,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 24,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 24
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "SodaMusic_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 48,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "line": 48,
+          "passed": true
+        },
+        {
+          "line": 48,
+          "passed": true,
+          "variant": "negative"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "Soul_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 38,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 38,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 38,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "Spotify_lyrics_translation-request.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 16,
+          "passed": true
+        },
+        {
+          "line": 16,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 16
+        },
+        {
+          "line": 17,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 17,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 17,
+          "passed": true,
+          "variant": "negative"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "Spotify_lyrics_translation-response.js",
+      "dispatch": [
+        {
+          "line": 14,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 14,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 14,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 19,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 19,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 19,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 20,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 20,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "line": 20,
+          "passed": true
+        },
+        {
+          "line": 22,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 22,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 22,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 23,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 23,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 23
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "Spotify_remove_ads-request.js",
+      "parse_passed": true,
+      "dispatch": []
+    },
+    {
+      "file": "Spotify_remove_ads-response.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 26
+        },
+        {
+          "line": 26,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "line": 26,
+          "passed": true
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "Sub-Store-request.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 20,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 20
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 20
+        },
+        {
+          "line": 21,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 21,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 21
+        }
+      ]
+    },
+    {
+      "file": "Sub-Store-task-1.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 22,
+          "passed": true
+        },
+        {
+          "line": 22,
+          "passed": true,
+          "variant": "override"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "TV_Assistant_remove_ads-response.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 21
+        },
+        {
+          "line": 21,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 21,
+          "variant": "negative",
+          "passed": true
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "Taobao_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 35
+        },
+        {
+          "line": 35,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 35,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "line": 37,
+          "passed": true
+        },
+        {
+          "line": 37,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 37
+        }
+      ]
+    },
+    {
+      "file": "TelegramRedirect-request.js",
+      "parse_passed": true,
+      "dispatch": []
+    },
+    {
+      "file": "Tencent_Video_remove_ads-request.js",
+      "dispatch": [
+        {
+          "line": 35,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 35,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 35
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "TestFlightRegionUnlock-request.js",
+      "dispatch": [],
+      "parse_passed": true
+    },
+    {
+      "file": "Tieba_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 49,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 49
+        },
+        {
+          "line": 49,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "Uki_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 22,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 22,
+          "passed": true
+        },
+        {
+          "line": 22,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 24
+        },
+        {
+          "line": 24,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 24,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 26,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 26,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 26
+        },
+        {
+          "line": 28,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 28,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 28,
+          "passed": true,
+          "variant": "negative"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "Umetrip_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 17,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 17,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 17,
+          "passed": true,
+          "variant": "negative"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "UnnooQuan_remove_watermark-response.js",
+      "parse_passed": true,
+      "dispatch": []
+    },
+    {
+      "file": "VVebo_repair-request.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 14,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 14
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 14
+        },
+        {
+          "variant": "default",
+          "line": 16,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 16,
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 16
+        },
+        {
+          "variant": "default",
+          "line": 18,
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 18
+        },
+        {
+          "line": 18,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "VVebo_repair-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 20,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 20
+        },
+        {
+          "line": 20,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 22
+        },
+        {
+          "variant": "override",
+          "line": 22,
+          "passed": true
+        },
+        {
+          "line": 22,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    },
+    {
+      "file": "WARP_Node_Query-task-1.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 14,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 14,
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "WPS_checkin-request.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 22,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 22
+        },
+        {
+          "line": 22,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "WPS_checkin-task-1.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "line": 24,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 24,
+          "passed": true,
+          "variant": "override"
+        }
+      ]
+    },
+    {
+      "file": "Weibo_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 45,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 45
+        },
+        {
+          "line": 45,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 47
+        },
+        {
+          "variant": "override",
+          "line": 47,
+          "passed": true
+        },
+        {
+          "line": 47,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 49,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 49,
+          "passed": true
+        },
+        {
+          "line": 49,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 51,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 51,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "line": 51,
+          "passed": true
+        },
+        {
+          "line": 53,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 53,
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 53
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 55
+        },
+        {
+          "line": 55,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 55
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 57
+        },
+        {
+          "variant": "override",
+          "line": 57,
+          "passed": true
+        },
+        {
+          "line": 57,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 59,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 59
+        },
+        {
+          "line": 59,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 61
+        },
+        {
+          "line": 61,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 61,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 63,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 63
+        },
+        {
+          "variant": "negative",
+          "line": 63,
+          "passed": true
+        },
+        {
+          "line": 65,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 65,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 65,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 67,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 67,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 67,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 69,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 69,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 69
+        },
+        {
+          "variant": "default",
+          "line": 71,
+          "passed": true
+        },
+        {
+          "line": 71,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 71,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 73
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 73
+        },
+        {
+          "line": 73,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 75
+        },
+        {
+          "line": 75,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 75,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 77,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 77,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "line": 77,
+          "passed": true
+        },
+        {
+          "line": 79,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 79,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 79,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 81,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 81,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 81
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 83
+        },
+        {
+          "line": 83,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 83,
+          "passed": true,
+          "variant": "negative"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "Weidian_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 39
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 39
+        },
+        {
+          "line": 39,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 41,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 41,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 41
+        }
+      ]
+    },
+    {
+      "file": "Weixin_external_links_unlock-response.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "line": 14,
+          "passed": true
+        },
+        {
+          "line": 14,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 14,
+          "passed": true,
+          "variant": "negative"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "WexinMiniPrograms_Remove_ads-response.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 213
+        },
+        {
+          "line": 213,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 213,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 215
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 215
+        },
+        {
+          "variant": "negative",
+          "line": 215,
+          "passed": true
+        },
+        {
+          "line": 217,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 217,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 217,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 219,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 219,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 219,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 221,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 221
+        },
+        {
+          "line": 221,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 223,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 223,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 223,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 225,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 225,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 225,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 227,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "line": 227,
+          "passed": true
+        },
+        {
+          "variant": "negative",
+          "line": 227,
+          "passed": true
+        },
+        {
+          "line": 229,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 229
+        },
+        {
+          "line": 229,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 231,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 231,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 231,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 233,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 233
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 233
+        },
+        {
+          "line": 235,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 235,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 235,
+          "passed": true,
+          "variant": "negative"
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "XiaoCan_remove_ads-request.js",
+      "dispatch": [],
+      "parse_passed": true
+    },
+    {
+      "file": "YouTubeSubtitlesTranslation-request.js",
+      "dispatch": [
+        {
+          "line": 20,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 20,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "line": 20,
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "line": 22,
+          "passed": true
+        },
+        {
+          "line": 22,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 22,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 25,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 25
+        },
+        {
+          "line": 25,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 29,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 29,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "line": 29,
+          "passed": true
+        },
+        {
+          "line": 30,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 30
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 30
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "YouTubeSubtitlesTranslation-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 21
+        },
+        {
+          "variant": "override",
+          "line": 21,
+          "passed": true
+        },
+        {
+          "line": 21,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 23
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 24,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 24
+        },
+        {
+          "line": 24,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 26
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 26
+        },
+        {
+          "line": 26,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 27,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 27
+        },
+        {
+          "line": 27,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 31,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 31,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 31,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "line": 32,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 32,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 32,
+          "variant": "negative",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "file": "YouTube_remove_ads-request.js",
+      "dispatch": [
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "line": 23,
+          "passed": true
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "negative"
+        },
+        {
+          "line": 25,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 25
+        },
+        {
+          "line": 25,
+          "variant": "negative",
+          "passed": true
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "YouTube_remove_ads-response.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 21
+        },
+        {
+          "line": 21,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 21
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "iMaiCai_remove_ads-response.js",
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 23
+        },
+        {
+          "line": 23,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 23
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "iWallBiZhi_remove_ads-response.js",
+      "dispatch": [
+        {
+          "line": 19,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "line": 19,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "line": 19,
+          "variant": "negative",
+          "passed": true
+        },
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 21
+        },
+        {
+          "variant": "override",
+          "passed": true,
+          "line": 21
+        },
+        {
+          "variant": "negative",
+          "line": 21,
+          "passed": true
+        },
+        {
+          "line": 23,
+          "variant": "default",
+          "passed": true
+        },
+        {
+          "line": 23,
+          "variant": "override",
+          "passed": true
+        },
+        {
+          "line": 23,
+          "variant": "negative",
+          "passed": true
+        }
+      ],
+      "parse_passed": true
+    },
+    {
+      "file": "mobileClouds_remove_ads-response.js",
+      "parse_passed": true,
+      "dispatch": [
+        {
+          "variant": "default",
+          "passed": true,
+          "line": 14
+        },
+        {
+          "line": 14,
+          "passed": true,
+          "variant": "override"
+        },
+        {
+          "variant": "negative",
+          "passed": true,
+          "line": 14
+        },
+        {
+          "line": 16,
+          "passed": true,
+          "variant": "default"
+        },
+        {
+          "variant": "override",
+          "line": 16,
+          "passed": true
+        },
+        {
+          "line": 16,
+          "passed": true,
+          "variant": "negative"
+        }
+      ]
+    }
+  ],
+  "surge_version": "6.100.0",
+  "surge_system": "iOS",
+  "surge_build": "4027",
+  "summary": {
+    "scripts": 93,
+    "parse_passed": 93,
+    "dispatch_checks": 608,
+    "dispatch_passed": 608,
+    "failures": 0
+  }
+}

@@ -1,0 +1,16 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=迅雷去广告 · Surge iOS
+#!desc=移除开屏广告、首页横幅广告、左上角广告入口，精简我的页面。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/XunLei_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://conf-m-ssl\.xunlei\.com/external/ '(. as $__original | try del(.values.me_config.entrance_list_vertical_enable) catch $__original) | (. as $__original | try del(.values.me_config.common_service_list) catch $__original) | (. as $__original | try del(.values.me_config.banner_service_list) catch $__original)'
+http-response-jq (?i)^https://api-shoulei-ssl\.xunlei\.com/flowhub/v1/slots:batchGet$ '.slots |= map(select(.id == "xl_ios_mytab_vipicon" or (.native.assets.title.text.value? and (.native.assets.title.text.value | . == "清理助手" or . == "云盘容量" or . == "远程设备"))))'
+
+[MITM]
+hostname = %APPEND% conf-m-ssl.xunlei.com, api-shoulei-ssl.xunlei.com
+h2 = true

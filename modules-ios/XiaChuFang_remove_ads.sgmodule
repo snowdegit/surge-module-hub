@@ -1,0 +1,23 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=下厨房去广告 · Surge iOS
+#!desc=移除开屏广告、页面推广及横幅，精简首页标签。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/XiaChuFang_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://api\.xiachufang\.com/v2/homepage/paged_waterfall_recommendations\.json$ 'del(.multiplex_cells[] | select(.recommendation_cell.impression_sensor_events[]?.properties.target_type? == "ad"))'
+http-response-jq (?i)^https://api\.xiachufang\.com/v2/config/get\.json$ '(. as $__original | try del(.content.recipe_ad) catch $__original) | (. as $__original | try del(.content.splash_ad_req_time) catch $__original) | (. as $__original | try del(.content.splash_sdk_ad_req_time) catch $__original) | (. as $__original | try del(.content.splash_ad_lifecycle_interval) catch $__original) | (. as $__original | try del(.content.waterfall_ad_feedback) catch $__original) | (. as $__original | try del(.content.homepage_waterfall_test_ad_pos) catch $__original) | (. as $__original | try del(.content.ad_app_look_around) catch $__original) | (. as $__original | try del(.content.ad_sdk_text_removal_keywords) catch $__original)'
+http-response-jq (?i)^https://api\.xiachufang\.com/v2/homepage/ranking_list/paged_homepage_ranking_list_section_v2\.json$ '.cells |= map(del(.side_slip_activity_cell, .dish_square_cell))'
+
+[Map Local]
+(?i)^https://api\.xiachufang\.com/v2/ad/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.xiachufang\.com/v2/account/feeds_v7\.json data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.xiachufang\.com/v2/homepage1810/init_page\.json data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.xiachufang\.com/v2/mark_mission/get_sticker_info\.json data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api.xiachufang.com
+h2 = true

@@ -1,0 +1,36 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=波点音乐去广告 · Surge iOS
+#!desc=精简应用配置，禁用P2P传输。移除开屏广告、横幅推广、悬浮广告、歌曲广告、商城入口、搜索推广、评论区推广、试听语音提醒。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/BodianMusic_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://bd-api\.kuwo\.cn/api/service/conf/all\? '(. as $__original | try del(.data.groupSign.adStartAppDialog) catch $__original) | (. as $__original | try del(.data.groupSign.adGuideTest) catch $__original) | (. as $__original | try del(.data.groupSign.playTips) catch $__original) | (. as $__original | try del(.data.groupSign.adExitChange) catch $__original) | (. as $__original | try del(.data.conf.adGuidePopCount) catch $__original) | (. as $__original | try del(.data.conf.adDownListOpen) catch $__original)'
+http-response-jq (?i)^https://bd-api\.kuwo\.cn/api/service/conf/all\? '.data.conf.flowControlConfig.uploadEnable = false | .data.conf.flowControlConfig.p2pEnable = false'
+http-response-jq (?i)^https://ab-bodian\.kuwo\.cn/abtest/ui/info\? '(. as $__original | try del(.data.mapTestInfo.CommentADPosition) catch $__original) | (. as $__original | try del(.data.mapTestInfo.DiscoverADPosition) catch $__original) | (. as $__original | try del(.data.mapTestInfo.DownloadAd) catch $__original) | (. as $__original | try del(.data.mapTestInfo.FreeModVoiceReminder) catch $__original) | (. as $__original | try del(.data.mapTestInfo.GamesTrans) catch $__original) | (. as $__original | try del(.data.mapTestInfo.bodianmvdialog) catch $__original) | (. as $__original | try del(.data.mapTestInfo.MvTryShowAds) catch $__original) | (. as $__original | try del(.data.mapTestInfo.insert) catch $__original)'
+http-response-jq (?i)^https://bd-api\.kuwo\.cn/api/service/global/config/scene\? '(. as $__original | try del(.data.iosP2PCacheEnable) catch $__original) | (. as $__original | try del(.data.warmStartDialog) catch $__original) | (. as $__original | try del(.data.adsNotFinishVipPop4DayInterval) catch $__original)'
+http-response-jq (?i)^https://bd-api\.kuwo\.cn/api/service/global/config/scene\? '.data.showShopEntry = false | .data.iosP2pEnableSendDataLimit = 1'
+http-response-jq (?i)^https://bd-api\.kuwo\.cn/api/search/topic/word/list\? '(. as $__original | try del(.data.hotTopic) catch $__original) | (. as $__original | try del(.data.searchFind) catch $__original) | (. as $__original | try del(.data.globalJumpInfo) catch $__original) | (. as $__original | try del(.data.hotWord) catch $__original)'
+http-response-jq (?i)^https://bd-api\.kuwo\.cn/api/service/home/index\? '.data.moduleList |= map(select(.type | tostring | (. != "8" and . != "1")))'
+http-response-jq (?i)^https://bd-api\.kuwo\.cn/api/service/music/recommendList\? '.data.musicList[] |= del(.showAd)'
+http-response-jq (?i)^https://bd-api\.kuwo\.cn/api/comments/v3/topInfo\? '(. as $__original | try del(.data.putao) catch $__original) | (. as $__original | try del(.data.bannerVos) catch $__original)'
+
+[Map Local]
+(?i)^https://bd-api\.kuwo\.cn/api/(play|service|advert)/advert/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://bd-api\.kuwo\.cn/api/service/banner/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://bd-api\.kuwo\.cn/api/ucenter/vip/give/config\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://bd-api\.kuwo\.cn/api/service/home/module\?.*&moduleId=6 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://bd-api\.kuwo\.cn/api/pay/vip/lowPriceText\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://bd-api\.kuwo\.cn/api/service/global/config/vipEnter\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://bd-api\.kuwo\.cn/api/popup/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://bd-api\.kuwo\.cn/api/pay/vip/invitation/swell/popup\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://bd-api\.kuwo\.cn/api/service/version/popup\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://bd-api\.kuwo\.cn/api/pay/vip/invitation/assist/popup\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://bd-api\.kuwo\.cn/api/pay/h5/common/popup\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% bd-api.kuwo.cn
+h2 = true

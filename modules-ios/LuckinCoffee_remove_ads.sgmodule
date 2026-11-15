@@ -1,0 +1,22 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=瑞幸咖啡去广告 · Surge iOS
+#!desc=移除开屏广告、弹窗和各类横幅推广。
+#!author=Sliverkiss[https://github.com/Sliverkiss]
+# Source: https://kelee.one/Tool/Loon/Lpx/LuckinCoffee_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Map Local]
+(?i)^https://capi\.lkcoffee\.com/resource/m/growUp/calendarList data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://capi\.lkcoffee\.com/resource/m/promotion/giftCard/topPage data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://capi\.lkcoffee\.com/resource/m/sys/base/myLittleLuck data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://capi\.lkcoffee\.com/resource/core/v2/menu/ordinaryUserLayeredArea data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://capi\.lkcoffee\.com/resource/m/sys/common/modules data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://capi\.lkcoffee\.com/resource/core/v2/homepage/homePageCoffeeList data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://capi\.lkcoffee\.com/resource/m/eorder/product/popAppTagProductList data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://capi\.lkcoffee\.com/resource/m/sys/app/adposNew data-type=text data="" status-code=404 header="Content-Type:text/plain"
+
+[MITM]
+hostname = %APPEND% capi.lkcoffee.com
+h2 = true

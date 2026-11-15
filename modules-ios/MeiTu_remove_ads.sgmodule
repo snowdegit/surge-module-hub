@@ -1,0 +1,18 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=美图秀秀去广告 · Surge iOS
+#!desc=移除开屏广告、横幅推广，精简我的页面。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/MeiTu_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Rule]
+DOMAIN, adui.tg.meitu.com, REJECT
+
+[Body Rewrite]
+http-response-jq (?i)^https://api\.posters\.meitu\.com/common/init\.json '(. as $__original | try del(.data.vip) catch $__original)'
+
+[MITM]
+hostname = %APPEND% api.posters.meitu.com
+h2 = true

@@ -1,0 +1,2018 @@
+{
+  "scope": "Static iOS default materialization and rule-policy audit, not native iOS loading or real app validation",
+  "modules": 275,
+  "unresolved_placeholders": 0,
+  "native_ios_load_tested": false,
+  "installable_static": 272,
+  "results": [
+    {
+      "id": "Block_HTTPDNS",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BlockAdvertisers",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "1.1.1.1",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "5EPlay_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "36Kr_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "123NetWorkDisk_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "360SmartCamera_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "SafetyHome_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "555DY_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "12306_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "AppleWeatherEnhancer",
+      "status": "converted",
+      "resolved_defaults": {
+        "Weather_Provider": "ColorfulClouds",
+        "NextHour_Provider": "ColorfulClouds",
+        "AirQuality_Calculate_Algorithm": "EU_EAQI",
+        "API_ColorfulClouds_Token": "",
+        "API_QWeather_Host": "devapi.qweather.com",
+        "API_QWeather_Token": "",
+        "API_WAQI_Token": "",
+        "Storage": "Argument",
+        "LogLevel": "WARN"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "SnowCamera_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BoxJs",
+      "status": "converted",
+      "resolved_defaults": {
+        "proxy_policy": "PROXY"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "CCLive_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "DjDuoDuo_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Dlabel_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Prevent_DNS_Leaks",
+      "status": "converted",
+      "resolved_defaults": {
+        "proxy_policy": "PROXY"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "DREAME_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "EcovacsHome_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "EasyCharge_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Fileball_mount",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "FollowRSS_checkin",
+      "status": "converted",
+      "resolved_defaults": {
+        "token": "",
+        "cookie": "",
+        "cron": "0 1 * * *"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Foodie_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Google",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "HongKongToolbar_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "IPATool",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "IThome_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {
+        "removePinnedArticles": "false",
+        "removeAllBanners": "false"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Jump_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Keep_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "KOOK_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Line_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "OKOK_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "PICOOC_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Pinterest_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "QQ_Redirect",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "QQMusic_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Reddit_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ReelShort_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Roborock_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "RQrun_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Script-Hub",
+      "status": "converted",
+      "resolved_defaults": {
+        "proxy_policy": "PROXY"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Sofascore_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Soul_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Spotify_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {
+        "tab": "false",
+        "useractivity": "true"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Spotify_lyrics_translation",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Sub-Store",
+      "status": "converted",
+      "resolved_defaults": {
+        "cron": "55 23 * * *",
+        "proxy_policy": "PROXY"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "TelegramRedirect",
+      "status": "converted",
+      "resolved_defaults": {
+        "app": "tg"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "TeraBox_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "TestFlightRegionUnlock",
+      "status": "converted",
+      "resolved_defaults": {
+        "proxy_policy": "PROXY"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "TubeMax_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {
+        "proxy_policy": "PROXY"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Tumblr_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Uki_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "VVebo_repair",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "WakeupSchedule_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "WARP_Node_Query",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "WPS_checkin",
+      "status": "converted",
+      "resolved_defaults": {
+        "CaptureCookie": "false",
+        "AK": "",
+        "SK": "",
+        "DAY": "1",
+        "MAX_RETRIES": "5",
+        "CRONEXP": "0 8 * * *"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "YouTube_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {
+        "blockUpload": "false",
+        "blockShorts": "false",
+        "blockImmersive": "false",
+        "captionLang": "zh-Hans",
+        "debug": "false"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "YouTubeSubtitlesTranslation",
+      "status": "converted",
+      "resolved_defaults": {
+        "Type": "Official",
+        "AutoCC": "true",
+        "ShowOnly": "true",
+        "Position": "Forward"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "YY_Voice_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "YYVoiceTool_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ZAKER_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Aiinquiry_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "iQiYi_Video_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "AliYunDrive_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BaiduMap_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BaiduTranslate_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Baidu_input_method_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Tieba_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {
+        "per_filter_video_thread": "true"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BaiduNetDisk_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BaiduSearchWebpage_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BaiduWenku_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BabyTree_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Beike_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BiliComic_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Bilibili_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {
+        "displayUpList": "show",
+        "purifyComment": "true",
+        "optimizeRequest": "true",
+        "sponsorBlock": "false",
+        "logLevel": "off",
+        "proxy_policy": "PROXY"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BitqiuPan_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Bixin_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BodianMusic_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BooHee_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Cainiao_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "CaixinMedia_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ColorfulClouds_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Cece_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MyFriday_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Chelaile_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ChengFenMiao_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "SkyworthDigitalPicamera_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Chuzhan_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "XFuse_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "NodeLinkCheck",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Damai_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Dayima_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "iReaderDejian_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Dewu_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "DidaPincheTaxi_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "DiDi_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "DingdongMaicai_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "DouBan_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "DoubanRead_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Douyu_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "DuiTang_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "TCLnScreen_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "DragonRead_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "KebidaDushu_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "FlyerTea_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "TaobaoTravel_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "FenBi_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "FC_Box_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ifengNews_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "RiskBird_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "LiveLab_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "GuideRank_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Amap_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "GaoDing_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "AlcidaeVideo_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "EasyBike_remove_ads",
+      "status": "needs-attention",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Umetrip_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "YunmaiScale_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MrHema_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "FinanceNews_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "HantingHotels_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "SmartLife_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "HUPU_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Huxiu_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "JiaKaoBaoDian_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "91160_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "SeasunJX3_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "JiaXiaoDrive_remove_ads",
+      "status": "needs-attention",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Node_detection_tool",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "JD_Price",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "JD_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "JDWaimai_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "WPS_Documents_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Jin10Data_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ChatCam_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Remove_ads_by_keli",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ShoujiDesk_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "KuaiDi100_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "KuaiDuiZuoYe_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "QuickSearch",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "KuaiKanComic_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "KuaiShou_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "KwaiVideoeditor_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "QuarkBrowser_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "QuarkScanking_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "CoolApk_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "KuGouYouth_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "KGRing_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "KuGou_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "KuroBBS_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Kuwo_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "TV_Assistant_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "2bulu_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "LZMH_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "RoboTaxi_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MaFengWo_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "marki_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MangoTV_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MKZ_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "CatEarFM_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Meizhixiuxing_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MeiRiSaiChe_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MeiShiJie_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MeiTu_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MeituMYXJ_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MeetYou_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MoeGirlWiki_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "miHoYoBBS_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MojiWeather_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MaiMai_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "FerrisWheel_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MotorFans_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "CSG_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "AxWorkSchedule_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "PangguaiLife_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "DubbingShow_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "PinDuoDuo_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "PiPiXia_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "PuPuMall_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "51Job_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "AutoHome_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "QiDian_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "SevenCat_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Qbb_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "QtingFM_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "SodaMusic_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "QiXinBao_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "QQKSong_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "LuckinCoffee_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ShandongSchool_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "YueDanBa_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "smzdm_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ShouYinTongMerchant_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "SF-Express_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ShuQiCenterReader_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "DigitalHeartbeat_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "KingdeeMyMoney_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Taobao_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Taopiaopiao_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Taqu_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Tencent_Video_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "TXDocs_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "TmallCampus_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "TianQiTong_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "iReaderCityWeather_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "CrazyRope_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "TuGuaiShou_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Daily_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "WaCaiJiZhang_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Wacai_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "NetEaseGodlike_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "NeteaseNews_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "YoudaoDict_remove_ads",
+      "status": "needs-attention",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": [
+        "Source rule has no explicit supported policy: DOMAIN, ad-sdk-config.youdao.com"
+      ]
+    },
+    {
+      "id": "MailMaster_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "NeteaseCloudMusic_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {
+        "MY": "false",
+        "DT": "false",
+        "FX": "false",
+        "PRGG": "false",
+        "PRRK": "false",
+        "PRDRD": "false",
+        "PRSCVPT": "false",
+        "PRST": "false",
+        "PRRR": "false",
+        "HMPR": "false",
+        "PRMST": "false",
+        "PRCN": "false"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "PerfectWorldEsport_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Weibo_intl_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Weibo_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Weidian_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "WPForum_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Weimai_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Weixin_Official_Accounts_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Weixin_external_links_unlock",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "WexinMiniPrograms_Remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Walmart_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "SnailSleep_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "WutaCamera_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "XiaChuFang_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "HKDouYin_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "OraySunlogin_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "FleaMarket_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "XiaobaiPrint_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "XiaoCan_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ShopKeeperAdmin_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "XiaoHeiHe_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "RedPaper_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "XiaojukejiCharge_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "MiaoRead_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "XiaomiSpeaker_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "HeartideBrainWave_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "iMaiCai_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "CosmosPodcast_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Himalaya_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "OnTheWay_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "SinaStock_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Snowball_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ChaoXingStudy_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "XunLei_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "YiKaoBang_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "BaiduPhoto_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "VideoGo_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Yitian_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "YiSchool_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "YoudaoTrans_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "YoudaoNote_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "YouKu_Video_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Yueyou_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "NarwelRobots_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ValorantBible_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "LOL_Bible_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "iReader_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Zhibo8_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "SuZhouCitizenCard_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Zhihu_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ZhiLianZhaoPin_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "UnnooQuan_remove_watermark",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "PICC_Insurance_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "WeatherChina_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "mobileClouds_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "EtouchEcalendar_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ZhuanZhuan_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "Auto_Join_TF",
+      "status": "converted",
+      "resolved_defaults": {
+        "CaptureAccountToken": "false",
+        "RunTask": "false",
+        "RunMonitor": "true",
+        "TaskCron": "0 0/2 * * * *",
+        "TaskMonitor": "0 * * * * *",
+        "proxy_policy": "PROXY"
+      },
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ZongHeng_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "iWallBiZhi_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    },
+    {
+      "id": "ZuiYou_remove_ads",
+      "status": "converted",
+      "resolved_defaults": {},
+      "unresolved_placeholders": 0,
+      "warnings": []
+    }
+  ]
+}

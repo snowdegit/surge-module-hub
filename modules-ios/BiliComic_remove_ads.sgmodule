@@ -1,0 +1,28 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=哔哩哔哩漫画去广告 · Surge iOS
+#!desc=移除开屏广告、应用内悬浮窗、各类横幅广告、你可能喜欢、小说推荐、首页弹窗，精简首页标签、底栏活动按钮和我的页面。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/BiliComic_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Map Local]
+(?i)^https://manga\.bilibili\.com/twirp/comic\.v\d\.Comic/GetActivityTab data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://manga\.bilibili\.com/twirp/comic\.v\d\.Comic/GetBubbles data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://manga\.bilibili\.com/twirp/comic\.v\d\.Comic/GetCommonBanner data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://manga\.bilibili\.com/twirp/comic\.v\d\.Comic/SearchBanner data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://manga\.bilibili\.com/twirp/user\.v\d\.SeasonV\d/GetSeasonInfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://manga\.bilibili\.com/twirp/bookshelf\.v\d\.Bookshelf/ListEmptyRecommend data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://manga\.bilibili\.com/twirp/bookshelf\.v\d\.Bookshelf/NovelRecommend data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://manga\.bilibili\.com/twirp/novel\.v\d\.Novel/MoreRecommend data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://manga\.bilibili\.com/twirp/comic\.v\d\.Comic/GetBubbles data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://manga\.bilibili\.com/twirp/comic\.v\d\.Comic/AppInit data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://manga\.bilibili\.com/twirp/comic\.v\d\.Comic/ListFlash data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+BiliComic_remove_ads-response = type=http-response, pattern="(?i)(?:^https://manga\\.bilibili\\.com/twirp/comic\\.v\\d\\.Comic/GetClassPageAllTabs)|(?:^https://manga\\.bilibili\\.com/twirp/user\\.v\\d\\.User/UCenterConf)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/BiliComic_remove_ads-response.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=10
+
+[MITM]
+hostname = %APPEND% manga.bilibili.com
+h2 = true

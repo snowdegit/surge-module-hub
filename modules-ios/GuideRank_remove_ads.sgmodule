@@ -1,0 +1,27 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=盖得排行去广告 · Surge iOS
+#!desc=精简首页、移除分类横幅推广、单单返猜你喜欢和编辑精选，移除我的页面推广。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/GuideRank_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://zone\.guiderank-app\.com/guiderank-web/app/home/getHomePageV '(. as $__original | try del(.data.countdownBanner) catch $__original) | (. as $__original | try del(.data.newEvaluations) catch $__original) | (. as $__original | try del(.data.freeToPayBannerPhotoUrl) catch $__original) | (. as $__original | try del(.data.groupBuyingList) catch $__original) | (. as $__original | try del(.data.multiCountdownBanner) catch $__original) | (. as $__original | try del(.data.banners) catch $__original) | (. as $__original | try del(.data.multiPlatformBanner) catch $__original) | (. as $__original | try del(.data.specialSaleBannerPhotoUrl) catch $__original) | (. as $__original | try del(.data.guide90Evaluation) catch $__original) | (. as $__original | try del(.data.insurancePromotions) catch $__original)'
+http-response-jq (?i)^https://zone\.guiderank-app\.com/guiderank-web/app/common/getInitData\.do '(. as $__original | try del(.data.SpecialSalePageMidTabConfig) catch $__original)'
+
+[Map Local]
+(?i)^https://zone\.guiderank-app\.com/guiderank-web/app/common/getWeworkPromotionInfoBySceneType data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://zone\.guiderank-app\.com/guiderank-web/app/popUpAdCollection/getActiveCollection\.do data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://zone\.guiderank-app\.com/guiderank-web/app/common/getWeworkPromotionInfoBySceneType data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://zone\.guiderank-app\.com/guiderank-web/app/common/getWeworkCategoryPromotionInfo data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://zone\.guiderank-app\.com/guiderank-web/app/stockTaking/pageStockTakingForHomePage data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://zone\.guiderank-app\.com/guiderank-web/app/specialSale/pageRecommendedItems data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://zone\.guiderank-app\.com/guiderank-web/app/manualOperationGoods/pageManualOperationGoods data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://zone\.guiderank-app\.com/guiderank-web/app/specialSale/listSpecialSalePageBanner data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://zone\.guiderank-app\.com/guiderank-web/app/personal/getPersonPageInfo\.do data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% zone.guiderank-app.com
+h2 = true

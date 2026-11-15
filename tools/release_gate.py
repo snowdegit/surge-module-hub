@@ -20,5 +20,17 @@ else:
 behavior=P/'test-results/native-behavior-report.json'
 if behavior.exists() and json.loads(behavior.read_text()).get('summary',{}).get('failed'):
  reasons.append('Native algorithm fixture tests contain failures')
+ios_catalog=P/'ios-catalog.json'
+if ios_catalog.exists():
+ bad=[x['name'] for x in json.loads(ios_catalog.read_text()) if x['status']!='converted']
+ if bad:reasons.append('Incomplete iOS upstream entries: '+', '.join(bad))
+ios=P/'test-results/ios-native-report.json'
+if not ios.exists():reasons.append('Native iOS script validation has not run')
+else:
+ n=json.loads(ios.read_text())
+ if n.get('surge_system')!='iOS' or n.get('summary',{}).get('failures'):
+  reasons.append('Native iOS script validation is incomplete or failed')
+ if not n.get('module_load_tested'):reasons.append('Native iOS module loading is incomplete')
+ if not n.get('real_app_tested'):reasons.append('Real iOS application regression is incomplete')
 print(json.dumps({'full_compatibility_verified':not reasons,'blockers':reasons},ensure_ascii=False,indent=2))
 raise SystemExit(1 if reasons else 0)

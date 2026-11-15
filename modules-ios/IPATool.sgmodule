@@ -1,0 +1,15 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=IPA工具箱助手 · Surge iOS
+#!desc=这是IPA工具箱的辅助插件，用于下载IPA包和应用降级。IPA工具箱是运行在Scripting应用中的脚本，需要购买Scripting的Pro版本才能运行。
+#!author=小白脸
+# Source: https://kelee.one/Tool/Loon/Lpx/IPATool.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Script]
+IPATool-request = type=http-request, pattern="(?i)(?:^https://apple-api\\.com)|(?:^https://xiaobai\\.app)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/IPATool-request.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=10
+
+[MITM]
+hostname = %APPEND% apple-api.com, xiaobai.app
+h2 = true

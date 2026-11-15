@@ -1,0 +1,17 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=金山文档去广告 · Surge iOS
+#!desc=移除首页横幅推广、表单收集页面推广和我的页面推广。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/WPS_Documents_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Map Local]
+(?i)^https://www\.kdocs\.cn/kdg/api/v1/cards/type/3\?iosVer=\d+\.\d+\.\d+&isGetList=1 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://www\.kdocs\.cn/kdg/api/v1/cards/type/27\?iosVer=\d+\.\d+\.\d+&isGetList=1 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://f-api\.kdocs\.cn/godfather/api/thirdparty/v1/viewpager\?showLocal=mobileWebIndex data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% www.kdocs.cn, f-api.kdocs.cn
+h2 = true

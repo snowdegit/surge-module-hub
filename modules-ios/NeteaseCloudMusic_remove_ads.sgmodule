@@ -1,0 +1,32 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=网易云音乐去广告 · Surge iOS
+#!desc=过滤网易云音乐广告，并允许自定义界面。
+#!author=RuCu6[https://github.com/RuCu6], Keywos[https://github.com/Keywos]
+# Source: https://kelee.one/Tool/Loon/Lpx/NeteaseCloudMusic_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Rule]
+DOMAIN, iadmat.nosdn.127.net, REJECT
+DOMAIN, iadmatapk.nosdn.127.net, REJECT
+DOMAIN, iadmusicmat.music.126.net, REJECT
+DOMAIN, iadmusicmatvideo.music.126.net, REJECT
+DOMAIN, ipv4.music.163.com, REJECT
+DOMAIN, ipv6.music.163.com, REJECT
+
+[Map Local]
+(?i)^https?://interface\d?\.music\.163\.com/e?api/(ocpc/)?ad/ data-type=text data="" status-code=200 header="Content-Type:text/plain; charset=utf-8"
+(?i)^https?://interface\d?\.music\.163\.com/eapi/(?:delivery/(batch-)?deliver|moment/tab/info/|side-bar/mini-program/music-service/account|yunbei/account/entrance/) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https?://interface\d?\.music\.163\.com/eapi/(?:community/friends/fans-group/artist/group/|mine/applet/redpoint|music/songshare/text/recommend/|resniche/position/play/new/|resniche/tspopup/show|resource/comments?/musiciansaid/|user/sub/artist) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https?://interface\d?\.music\.163\.com/eapi/(?:ios/version|mlivestream/entrance/playpage/|link/position/show/strategy|link/scene/show/resource|v1/content/exposure/comment/banner/) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https?://interface\d?\.music\.163.com/w?e?api/search/default data-type=text data="" status-code=200 header="Content-Type:text/plain; charset=utf-8"
+(?i)^https?://interface\d?\.music\.163\.com/w?eapi/(?:activity/bonus/playpage/time/query|resource-exposure/|search/(?:chart/|rcmd/keyword/|specialkeyword/)) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://interface\d\.music\.163\.com/eapi/my/podcast/tab/recommend data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+NeteaseCloudMusic_remove_ads-response = type=http-response, pattern="(?i)(?:^https?://interface\\d?\\.music\\.163\\.com/eapi/(?:batch|v2/resource/comment/floor/get))|(?:^https?://interface\\d?\\.music\\.163\\.com/eapi/(?:homepage/block/page|link/page/rcmd/(?:block/resource/multi/refresh|resource/show)))|(?:^https?://interface\\d?\\.music\\.163\\.com/eapi/link/home/framework/tab)|(?:^https?://interface\\d?\\.music\\.163\\.com/eapi/link/page/discovery/resource/show)|(?:^https?://interface\\d?\\.music\\.163\\.com/eapi/link/position/show/resource)|(?:^https?://interface\\d?\\.music\\.163\\.com/eapi/user/follow/users/mixed/get)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/NeteaseCloudMusic_remove_ads-response.js?v=20261115.2, requires-body=true, binary-body-mode=true, timeout=20, argument="{\"MY\":\"false\",\"DT\":\"false\",\"FX\":\"false\",\"PRGG\":\"false\",\"PRRK\":\"false\",\"PRDRD\":\"false\",\"PRSCVPT\":\"false\",\"PRST\":\"false\",\"PRRR\":\"false\",\"HMPR\":\"false\",\"PRMST\":\"false\",\"PRCN\":\"false\"}"
+
+[MITM]
+hostname = %APPEND% interface*.music.163.com
+h2 = true

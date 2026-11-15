@@ -1,0 +1,22 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=堆糖去广告 · Surge iOS
+#!desc=移除开屏广告、信息流广告、热搜排行榜广告、我的页面横幅广告，移除关注推荐，精简底部导航栏。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/DuiTang_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://meta\.duitang\.com/napi/infra/settings/ '(. as $__original | try del(.data.AD_LINKS) catch $__original)'
+http-response-jq (?i)^https://(www|api-2)\.duitang\.com/napi/home/bottom_tab/detail/\? '.data.tabs |= map(select(.group == "home" or .group == "category" or .group == "me"))'
+http-response-jq (?i)^https://api-2\.duitang\.com/napi/settings/ '(. as $__original | try del(.data.SPLASH_SWING_OPEN) catch $__original) | (. as $__original | try del(.data.STICKER_SEARCH_HOT_KEYWORDS) catch $__original) | (. as $__original | try del(.data.REWARD_AD_PAG_EDITOR) catch $__original) | (. as $__original | try del(.data.REWARD_AD_PHOTO_EDITOR) catch $__original) | (. as $__original | try del(.data.REWARD_AD_CUTOUT_NUM) catch $__original) | (. as $__original | try del(.data.MAIN_EVENTS) catch $__original) | (. as $__original | try del(.data.QA_TOOLTIP_BOTTOM) catch $__original) | (. as $__original | try del(.data.OC_FOLLOW_OFFICIAL) catch $__original) | (. as $__original | try del(.data.AD_MENU_SELECTIONS) catch $__original) | (. as $__original | try del(.data.FEATURE_TEMPLATES) catch $__original) | (. as $__original | try del(.data.FEEDBACK_URL) catch $__original) | (. as $__original | try del(.data.AVATAR_MALL_UPDATE) catch $__original) | (. as $__original | try del(.data.WATERMARK_MALL_UPDATE) catch $__original) | (. as $__original | try del(.data.OC_MALL_UPDATE) catch $__original) | (. as $__original | try del(.data["3D_AVATAR_UPDATE"]) catch $__original) | (. as $__original | try del(.data.BENEFIT_LIST) catch $__original) | (. as $__original | try del(.data.SHARE_BANNER) catch $__original)'
+
+[Map Local]
+(?i)^https://xapi\.duitang\.com/napi/ads/\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api-2\.duitang\.com/napi/vienna/daren/daren/recommend/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://www\.duitang\.com/napi/hot/search/list/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% www.duitang.com, api-2.duitang.com, meta.duitang.com
+h2 = true

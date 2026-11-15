@@ -1,0 +1,29 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=猫耳FM去广告 · Surge iOS
+#!desc=移除开屏广告、青少年模式弹窗、首页顶部入口，替换底栏的直播入口为发现入口。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/CatEarFM_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://app\.missevan\.com/site/launch\? '(. as $__original | try del(.info.splash) catch $__original) | (. as $__original | try del(.info.splash_ready) catch $__original)'
+http-response-jq (?i)^https://app\.missevan\.com/site/config$ '(. as $__original | try del(.info.tab_bar_live) catch $__original) | (. as $__original | try del(.["0"]) catch $__original) | (. as $__original | try del(.info.enable_tab_bar_live_notice) catch $__original) | (. as $__original | try del(.false) catch $__original) | (. as $__original | try del(.info.teenager_popup_mode) catch $__original) | (. as $__original | try del(.["0"]) catch $__original)'
+http-response-jq (?i)^https://app\.missevan\.com/site/config$ '(. as $__original | try del(.info.httpdns) catch $__original) | (. as $__original | try del(.info.homepage_top_task_button) catch $__original)'
+http-response-jq (?i)^https://app\.missevan\.com/site/config$ '.info.cronet |= (fromjson | .quic=false | tojson)'
+http-response-jq (?i)^https://app\.missevan\.com/site/tabs\? '.info.tabs |= map(select(.title as $t | ["直播", "发现", "广播剧", "听书", "分类"] | index($t) != null))'
+http-response-jq (?i)^https://app\.missevan\.com/site/icons\? '.info.icons |= map(select(.title as $t | $t == "直播" or $t == "必听剧" or $t == "免费榜" or $t == "夜猫子" or $t == "启动音"))'
+http-response-jq (?i)^https://app\.missevan\.com/discovery/list$ '.info |= map(map(select(.title != "免流服务")))'
+http-response-jq (?i)^https://app\.missevan\.com/site/get-top$ '(. as $__original | try del(.info.search_words) catch $__original)'
+
+[Map Local]
+(?i)^https://data\.missevan\.com/site/ad-track$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://app\.missevan\.com/x/recommend/get-popup$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://fm\.missevan\.com/api/v2/meta/banner$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://fm\.missevan\.com/api/v2/recommended/top\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://fm\.missevan\.com/api/v2/chatroom/sound/recommend\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% app.missevan.com, data.missevan.com, fm.missevan.com
+h2 = true

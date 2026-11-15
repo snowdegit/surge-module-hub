@@ -89,3 +89,17 @@ SURGE_TEST_API_KEY='在本机环境变量中提供' python3 tools/native_probe.p
 python3 tools/native_test.py --api-url http://你的Mac:6171
 python3 tools/native_behavior.py --api-url http://你的Mac:6171
 ```
+
+## iOS 专项修复（2026-11-15）
+
+Mac专属 `#!arguments` 被用于iOS模块，会留下未展开的策略名和脚本参数。新增 `modules-ios/`：全部275项生成独立iOS默认值版本，18项参数表展开，参数占位符为零。`PROXY`策略必须存在于主配置；参数按上游默认值固定，iOS版不提供Mac参数面板。
+
+iPhone和iPad访问网页时会选择iOS模块及iOS目录状态；Mac继续使用原有参数化版本。已安装的旧版模块须先停用，避免旧版仍参与匹配。不要把Mac版与iOS版同时启用。
+
+新增4组iOS回归，全套17组通过。除了此前的哈罗、驾校一点通，有道词典源配置还存在无策略裸域名规则：iOS目录将这3项标为阻塞并禁用安装，不能宣称275项都已兼容。
+
+已连接真实iOS HTTP API，在iOS脚本引擎执行隔离验证；详见[原生iOS解析与分发报告](test-results/ios-native-report.json)、[原生iOS算法样例](test-results/ios-native-behavior-report.json)、[全部iOS静态审计](test-results/ios-defaults-report.json)。这些测试仍不等于逐一安装模块和所有App实际流量验证。
+
+官方依据：[模块参数表仅Mac](https://manual.nssurge.com/profile/module.html)、[脚本与iOS限制](https://manual.nssurge.com/scripting/overview.html)。
+
+本次iOS原生结果：93/93脚本解析、608/608分发适配、7/7实际算法合成输入通过。`module_load_tested`及`real_app_tested`保持false。

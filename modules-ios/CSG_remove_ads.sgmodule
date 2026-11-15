@@ -1,0 +1,19 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=南网在线去广告 · Surge iOS
+#!desc=移除首页推广，精简搜索页和我的页面。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/CSG_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://95598\.csg\.cn/mp/mpaas/mgw\.htm$ 'if .info | contains("RUBIK-TRACEID:") then .scene.page.areas |= map(select(.areaId | test("kingkong_|9grid_|message_|nearmap_|recommend_"))) else . end'
+
+[Map Local]
+(?i)^https://95598\.csg\.cn/mp/ucs/ma/zt/content/queryHotInformations$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://95598\.csg\.cn/mp/mpaas/rubik/openapi/rubik/mobile/getRubikScene$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% 95598.csg.cn
+h2 = true

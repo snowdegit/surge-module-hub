@@ -1,0 +1,24 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=贝壳找房去广告 · Surge iOS
+#!desc=移除开屏广告、弹窗广告、悬浮广告、信息流推广、我家页面的装修推荐。移除我的页面的专属推荐、游戏入口、钱包入口。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/Beike_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://apps\.api\.ke\.com/platform/shellapp/homepage/initData/mini\? '(. as $__original | try del(.data.bootpage) catch $__original) | (. as $__original | try del(.data.bottom_bar_activity) catch $__original)'
+http-response-jq (?i)^https://apps\.api\.ke\.com/platform/shellapp/userCenter/info\? '(. as $__original | try del(.data.islandModule) catch $__original)'
+http-response-jq (?i)^https://apps\.api\.ke\.com/platform/shellapp/userCenter/info\? 'del(.data.mainIcons.list[] | select(.indexKey == "coupon"))'
+http-response-jq (?i)^https://apps\.api\.ke\.com/platform/shellapp/myhome/pagedetail\? '.data.moduleList |= map(select(.tab != "myHomeDecorV4"))'
+http-response-jq (?i)^https://apps\.api\.ke\.com/platform/shellapp/homepage/feed\? '.data.list |= map(select(.cardType == "houseContainer" or .cardType == "houseV2" or .cardType == "houseV3" or .cardType == "rentHouseDiscount" or .cardType == "decorationCase"))'
+
+[Map Local]
+(?i)^https://apps\.api\.ke\.com/config/config/bootpage\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://apps\.api\.ke\.com/platform/shellapp/userCenter/feed\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://apps\.api\.ke\.com/config/config/getactivityconfig\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% apps.api.ke.com
+h2 = true

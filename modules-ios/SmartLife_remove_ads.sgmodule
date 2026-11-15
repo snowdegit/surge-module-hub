@@ -1,0 +1,20 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=慧生活798去广告 · Surge iOS
+#!desc=移除开屏广告、横幅广告，精简底栏。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/SmartLife_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://i\.ilife798\.com/api/v\d/acc/login$ '(. as $__original | try del(.data.ar) catch $__original) | (. as $__original | try del(.data.showAd) catch $__original)'
+
+[Map Local]
+(?i)^https://i\.ilife798\.com/api/v\d/acc/score/mission-lst$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://i\.ilife798\.com/api/v\d/ep/lst-simple\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://i\.ilife798\.com/api/v\d/ui/app/master$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% i.ilife798.com
+h2 = true

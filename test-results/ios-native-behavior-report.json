@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-11-15T12:38:02.612969+00:00",
+  "scope": "Selected actual generated algorithms in native Surge on synthetic fixtures; no real app traffic. Network/storage/notifications blocked.",
+  "profile_modified": false,
+  "real_app_tested": false,
+  "cases": [
+    {
+      "name": "Telegram configured client",
+      "file": "TelegramRedirect-request.js",
+      "passed": true
+    },
+    {
+      "name": "Tencent replacement preserves unrelated parameters",
+      "file": "Tencent_Video_remove_ads-request.js",
+      "passed": true
+    },
+    {
+      "name": "Google preserves path and query",
+      "file": "Google-request.js",
+      "passed": true
+    },
+    {
+      "name": "Spotify preserves suffix and Host",
+      "file": "Spotify_remove_ads-request.js",
+      "passed": true
+    },
+    {
+      "name": "Bilibili binary entry text route preserves Unicode",
+      "file": "Bilibili_remove_ads-response.js",
+      "passed": true
+    },
+    {
+      "name": "Unmatched Bilibili URL does nothing",
+      "file": "Bilibili_remove_ads-response.js",
+      "passed": true
+    },
+    {
+      "name": "IT Home explicitly false switches",
+      "file": "IThome_remove_ads-response.js",
+      "passed": true
+    }
+  ],
+  "surge_version": "6.100.0",
+  "surge_system": "iOS",
+  "summary": {
+    "checks": 7,
+    "passed": 7,
+    "failed": 0
+  }
+}

@@ -1,0 +1,17 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=萌娘百科去广告 · Surge iOS
+#!desc=移除开屏广告、弹窗、首页横幅。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/MoeGirlWiki_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Map Local]
+(?i)^https://grpc\.moegirl\.org\.cn/moegirl\.moepad\.MoepadAppMetaService/GetAppInitialInfo$ data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://grpc\.moegirl\.org\.cn/moegirl\.moepad\.MoepadService/GetLaunchAdPage$ data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://grpc\.moegirl\.org\.cn/moegirl\.moepad\.MoepadService/GetFeedAdProbability$ data-type=text data="" status-code=404 header="Content-Type:text/plain"
+
+[MITM]
+hostname = %APPEND% grpc.moegirl.org.cn
+h2 = true

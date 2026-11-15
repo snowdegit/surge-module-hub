@@ -1,0 +1,26 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=帆书去广告 · Surge iOS
+#!desc=移除弹窗和会员任务，精简首页、听书页面、课程菜单和我的页面。
+#!author=Yuheng0101[https://github.com/Yuheng0101]
+# Source: https://kelee.one/Tool/Loon/Lpx/KebidaDushu_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Map Local]
+(?i)^https?://popup\.dushu365\.com/api/v2/sfo/(user_)?popup_(config|display)s data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https?://g[a-z0-9-]+\.dushu365\.com/chief-orch/config/config/v\d+/(shortCut|appUpdateUnite|loadingAd) data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https?://g[a-z0-9-]+\.dushu365\.com/fs-retain/trialVip/v\d+/requestTrialVipPopDoNotSendReward data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https?://g[a-z0-9-]+\.dushu365\.com/resource-orchestration-system/vipLandingPage/v\d+/getVipLandingPageApp data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https?://g[a-z0-9-]+\.dushu365\.com/fandeng-orch/dual2211/config data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https?://g[a-z0-9-]+\.dushu365\.com/fdtalk-orch/newcomerzone/v\d+/guide data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https?://g[a-z0-9-]+\.dushu365\.com/fandeng-orch/bookboy/v\d+/vipPagePop data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https?://g[a-z0-9-]+\.dushu365\.com/chief-orch/config/config/v\d+/appConfig data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https?://g[a-z0-9-]+\.dushu365\.com/order-orchestration/orderWeb/exchange/v100/showExchangeButton data-type=text data="" status-code=404 header="Content-Type:text/plain"
+
+[Script]
+KebidaDushu_remove_ads-response = type=http-response, pattern="(?i)(?:^https?://g[a-z0-9-]+\\.dushu365\\.com/chief-orch/home/bookPortal/v105/category)|(?:^https?://g[a-z0-9-]+\\.dushu365\\.com/abtest-front/banner-modular/get)|(?:^https?://g[a-z0-9-]+\\.dushu365\\.com/resource-orchestration-system/book/channel/v100/info)|(?:^https?://g[a-z0-9-]+\\.dushu365\\.com/fs-member/user/profile/v100/detail)|(?:^https?://g[a-z0-9-]+\\.dushu365\\.com/chief-orch/home/bookPortal/v111/forApp)|(?:^https?://g[a-z0-9-]+\\.dushu365\\.com/sns-orchestration-system/homePage/api/v100/myPage)|(?:^https?://g[a-z0-9-]+\\.dushu365\\.com/task-orchestration/taskCenter/api/v101/taskList)|(?:^https?://g[a-z0-9-]+\\.dushu365\\.com/resource-orchestration-system/book/v101/content)|(?:^https?://g[a-z0-9-]+\\.dushu365\\.com/user-orchestration/user/api/v101/ceiltip)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/KebidaDushu_remove_ads-response.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=10
+
+[MITM]
+hostname = %APPEND% g*.dushu365.com
+h2 = true

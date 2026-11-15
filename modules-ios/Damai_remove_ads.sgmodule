@@ -1,0 +1,21 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=大麦去广告 · Surge iOS
+#!desc=移除开屏广告、轮播图广告和弹窗广告，移除搜索填充词和专属推荐。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/Damai_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://acs\.m\.taobao\.com/gw/mtop\.damai\.wireless\.user\.my\.content\.get/ '(. as $__original | try del(.data.banner) catch $__original) | (. as $__original | try del(.data.performFilmVip.userProfitList) catch $__original)'
+http-response-jq (?i)^https://acs\.m\.taobao\.com/gw/mtop\.damai\.wireless\.mypage\.feed/ '(. as $__original | try del(.data.feedCard) catch $__original)'
+http-response-jq (?i)^https://acs\.m\.taobao\.com/gw/mtop\.damai\.mec\.aristotle\.get/ '(. as $__original | try del(.data.data.top.keywords) catch $__original)'
+
+[Map Local]
+(?i)^https://acs\.m\.taobao\.com/gw/mtop\.damai\.wireless\.home\.welcome/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://acs\.m\.taobao\.com/gw/mtop\.damai\.mec\.popup\.get/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% acs.m.taobao.com
+h2 = true

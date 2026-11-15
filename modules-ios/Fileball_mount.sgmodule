@@ -1,0 +1,15 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=Fileball网盘挂载 · Surge iOS
+#!desc=支持挂载阿里云盘、夸克网盘和PikPak网盘，点击下方署名查看使用方法。
+#!author=小白脸
+# Source: https://kelee.one/Tool/Loon/Lpx/Fileball_mount.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Script]
+Fileball_mount-request = type=http-request, pattern="(?i)(?:^http://(aliyun|quark|pikpak)\\.example\\.com)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Fileball_mount-request.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=10
+
+[MITM]
+hostname = %APPEND% aliyun.example.com, quark.example.com, pikpak.example.com,
+h2 = true

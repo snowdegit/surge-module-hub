@@ -1,0 +1,31 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=闪动校园去广告 · Surge iOS
+#!desc=精简首页和底部导航
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/ShandongSchool_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://api\.huachenjie\.com/run-front/home/homePage/config$ '.data.functionEntries |= map(select(.name == "运动" or .name == "空间")) | del(.data.seaview)'
+http-response-jq (?i)^https://api\.huachenjie\.com/run-front/api/user/cs/index$ '(. as $__original | try del(.data.bannerList) catch $__original)'
+http-response-jq (?i)^https://api\.huachenjie\.com/run-front/common/bottom-bar/redDot$ '(. as $__original | try del(.data.inspiration) catch $__original)'
+
+[Map Local]
+(?i)^https://api\.huachenjie\.com/run-front/ad/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.huachenjie\.com/run-front/api/union/ad/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.huachenjie\.com/run-front/home/getAdPopup$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.huachenjie\.com/run-front/street/listRecommendBanner$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.huachenjie\.com/run-front/street/listThemeBanner$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.huachenjie\.com/run-front/api/home/activityEntry$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.huachenjie\.com/run-front/home/promoSlots/config$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.huachenjie\.com/run-front/api/channel/subject/hotspot/rank$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.huachenjie\.com/run-front/api/jackpot/award/home$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.huachenjie\.com/run-front/api/jackpot/award/lotteryPage$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.huachenjie\.com/run-front/api/jackpot/award/list$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://api\.huachenjie\.com/run-front/api/mall/goods/recommend/pagePointsGoodsList$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% api.huachenjie.com
+h2 = true

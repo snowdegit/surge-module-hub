@@ -1,0 +1,16 @@
+#!requirement=SYSTEM = 'iOS'
+# iOS build: explicit upstream defaults; no Mac-only argument table.
+#!version=2026.11.15.3-ios
+#!name=自动加入TestFlight · Surge iOS
+#!desc=自动监控TestFlight名额，一旦有新的名额即刻加入。
+#!author=奶思[https://github.com/fmz200], DecoAri[https://github.com/DecoAri], xream[https://github.com/xream]
+# Source: https://kelee.one/Tool/Loon/Lpx/Auto_Join_TF.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Rule]
+DOMAIN, testflight.apple.com, PROXY
+
+[Script]
+Auto_Join_TF-request = type=http-request, pattern="(?i)(?:^https?://testflight\\.apple\\.com/v3/accounts/.*/apps$)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Auto_Join_TF-request.js?v=20261115.2, requires-body=false, binary-body-mode=false, timeout=10, argument="{\"CaptureAccountToken\":\"false\",\"RunTask\":\"false\",\"RunMonitor\":\"true\",\"TaskCron\":\"0 0/2 * * * *\",\"TaskMonitor\":\"0 * * * * *\"}"
+#!REQUIREMENT 'false'=='true' Auto_Join_TF-task-1 = type=cron, script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Auto_Join_TF-task-1.js?v=20261115.2, timeout=600, cronexp="0 0/2 * * * *", argument="{\"CaptureAccountToken\":\"false\",\"RunTask\":\"false\",\"RunMonitor\":\"true\",\"TaskCron\":\"0 0/2 * * * *\",\"TaskMonitor\":\"0 * * * * *\"}"
+#!REQUIREMENT 'true'=='true' Auto_Join_TF-task-2 = type=cron, script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Auto_Join_TF-task-2.js?v=20261115.2, timeout=30, cronexp="0 * * * * *", argument="{\"CaptureAccountToken\":\"false\",\"RunTask\":\"false\",\"RunMonitor\":\"true\",\"TaskCron\":\"0 0/2 * * * *\",\"TaskMonitor\":\"0 * * * * *\"}"
