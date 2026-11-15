@@ -1,0 +1,16 @@
+#!name=一刻相册去广告 · Surge
+#!desc=移除开屏广告、横幅广告和弹窗推广。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/BaiduPhoto_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://mbd\.baidu\.com/ccs/v1/start/confsync\? 'del(.data.service.config.advertisement,.data.service.config.youa.pm_config_ad)'
+
+[Map Local]
+(?i)^https://pan\.baidu\.com/act/api/conf\?.*conf_key=youa_core_config_ios data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://pan\.baidu\.com/youai/material/v1/getbynavid\?.*nav_id=1 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% pan.baidu.com, mbd.baidu.com
+h2 = true

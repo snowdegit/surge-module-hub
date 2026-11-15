@@ -1,0 +1,15 @@
+#!name=YouTube双语翻译 · Surge
+#!desc=字幕增强及双语翻译，支持Youtube Music歌词翻译。此插件需要置于YouTube去广告插件之下，且和YouTube去广告插件的歌词翻译冲突，不支持tvOS设备。
+#!author=VirgilClyne[https://github.com/VirgilClyne]
+# Source: https://kelee.one/Tool/Loon/Lpx/YouTubeSubtitlesTranslation.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+#!arguments=Type:Official,AutoCC:true,ShowOnly:true,Position:Forward
+#!arguments-desc=参数沿用上游默认值；修改后重新启用模块。
+
+[Script]
+YouTubeSubtitlesTranslation-request = type=http-request, pattern=(?i)(?:^https?://(www|m|tv)\.youtube\.com/youtubei/v1/player\?(.*))|(?:^https?://youtubei\.googleapis\.com/youtubei/v1/player\?(.*))|(?:^https?://(www|m)\.youtube\.com/api/timedtext\?(.*))|(?:^https?://music\.youtube\.com/youtubei/v1/browse\?(.*))|(?:^https?://youtubei\.googleapis\.com/youtubei/v1/browse\?(.*)), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/YouTubeSubtitlesTranslation-request.js, requires-body=true, binary-body-mode=true, timeout=10, argument="{\"Type\":\"{{{Type}}}\",\"AutoCC\":\"{{{AutoCC}}}\",\"ShowOnly\":\"{{{ShowOnly}}}\",\"Position\":\"{{{Position}}}\"}"
+YouTubeSubtitlesTranslation-response = type=http-response, pattern=(?i)(?:^https?://(www|m|tv)\.youtube\.com/youtubei/v1/player\?(.*))|(?:^https?://youtubei\.googleapis\.com/youtubei/v1/player\?(.*))|(?:^https?://youtubei\.googleapis\.com/youtubei/v1/get_watch\?(.*))|(?:^https?://(www|m)\.youtube\.com/api/timedtext\?(.*)subtype=(Official|External))|(?:^https?://(www|m)\.youtube\.com/api/timedtext\?(.*)subtype=Translate)|(?:^https?://music\.youtube\.com/youtubei/v1/browse\?(.*)subtype=Translate)|(?:^https?://youtubei\.googleapis\.com/youtubei/v1/browse\?(.*)subtype=Translate), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/YouTubeSubtitlesTranslation-response.js, requires-body=true, binary-body-mode=true, timeout=10, argument="{\"Type\":\"{{{Type}}}\",\"AutoCC\":\"{{{AutoCC}}}\",\"ShowOnly\":\"{{{ShowOnly}}}\",\"Position\":\"{{{Position}}}\"}"
+
+[MITM]
+hostname = %APPEND% www.youtube.com, m.youtube.com, tv.youtube.com, music.youtube.com, youtubei.googleapis.com
+h2 = true

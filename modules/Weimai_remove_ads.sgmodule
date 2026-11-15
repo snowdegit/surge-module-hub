@@ -1,0 +1,13 @@
+#!name=微脉圈去广告 · Surge
+#!desc=移除开屏广告、聊天页横幅提示及发现页面的横幅广告。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/Weimai_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https://confssl\d?\.iweimai\.cn/wm_ios_update\.json\? '.isShowCJAd = 0'
+http-response-jq (?i)^https://confssl\d?\.iweimai\.cn/wm_ios_update\.json\? 'del(.launchAd,.adBanners,.ad)'
+
+[MITM]
+hostname = %APPEND% confssl*.iweimai.cn
+h2 = true

@@ -1,0 +1,17 @@
+#!name=小蚕霸王餐去广告 · Surge
+#!desc=移除开屏广告、首页横幅推广、红包推广、更新弹窗。
+#!author=Sliverkiss[https://github.com/Sliverkiss], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/XiaoCan_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Map Local]
+(?i)^https://web2\.realtech-inc\.com/oss/xc-app-assets/configs/common/theme\.json data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://sdk\.1rtb\.net/sdk/req_ad\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://gw\.xiaocantech\.com/g/pa data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+XiaoCan_remove_ads-request = type=http-request, pattern=(?i)(?:^https://gw\.xiaocantech\.com/rpc), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/XiaoCan_remove_ads-request.js, requires-body=false, binary-body-mode=false, timeout=10
+
+[MITM]
+hostname = %APPEND% gw.xiaocantech.com, web2.realtech-inc.com, sdk.1rtb.net
+h2 = true

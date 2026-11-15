@@ -1,0 +1,8 @@
+{
+  "name": "surge-module-hub",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "test": "node --test tests/*.test.cjs"
+  }
+}

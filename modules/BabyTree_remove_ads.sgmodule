@@ -1,0 +1,19 @@
+#!name=宝宝树孕育去广告 · Surge
+#!desc=过滤宝宝树孕育广告
+#!author=RuCu6[https://github.com/RuCu6]
+# Source: https://kelee.one/Tool/Loon/Lpx/BabyTree_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Rule]
+URL-REGEX, "^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/(index_activity\/get_app_index_activity|sign\/sign_h_5)\?", REJECT-DICT
+URL-REGEX, "^http:\/\/go\.babytree\.com\/go_search\/api\/mobile_search_new\/get_multi_search_default_keywords\?", REJECT-DICT
+URL-REGEX, "^http:\/\/m\.meitun\.com\/newapi\/router\/topic\/hometptf\/feedRecommend", REJECT-DICT
+URL-REGEX, "^http:\/\/pic08\.babytreeimg\.com\/knowledge\/2022\/0923\/\w+", REJECT
+URL-REGEX, "^http:\/\/plough\.babytree\.com\/plough\.do", REJECT-DICT
+
+[Script]
+BabyTree_remove_ads-response = type=http-response, pattern=(?i)(?:^http://api\.babytree\.com/bafconfigcenter_intf/config/get\?)|(?:^http://go\.babytree\.com/go_pregnancy/api/(app_index/get_app_tab|cms_column/get_column_list|feeds/get_index_feeds_list|user/get_user_info)\?)|(?:^http://go\.babytree\.com/go_search/api/mobile_search_new/search_index), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/BabyTree_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
+
+[MITM]
+hostname = %APPEND% api.babytree.com, go.babytree.com
+h2 = true

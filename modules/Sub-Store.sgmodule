@@ -1,0 +1,18 @@
+#!name=Sub-Store · Surge
+#!desc=高级订阅管理工具，定时任务默认为每天23点55分，可在插件设置中自定义。使用前请在本插件的详情页面为[PROXY]项分配代理策略。
+#!author=Peng-YM[https://github.com/Peng-YM]
+# Source: https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+#!arguments=cron:55 23 * * *,proxy_policy:PROXY
+#!arguments-desc=参数沿用上游默认值；修改后重新启用模块。
+
+[Rule]
+DOMAIN, sub-store.vercel.app, {{{proxy_policy}}}
+
+[Script]
+Sub-Store-request = type=http-request, pattern=(?i)(?:^https?://sub\.store/((download)|api/(preview|sync|(utils/node-info))))|(?:^https?://sub\.store), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Sub-Store-request.js, requires-body=true, binary-body-mode=false, timeout=120, argument="{\"cron\":\"{{{cron}}}\"}"
+Sub-Store-task-1 = type=cron, script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Sub-Store-task-1.js, timeout=120, cronexp="55 23 * * *", argument="{\"cron\":\"{{{cron}}}\"}"
+
+[MITM]
+hostname = %APPEND% sub.store
+h2 = true

@@ -1,0 +1,17 @@
+#!name=中国人保去广告 · Surge
+#!desc=移除中国人保开屏广告和应用内广告
+#!author=Sliverkiss[https://github.com/Sliverkiss]
+# Source: https://kelee.one/Tool/Loon/Lpx/PICC_Insurance_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Map Local]
+(?i)^https://zgrb\.epicc\.com\.cn/G-HAPP/h/headlines/queryHeadlines data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://zgrb\.epicc\.com\.cn/G-HAPP/a/update/startupPage/v1 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://zgrb\.epicc\.com\.cn/G-HAPP/a/config/guessYouLike/v3 data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[Script]
+PICC_Insurance_remove_ads-response = type=http-response, pattern=(?i)(?:^https://zgrb\.epicc\.com\.cn/G-HAPP/a/config/homeInit/v3)|(?:^https://zgrb\.epicc\.com\.cn/G-HAPP/mpageconfig/myPageConfigList/v3), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/PICC_Insurance_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
+
+[MITM]
+hostname = %APPEND% zgrb.epicc.com.cn
+h2 = true

@@ -1,0 +1,13 @@
+#!name=Hong Kong Toolbar去广告 · Surge
+#!desc=移除开屏互动广告、直播前贴片广告及视频广告
+#!author=C.Hiang
+# Source: https://kelee.one/Tool/Loon/Lpx/HongKongToolbar_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Rule]
+URL-REGEX, "^https:\/\/a\.881903\.com\/live\/preroll\/.*\/.*", REJECT-DROP
+URL-REGEX, "^https:\/\/a\.881903\.com\/v\d\/app\/game\/.*", REJECT-DROP
+
+[MITM]
+hostname = %APPEND% a.881903.com
+h2 = true

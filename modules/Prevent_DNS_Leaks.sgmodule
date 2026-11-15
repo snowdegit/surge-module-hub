@@ -1,0 +1,31 @@
+#!name=DNS防泄露 · Surge
+#!desc=专为小白设计的DNS防泄露
+#!author=非正常人类研究中心
+# Source: https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+#!arguments=proxy_policy:PROXY
+#!arguments-desc=参数沿用上游默认值；修改后重新启用模块。
+
+[Rule]
+DOMAIN-SUFFIX, dnsleaktest.com, {{{proxy_policy}}}
+DOMAIN-SUFFIX, dnsleak.com, {{{proxy_policy}}}
+DOMAIN-SUFFIX, expressvpn.com, {{{proxy_policy}}}
+DOMAIN-SUFFIX, nordvpn.com, {{{proxy_policy}}}
+DOMAIN-SUFFIX, surfshark.com, {{{proxy_policy}}}
+DOMAIN-SUFFIX, ipleak.net, {{{proxy_policy}}}
+DOMAIN-SUFFIX, perfect-privacy.com, {{{proxy_policy}}}
+DOMAIN-SUFFIX, browserleaks.com, {{{proxy_policy}}}
+DOMAIN-SUFFIX, browserleaks.org, {{{proxy_policy}}}
+DOMAIN-SUFFIX, vpnunlimited.com, {{{proxy_policy}}}
+DOMAIN-SUFFIX, whoer.net, {{{proxy_policy}}}
+DOMAIN-SUFFIX, whrq.net, {{{proxy_policy}}}
+DOMAIN-SUFFIX, astrill.com, {{{proxy_policy}}}
+DOMAIN-SUFFIX, astrill.org, {{{proxy_policy}}}
+DOMAIN-SUFFIX, dnsleak.asn247.net, {{{proxy_policy}}}
+DOMAIN-SUFFIX, surfshark.com, {{{proxy_policy}}}
+DOMAIN-SUFFIX, surfsharkdns.com, {{{proxy_policy}}}
+DOMAIN-SUFFIX, pixelscan.net, {{{proxy_policy}}}
+DOMAIN, ipv4.ping0.cc, {{{proxy_policy}}}
+DOMAIN, ipv6.ping0.cc, {{{proxy_policy}}}
+DOMAIN-SUFFIX, ipapi.co, {{{proxy_policy}}}
+DOMAIN, ip-scan.adspower.net, {{{proxy_policy}}}

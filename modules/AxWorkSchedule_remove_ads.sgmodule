@@ -1,0 +1,14 @@
+#!name=排班日历去广告 · Surge
+#!desc=移除开屏广告、横幅广告。
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/AxWorkSchedule_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Map Local]
+(?i)^https://schedule-api\.julanling\.com/api\d/get_splash$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://schedule-api\.julanling\.com/api\d/index_advert$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://schedule-api\.julanling\.com/api\d/queryAdvertConfig$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+[MITM]
+hostname = %APPEND% schedule-api.julanling.com
+h2 = true

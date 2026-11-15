@@ -1,0 +1,12 @@
+#!name=推栏去广告 · Surge
+#!desc=过滤推栏广告
+#!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+# Source: https://kelee.one/Tool/Loon/Lpx/Daily_remove_ads.lpx
+# Generated port; device validation pending. See catalog compatibility notes.
+
+[Body Rewrite]
+http-response-jq (?i)^https?://m\.pvp\.xoyo\.com/conf/server-mapping$ 'del(.data.splashConf,.data.splashConfNew)'
+
+[MITM]
+hostname = %APPEND% m.pvp.xoyo.com
+h2 = true
