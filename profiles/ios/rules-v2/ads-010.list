@@ -1,0 +1,12 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, adstats.tencentmusic.com
+DOMAIN, ad.tencentmusic.com
+DOMAIN, adcdn.tencentmusic.com
+DOMAIN, adcdn6.tencentmusic.com
+DOMAIN, adexpo.tencentmusic.com
+DOMAIN, adclick.tencentmusic.com
+DOMAIN, mc.tencentmusic.com
+DOMAIN, monitor.music.qq.com
+DOMAIN, tmead.y.qq.com
+DOMAIN, tmeadbak.y.qq.com
+DOMAIN, tmeadquic.y.qq.com

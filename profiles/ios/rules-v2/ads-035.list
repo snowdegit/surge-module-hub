@@ -1,0 +1,2 @@
+# Ordered contiguous policy run; do not merge across other runs.
+URL-REGEX, "^http:\/\/file-share\.izuiyou\.com\/octopus\/media\/templates\/search_home_page_(nv|nv_v2)\/search_home_page_nv"

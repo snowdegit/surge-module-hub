@@ -1,0 +1,14 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, ad-h5-cdn.soulapp.cn
+DOMAIN, ad-h5-station-cdn.soulapp.cn
+DOMAIN, ad-r.soulapp.cn
+DOMAIN, soul-ad.soulapp.cn
+IP-CIDR, 47.56.131.76/32, no-resolve
+IP-CIDR, 47.97.215.55/32, no-resolve
+IP-CIDR, 47.99.42.29/32, no-resolve
+IP-CIDR, 47.110.187.87/32, no-resolve
+IP-CIDR, 47.243.147.125/32, no-resolve
+IP-CIDR, 120.27.235.201/32, no-resolve
+IP-CIDR, 121.196.197.147/32, no-resolve
+AND, ((DOMAIN-SUFFIX, spotify.com), (PROTOCOL, QUIC))
+DOMAIN, ymg-api.terabox.com

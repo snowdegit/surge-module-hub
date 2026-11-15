@@ -1,0 +1,17 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, mall-dsp2.qinlinkeji.com
+DOMAIN, mallapi2.qinlinkeji.com
+DOMAIN, open-pixon.ads-pixiv.net
+DOMAIN, adx.zuoyebang.com
+DOMAIN, ad.v3mh.com
+DOMAIN, ipv6.kkmh.com
+DOMAIN, ipv4.kkmh.com
+DOMAIN, ads.service.kugou.com
+DOMAIN, adstats.tencentmusic.com
+DOMAIN, adsmind.gdtimg.com
+DOMAIN, adserviceretry.kugou.com
+DOMAIN, adserviceretry.kglink.cn
+DOMAIN, ad.tencentmusic.com
+DOMAIN, adservice.kugou.com
+DOMAIN, splashimgretrybssdl.cloud.kugou.com
+URL-REGEX, "^http:\/\/log\.stat\.kugou\.com\/mobile\/ad\.html"

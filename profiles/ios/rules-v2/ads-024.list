@@ -1,0 +1,6 @@
+# Ordered contiguous policy run; do not merge across other runs.
+URL-REGEX, "^http:\/\/rich\.kuwo\.cn\/AdService\/"
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/user\/freeMode\/"
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/pasterAdvert\/"
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/startup\/config"
+URL-REGEX, "^http:\/\/rich\.kuwo\.cn\/EcomResourceServer\/"

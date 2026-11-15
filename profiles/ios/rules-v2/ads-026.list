@@ -1,0 +1,5 @@
+# Ordered contiguous policy run; do not merge across other runs.
+URL-REGEX, "^http:\/\/searchrecterm\.kuwo\.cn\/recterm\.s"
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/newMenuList\/menuListInfo"
+URL-REGEX, "^http:\/\/vip\d\.kuwo\.cn\/vip\/v\d\/sysinfo\?op=getRePayAndDoPayBox"
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/album\/adBar\/"

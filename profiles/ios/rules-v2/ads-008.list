@@ -1,0 +1,5 @@
+# Ordered contiguous policy run; do not merge across other runs.
+URL-REGEX, "^https:\/\/obs\.line-scdn\.net\/r\/linecrs\/.+\/m180x180$"
+URL-REGEX, "^https:\/\/ec-bot-obs\.line-scdn\.net\/0h[0-9a-zA-Z_-]{50}[0-9a-zA-Z_-]*"
+URL-REGEX, "^https:\/\/d\.line-scdn\.net\/lcp-prod-photo\/20.+\.(jpg|jpeg|png)"
+URL-REGEX, "^https:\/\/web-mmap-pay\.line-apps\.com\/tw\/liff\/campaign\/v\d\/aggregate\/ad\/banner\/"

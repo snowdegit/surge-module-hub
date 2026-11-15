@@ -1,0 +1,3 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, nex.163.com
+DOMAIN, gw.m.163.com

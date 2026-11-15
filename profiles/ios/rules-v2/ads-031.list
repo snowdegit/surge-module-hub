@@ -1,0 +1,25 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, huodong.weibo.cn
+DOMAIN-SUFFIX, biz.weibo.com
+DOMAIN-SUFFIX, wxs.qq.com
+DOMAIN, wxsnsdy.wxs.qq.com
+DOMAIN, wxsmsdy.video.qq.com
+DOMAIN, wxsnsdythumb.wxs.qq.com
+DOMAIN, ads-shopping.shouqianba.com
+DOMAIN, ad.maoyan.com
+DOMAIN, e.jparking.cn
+DOMAIN, ad.snailsleep.net
+AND, ((IP-CIDR, 101.126.58.201/32, no-resolve), (DEST-PORT, 6443))
+AND, ((IP-CIDR, 110.249.199.75/32, no-resolve), (DEST-PORT, 6443))
+AND, ((IP-CIDR, 111.225.147.191/32, no-resolve), (DEST-PORT, 6443))
+AND, ((IP-CIDR, 111.63.61.101/32, no-resolve), (DEST-PORT, 6443))
+AND, ((IP-CIDR, 220.243.141.0/32, no-resolve), (DEST-PORT, 6443))
+AND, ((OR, ((DOMAIN-SUFFIX, bytegecko.com), (DOMAIN-SUFFIX, byteeffecttos.com))), (DOMAIN-KEYWORD, ncdn))
+DOMAIN, ad.lovefree.cc
+DOMAIN-SUFFIX, adwanji.com
+AND, ((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com))
+DOMAIN, adse.ximalaya.com
+DOMAIN, adsehera.ximalaya.com
+DOMAIN, adse.wsa.ximalaya.com
+DOMAIN, adbehavior.ximalaya.com
+DOMAIN, adbehavior.wsa.ximalaya.com

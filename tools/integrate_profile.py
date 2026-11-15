@@ -10,11 +10,13 @@ BASE='https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/profiles
 ap=argparse.ArgumentParser()
 ap.add_argument('--input',required=True)
 ap.add_argument('--output',required=True)
+ap.add_argument('--platform',choices=['mac','ios'],default='mac')
 args=ap.parse_args()
+if args.platform=='ios':BASE+='ios/'
 source=pathlib.Path(args.input);dest=pathlib.Path(args.output)
 assert not dest.resolve().is_relative_to(P), 'Keep private profiles outside the public repository'
 original=source.read_text()
-catalog=json.loads((P/'catalog.json').read_text())
+catalog=json.loads((P/('ios-catalog.json' if args.platform=='ios' else 'catalog.json')).read_text())
 byid={x['id']:x for x in catalog}
 # Exact order of currently enabled upstream template plugins. Sub-Store already
 # exists in the user's profile and is deliberately not loaded twice.
@@ -35,7 +37,7 @@ assert all(x in private for x in ['General','Proxy','Proxy Group','Rule','MITM',
 defaults={};parsed={}
 for name in foundation+ads:
     assert byid[name]['status']=='converted'
-    text=(P/'modules'/(name+'.sgmodule')).read_text()
+    text=(P/('modules-ios' if args.platform=='ios' else 'modules')/(name+'.sgmodule')).read_text()
     decl=re.search(r'^#!arguments=(.*)$',text,re.M)
     values=dict(p.split(':',1) for p in decl[1].split(',')) if decl else {}
     defaults[name]=values
@@ -43,7 +45,9 @@ for name in foundation+ads:
     assert '{{{' not in text, name
     parsed[name]=parse(text)
 
-remote=P/'profiles';remote.mkdir(exist_ok=True)
+remote=P/'profiles'
+if args.platform=='ios':remote=remote/'ios'
+remote.mkdir(parents=True,exist_ok=True)
 ordered=['URL Rewrite','Header Rewrite','Body Rewrite','Map Local','Script','Host','Panel']
 bundles={}
 for label,names in [('klee-foundation-v2',foundation),('klee-ads-v2',ads)]:
@@ -57,7 +61,7 @@ for label,names in [('klee-foundation-v2',foundation),('klee-ads-v2',ads)]:
             active=[l for l in parsed[name].get(section,[]) if l.strip() and not l.lstrip().startswith('#')]
             if not active:continue
             entries.extend(['# '+byid[name]['name']+' ('+name+')',
-                            '# Module: https://snowdegit.github.io/surge-module-hub/modules/'+name+'.sgmodule',
+                            '# Module: https://snowdegit.github.io/surge-module-hub/'+('modules-ios' if args.platform=='ios' else 'modules')+'/'+name+'.sgmodule',
                             *parsed[name][section],''])
         if entries:out.extend(['['+section+']',*entries]);present.append(section)
     # This fallback belongs ONLY to standalone managed-profile validation.
@@ -107,8 +111,8 @@ for name in foundation+ads:
 # Public helper domains of the existing Google rewrite and Sub-Store integration.
 for host in ['www.google.cn:443','sub.store']:
     if host not in hostnames:hostnames.append(host)
-existing=next(l.split('=',1)[1] for l in private['MITM'] if l.strip().startswith('hostname ='))
-assert all(h.strip() in hostnames for h in existing.split(',')), 'Private MITM domains require a private overlay; do not publish them'
+existing=next((l.split('=',1)[1] for l in private['MITM'] if l.strip().startswith('hostname =')),'')
+assert all(h.strip() in hostnames for h in existing.split(',') if h.strip()), 'Private MITM domains require a private overlay; do not publish them'
 (remote/'klee-mitm-v2.dconf').write_text('# Public module MITM hostnames only; no certificates or secrets.\n[MITM]\nhostname = '+', '.join(hostnames)+'\n\n[Rule]\nFINAL,DIRECT\n')
 
 result=original
@@ -122,7 +126,10 @@ for section in ordered:
     marker='['+section+']\n'
     if marker in result:result=result.replace(marker,marker+block,1)
     else:result+='\n'+marker+block
-result=re.sub(r'(?m)^hostname\s*=.*$', '#!include '+BASE+'klee-mitm-v2.dconf',result)
+if existing:
+    result=re.sub(r'(?m)^hostname\s*=.*$', '#!include '+BASE+'klee-mitm-v2.dconf',result)
+else:
+    result=result.replace('[MITM]\n','[MITM]\n#!include '+BASE+'klee-mitm-v2.dconf\n',1)
 
 for name in foundation+ads:
     for line in parsed[name].get('General',[]):
@@ -140,7 +147,7 @@ backup=dest.parent/'Surge.original.conf'
 if not backup.exists():shutil.copyfile(source,backup)
 dest.write_text(result);dest.chmod(0o600);backup.chmod(0o600)
 manifest={'source_template':'https://raw.githubusercontent.com/luestr/ProxyResource/main/Tool/Loon/Lcf/zh-CN/Loon_Auto_Select_Config_By_iKeLee.lcf','foundation_order':foundation,'existing_foundation':['Sub-Store (inline in private profile; not duplicated)'],'upstream_disabled':['TestFlightRegionUnlock'],'application_order':ads,'module_count':len(foundation+ads),'excluded_blocked':[x['id'] for x in catalog if x['status']!='converted'],'argument_defaults':defaults,'bundles':bundles,'hostname_count':len(hostnames),'real_app_tested':False,'native_profile_load_tested':False}
-manifest.update(rule_set_runs=len(rule_includes),ordered_rule_roundtrip_passed=True,excluded_invalid_rules=invalid_rules,format_version=2)
+manifest.update(rule_set_runs=len(rule_includes),ordered_rule_roundtrip_passed=True,excluded_invalid_rules=invalid_rules,format_version=2,source_modules='modules-ios' if args.platform=='ios' else 'modules')
 (remote/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 
 # Check the virtual assembled profile without loading/changing the live Mac.

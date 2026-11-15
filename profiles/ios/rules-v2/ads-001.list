@@ -1,0 +1,6 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, adx.36kr.com
+DOMAIN, ad.jiemian.com
+DOMAIN, ad.jia.360.cn
+DOMAIN, ad.iot.360.cn
+DOMAIN, ad.iot.360.cn
