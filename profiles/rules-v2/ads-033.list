@@ -1,0 +1,27 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, h-adashx.ut.taobao.com
+DOMAIN, adx-core.youku.com
+DOMAIN, adx-open-service.youku.com
+DOMAIN, yk-ssp.ad.youku.com
+DOMAIN, cad.youku.com
+DOMAIN, ykad-data.youku.com
+DOMAIN, yk-ssp.ad.youku.com
+DOMAIN, amdc.m.youku.com
+DOMAIN, cad.youku.com
+DOMAIN, nbsdk-baichuan.alicdn.com
+DOMAIN, youku-crm-product.youku.com
+DOMAIN, dr-danmu.youku.com
+DOMAIN, group-ssl-danmu-ori.youku.com
+DOMAIN, m.atm.youku.com
+DOMAIN, mc.atm.youku.com
+DOMAIN, vali-g1.cp31.ott.cibntv.net
+DOMAIN, vali-ugc.cp31.ott.cibntv.net
+DOMAIN-SUFFIX, iyes.youku.com
+DOMAIN, adsmind.ugdtimg.com
+DOMAIN, pre-acs.youku.com
+DOMAIN, youku-acs.m.taobao.com
+DOMAIN, ads.reader.yueyouxs.com
+DOMAIN, saad.ms.zhangyue.net
+URL-REGEX, "^https:\/\/(ask|cgate)\.zhaopin\.com\/operation\/ad\/"
+DOMAIN, sdk.ad.sfys365.com
+DOMAIN, adapi.izuiyou.com

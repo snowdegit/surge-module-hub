@@ -1,0 +1,2 @@
+# Ordered contiguous policy run; do not merge across other runs.
+URL-REGEX, "^http:\/\/pic08\.babytreeimg\.com\/knowledge\/2022\/0923\/\w+"

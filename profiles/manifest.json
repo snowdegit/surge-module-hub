@@ -574,13 +574,11 @@
     "ZuiYou_remove_ads": {}
   },
   "bundles": {
-    "klee-foundation": [
-      "Rule",
+    "klee-foundation-v2": [
       "Map Local",
       "Script"
     ],
-    "klee-ads": [
-      "Rule",
+    "klee-ads-v2": [
       "URL Rewrite",
       "Header Rewrite",
       "Body Rewrite",
@@ -590,5 +588,15 @@
   },
   "hostname_count": 716,
   "real_app_tested": false,
-  "native_profile_load_tested": false
+  "native_profile_load_tested": false,
+  "rule_set_runs": 45,
+  "ordered_rule_roundtrip_passed": true,
+  "excluded_invalid_rules": [
+    {
+      "module": "YoudaoDict_remove_ads",
+      "line": "DOMAIN, ad-sdk-config.youdao.com",
+      "reason": "Source rule has no explicit policy; not enabled or guessed"
+    }
+  ],
+  "format_version": 2
 }

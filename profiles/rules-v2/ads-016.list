@@ -1,0 +1,6 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, api.iqiyi.com
+DOMAIN, access.if.iqiyi.com
+IP-CIDR, 203.107.1.1/24, no-resolve
+DOMAIN, 180.76.76.200
+IP-CIDR, 180.76.76.200/32, no-resolve

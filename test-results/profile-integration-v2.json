@@ -1,0 +1,26 @@
+{
+  "module_count": 256,
+  "github_section_includes": 8,
+  "rule_set_runs": 45,
+  "ordered_rules_preserved": 901,
+  "excluded_invalid_rules": [
+    {
+      "module": "YoudaoDict_remove_ads",
+      "line": "DOMAIN, ad-sdk-config.youdao.com",
+      "reason": "Source rule has no explicit policy; not enabled or guessed"
+    }
+  ],
+  "script_entries": 69,
+  "hostname_count": 716,
+  "preserved": [
+    "Proxy",
+    "Proxy Group",
+    "Host",
+    "Tailscale",
+    "Panel",
+    "MITM certificate and other original switches"
+  ],
+  "static_validation_passed": true,
+  "native_profile_load_tested": false,
+  "live_profile_modified": false
+}

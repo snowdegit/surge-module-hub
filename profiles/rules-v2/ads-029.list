@@ -1,0 +1,7 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, iadmat.nosdn.127.net
+DOMAIN, iadmatapk.nosdn.127.net
+DOMAIN, iadmusicmat.music.126.net
+DOMAIN, iadmusicmatvideo.music.126.net
+DOMAIN, ipv4.music.163.com
+DOMAIN, ipv6.music.163.com

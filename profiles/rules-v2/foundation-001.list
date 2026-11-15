@@ -1,0 +1,7 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN-KEYWORD, httpdns
+DOMAIN-KEYWORD, httpsdns
+USER-AGENT, "httpdns*"
+USER-AGENT, "httpsdns*"
+USER-AGENT, "Httpdns*"
+USER-AGENT, "Httpsdns*"

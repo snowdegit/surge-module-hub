@@ -1,0 +1,15 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN-SUFFIX, adjust.com
+DOMAIN-SUFFIX, applvn.com
+DOMAIN-SUFFIX, app-measurement.com
+DOMAIN-SUFFIX, pangle.io
+DOMAIN-SUFFIX, applovin.com
+DOMAIN-SUFFIX, appier.net
+DOMAIN-SUFFIX, adsmoloco.com
+DOMAIN-SUFFIX, adcanvas.com
+DOMAIN, splash.yy.com
+DOMAIN, dsp-ad.yy.com
+DOMAIN, ysad.yy.com
+IP-CIDR, 103.44.59.54/32, no-resolve
+IP-CIDR, 111.63.147.158/32, no-resolve
+IP-CIDR, 116.211.198.237/32, no-resolve

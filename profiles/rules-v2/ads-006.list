@@ -1,0 +1,3 @@
+# Ordered contiguous policy run; do not merge across other runs.
+URL-REGEX, "^https:\/\/a\.line\.me\/er\/lads\/v\d\/ei\?"
+URL-REGEX, "^https:\/\/a\.line\.me\/er\/l.*\/v\d\/event\/image"

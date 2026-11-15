@@ -1,0 +1,48 @@
+# Generated detached sections, not an independently enabled sgmodule.
+# Priority follows the source template; module arguments use upstream defaults.
+# Rebuild with tools/integrate_profile.py; do not add credentials here.
+
+[Map Local]
+# HTTPDNS拦截器 (Block_HTTPDNS)
+# Module: https://snowdegit.github.io/surge-module-hub/modules/Block_HTTPDNS.sgmodule
+(?i)^https?://appconf\.mail\.163\.com/mailmaster/api/http/urlConfig\.do$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https?://cdn\.wup\.huya\.com/monitor/monitor\.jsp data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://msglb\.91160\.com/msg/outer/broker/get$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://gslbali\.ximalaya\.com/linkeye-cloud/httpdns/ data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://ucdc\d?-upaas\.uc\.cn/api/v\d/dns_query\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+(?i)^https://gw-cn\.jiaoliuqu\.com/taqu-im-broadcast-srv/v\d/Comet/get\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"
+
+
+# 广告平台拦截器 (BlockAdvertisers)
+# Module: https://snowdegit.github.io/surge-module-hub/modules/BlockAdvertisers.sgmodule
+(?i)^https://video-dsp\.pddpic\.com/market-dsp-video/ data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://t-dsp\.pinduoduo\.com/dspcb/i/mrk_ data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://images\.pinduoduo\.com/mrk/ data-type=text data="" status-code=404 header="Content-Type:text/plain"
+(?i)^https://images\.pinduoduo\.com/marketing_api/ data-type=text data="" status-code=404 header="Content-Type:text/plain"
+
+
+[Script]
+# 快捷搜索 (QuickSearch)
+# Module: https://snowdegit.github.io/surge-module-hub/modules/QuickSearch.sgmodule
+QuickSearch-request = type=http-request, pattern="(?i)(?:^https://duckduckgo\\.com/\\?q=bd\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=bdimg\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=gimg\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=b\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=wk\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=qm\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=gh\\+([^&]+).+)|(?:^https://duckduckgo\\.com/\\?q=(?!(?:bd|bdimg|gimg|b|wk|qm|gh)\\+)([^&]+).+)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/QuickSearch-request.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=10
+
+
+# 节点检测工具 (Node_detection_tool)
+# Module: https://snowdegit.github.io/surge-module-hub/modules/Node_detection_tool.sgmodule
+Node_detection_tool-task-1 = type=generic, script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Node_detection_tool-task-1.js?v=20261115.2, timeout=10
+Node_detection_tool-task-2 = type=generic, script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Node_detection_tool-task-2.js?v=20261115.2, timeout=10
+Node_detection_tool-task-3 = type=generic, script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Node_detection_tool-task-3.js?v=20261115.2, timeout=20
+
+# BoxJs (BoxJs)
+# Module: https://snowdegit.github.io/surge-module-hub/modules/BoxJs.sgmodule
+BoxJs-request = type=http-request, pattern="(?i)(?:^https?://(.+\\.)?boxjs\\.(com|net))", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/BoxJs-request.js?v=20261115.2, requires-body=true, binary-body-mode=false, timeout=120
+
+
+# Script-Hub (Script-Hub)
+# Module: https://snowdegit.github.io/surge-module-hub/modules/Script-Hub.sgmodule
+Script-Hub-request = type=http-request, pattern="(?i)(?:^https?://script\\.hub/($|edit/|reload))|(?:^https?://script\\.hub/file/_start_/.+type=(?:qx-rewrite|surge-module|loon-plugin|all-module))|(?:^https?://script\\.hub/file/_start_/.+type=rule-set)|(?:^https?://script\\.hub/convert/)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Script-Hub-request.js?v=20261115.2, requires-body=false, binary-body-mode=false, timeout=300
+
+
+[Rule]
+FINAL,DIRECT
+

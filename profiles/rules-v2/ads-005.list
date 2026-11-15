@@ -1,0 +1,9 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, zlsdk.1rtb.net
+DOMAIN, jp.ad.gameley.com
+DOMAIN, toblog.ctobsnssdk.com
+DOMAIN, s3plus.meituan.net
+DOMAIN, images.pinduoduo.com
+DOMAIN, qh-material.taobao.com
+DOMAIN-SUFFIX, admobile.top
+DOMAIN, kad.gotokeep.com

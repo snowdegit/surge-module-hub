@@ -1,0 +1,8 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, api-ad.kajicam.com
+DOMAIN, zjres-ad.kajicam.com
+DOMAIN, popup-api.b612kaji.com
+DOMAIN, adash-evone.echargenet.com
+DOMAIN, api-ad.kajicam.com
+DOMAIN, zjres-ad.kajicam.com
+DOMAIN, popup-api.b612kaji.com

@@ -1,0 +1,3 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, smartop-sdkapi.jiguang.cn
+DOMAIN, sdk.verification.jiguang.cn

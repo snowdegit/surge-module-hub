@@ -1,0 +1,3 @@
+# Ordered contiguous policy run; do not merge across other runs.
+URL-REGEX, "^https:\/\/scdn\.line-apps\.com\/lan\/image\/line\/bannerImageEvent\/"
+URL-REGEX, "^https:\/\/scdn\.line-apps\.com\/lan\/document\/pageEvent\/line\/ios\/"

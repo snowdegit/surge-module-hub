@@ -1,0 +1,4 @@
+# Ordered contiguous policy run; do not merge across other runs.
+DOMAIN, init.sms.mob.com
+DOMAIN, sdkapi.sms.mob.com
+DOMAIN, code.sms.mob.com
