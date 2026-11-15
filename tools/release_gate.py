@@ -14,7 +14,11 @@ native=P/'test-results/native-report.json'
 if not native.exists():reasons.append('Native Surge validation has not run')
 else:
  n=json.loads(native.read_text())
+ if n.get('summary',{}).get('failures'):reasons.append('Native script parsing/dispatch contains failures')
  if not n.get('module_load_tested') or n.get('module_load_passed')!=len(cat):reasons.append('Native module loading is incomplete')
  if not n.get('real_app_tested'):reasons.append('Real application traffic regression is incomplete')
+behavior=P/'test-results/native-behavior-report.json'
+if behavior.exists() and json.loads(behavior.read_text()).get('summary',{}).get('failed'):
+ reasons.append('Native algorithm fixture tests contain failures')
 print(json.dumps({'full_compatibility_verified':not reasons,'blockers':reasons},ensure_ascii=False,indent=2))
 raise SystemExit(1 if reasons else 0)

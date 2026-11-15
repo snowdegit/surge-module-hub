@@ -1,0 +1,16 @@
+{
+  "profile_modified": false,
+  "module_load_tested": false,
+  "real_app_tested": false,
+  "scripting_status": {
+    "enabled": true
+  },
+  "probe": {
+    "result": {
+      "probe": "surge-module-hub",
+      "ok": true
+    },
+    "output": "19:38:25.675390 [CFF34FCC] surge-hub-native-probe\n19:38:25.675445 [CFF34FCC] [Script Completed]\n----------------------------\n"
+  },
+  "connected": true
+}

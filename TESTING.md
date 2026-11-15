@@ -11,6 +11,9 @@
 | cron/generic调用、开关与可修改计划 | 20项通过 |
 | Node行为/回归/网页测试组 | 13组通过 |
 | 每个jq源声明至少一个可执行的合成结构样例 | 237/237覆盖 |
+| Surge Mac 6.12.0 原生JS解析 | 93/93脚本通过 |
+| Surge原生HTTP/任务分发、参数及正文适配 | 608/608通过（上游业务函数替换为探针） |
+| Surge原生实际算法合成输入 | 7/7通过 |
 | Surge原生模块加载、真实App流量回归 | 尚未完成 |
 
 详细记录：[全量报告](test-results/full-report.json)、[HTTP分发报告](test-results/dispatch-report.json)、[任务报告](test-results/task-report.json)。
@@ -64,7 +67,11 @@ python3 tools/release_gate.py
 
 ## 原生测试
 
-用户已表示有Surge Mac测试环境，连接方式选HTTP API。目前现有地址连接超时，等待正确地址/监听设置。
+已于2026-11-15通过Surge内置Tailscale连接Surge Mac 6.12.0（build 12840）的HTTP API，原生探针成功。入站请求经规则匹配，本机回环地址必须直连，避免被FINAL规则发送到远程代理。
+
+[原生解析/分发报告](test-results/native-report.json)、[实际算法合成输入报告](test-results/native-behavior-report.json)。原生分发测试用探针替换上游函数，验证路由、参数类型、正文转换与任务开关，不执行签到、账号或其他外部请求。实际算法样例覆盖Telegram、腾讯视频、Google、Spotify、哔哩哔哩和IT之家；网络、写存储及通知被隔离。
+
+这些测试使用真实Surge JS引擎，但仍未加载全部275个模块，也不是完整App流量验证。`module_load_tested`和`real_app_tested`保持false，完整兼容门槛仍不通过。
 
 先通过只读状态接口和隔离JS探测确认连接；不切换现有配置、不启用全部模块、不执行签到/自动加入任务，不向公网暴露密钥。
 
@@ -75,3 +82,10 @@ SURGE_TEST_API_KEY='在本机环境变量中提供' python3 tools/native_probe.p
 也可使用位于仓库之外的`--key-file`；HTTPS可用`--ca-file`提供信任证书。工具不关闭TLS验证，不记录密钥。
 
 原生JS回放、模块加载和真实App回归是不同层次。HTTP API脚本探测成功也不会自动把`module_load_tested`或`real_app_tested`设成true。
+
+原生测试命令（密钥仅通过环境变量传入）：
+
+```sh
+python3 tools/native_test.py --api-url http://你的Mac:6171
+python3 tools/native_behavior.py --api-url http://你的Mac:6171
+```
