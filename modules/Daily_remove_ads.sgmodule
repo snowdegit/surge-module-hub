@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=推栏去广告 · Surge
 #!desc=过滤推栏广告
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https?://m\.pvp\.xoyo\.com/conf/server-mapping$ 'del(.data.splashConf,.data.splashConfNew)'
+http-response-jq (?i)^https?://m\.pvp\.xoyo\.com/conf/server-mapping$ '(. as $__original | try del(.data.splashConf) catch $__original) | (. as $__original | try del(.data.splashConfNew) catch $__original)'
 
 [MITM]
 hostname = %APPEND% m.pvp.xoyo.com

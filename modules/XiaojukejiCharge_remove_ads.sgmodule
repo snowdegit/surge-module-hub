@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=小桔充电去广告 · Surge
 #!desc=移除横幅广告、弹窗广告，精简我的页面。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://energy\.xiaojukeji\.com/am/marketing/api/member/facade/charge/personal/center\? 'del(.data)'
+http-response-jq (?i)^https://energy\.xiaojukeji\.com/am/marketing/api/member/facade/charge/personal/center\? '(. as $__original | try del(.data) catch $__original)'
 
 [Map Local]
 (?i)^https://energy\.xiaojukeji\.com/energy/hummer/api/resource/display($|\?) data-type=text data="{}" status-code=200 header="Content-Type:application/json"

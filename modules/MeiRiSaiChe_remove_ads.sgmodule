@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=每日赛车去广告 · Surge
 #!desc=移除开屏广告、信息流广告。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://api\.romielf\.com/index/indexv\d\? '.data.advertisement = ["[]", "[]"] | .data.listadvertising = ["[]", "[]"]'
+http-response-jq (?i)^https://api\.romielf\.com/index/indexv\d\? '.data.advertisement = "[]" | .data.listadvertising = "[]"'
 http-response-jq (?i)^https://api\.romielf\.com/index/indexv\d\? '.data.list |= map(select(.type == 1))'
 
 [MITM]

@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=淘票票去广告 · Surge
 #!desc=移除开屏广告、悬浮广告、轮播图广告和弹窗广告，移除搜索填充词和为你推荐。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://acs\.m\.taobao\.com/gw/mtop\.film\.mtopintegrationapi\.homeconfig/ 'del(.data.returnValue.floatingBanner,.data.returnValue.searchShadeList)'
+http-response-jq (?i)^https://acs\.m\.taobao\.com/gw/mtop\.film\.mtopintegrationapi\.homeconfig/ '(. as $__original | try del(.data.returnValue.floatingBanner) catch $__original) | (. as $__original | try del(.data.returnValue.searchShadeList) catch $__original)'
 http-response-jq (?i)^https://acs\.m\.taobao\.com/gw/mtop\.film\.mtopintegrationapi\.homeconfig/ '.data.returnValue.topTab |= map(select(.activeImage | not)) | .data.returnValue.topTab |= map(del(.backgroundColor))'
 http-response-jq (?i)^https://acs\.m\.taobao\.com/gw/mtop\.film\.life\.aristotle\.get/ 'def filter_nodes: map(if .data.componentId? and (.data.componentId | type == "string") and (.data.componentId | (contains("tpp_banner") or . == "tpp_guess_like")) then empty else .nodes |= (if . then filter_nodes else . end) end); .data.nodes |= (if . then filter_nodes else . end)'
 

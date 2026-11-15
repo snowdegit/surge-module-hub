@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=凤凰新闻去广告 · Surge
 #!desc=移除皮肤、开屏广告、信息流广告、文末广告、视频流广告、评论区广告，移除信息流订阅号文章、文末推荐阅读，精简我的页面。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -6,11 +7,11 @@
 
 [Body Rewrite]
 http-response-jq (?i)^https://config\.nine\.ifeng\.com/news/cow\? '.bottomNav|=map(select(.NavId=="bottomNavNews" or .NavId=="bottomNavMine"))'
-http-response-jq (?i)^https://config\.nine\.ifeng\.com/news/cow\? 'del(.zip_url)'
+http-response-jq (?i)^https://config\.nine\.ifeng\.com/news/cow\? '(. as $__original | try del(.zip_url) catch $__original)'
 http-response-jq (?i)^https://config\.nine\.ifeng\.com/news/channel\? '.defaultChannel |= map(select(.id == "commenterch" or .id == "sy" or .id == "vipchannel" or .id == "rank_hot_merge" or .id == "rtnews" or .id == "sp" or .id == "mil" or .id == "finance" or .id == "history" or .id == "momentsnew" or .id == "taihai" or .id == "focusnews" or .id == "rcmd" or .id == "tw" or .id == "HK" or .id == "dawanqu1"))'
-http-response-jq (?i)^https://config\.nine\.ifeng\.com/news/channel\? 'del(.more,.youngChannel)'
+http-response-jq (?i)^https://config\.nine\.ifeng\.com/news/channel\? '(. as $__original | try del(.more) catch $__original) | (. as $__original | try del(.youngChannel) catch $__original)'
 http-response-jq (?i)^https://nine\.ifeng\.com/headline\? 'walk(if type == "object" and has("item") and (.item | type == "array") then .item |= map(select(.type == "phvideo" or .type == "doc" or .type == "phreclist")) else . end)'
-http-response-jq (?i)^https://nine\.ifeng\.com/getNewsDocs\? 'del(.body.showAdvert,.body.adData)'
+http-response-jq (?i)^https://nine\.ifeng\.com/getNewsDocs\? '(. as $__original | try del(.body.showAdvert) catch $__original) | (. as $__original | try del(.body.adData) catch $__original)'
 http-response-jq (?i)^https://nine\.ifeng\.com/phoenixTvChannel\? 'map(if has("item") then .item|=map(select(.type=="columnfastmessagescroll" or .type=="phvideo" or .type=="videoseriesrecommendmarquee" or .type=="short")) else . end)'
 http-response-jq (?i)^https://nine\.ifeng\.com/videoimmersionlistv\d\? 'map(if has("item") then .item|=map(select(.type=="miniVideo" or .type=="phvideo")) else . end)'
 http-response-jq (?i)^https://nine\.ifeng\.com/shortList\? 'map(.item|=map(select(.type=="short")))'

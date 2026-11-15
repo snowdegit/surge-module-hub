@@ -3,7 +3,8 @@ on: [push, pull_request, workflow_dispatch]
 permissions:
   contents: read
 jobs:
-  validate:
+  converted-scope:
+    name: Converted scope and regression tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -11,5 +12,19 @@ jobs:
         with:
           node-version: '22'
       - run: python3 tools/validate.py
-      - run: node --test tests/behavior.test.cjs
+      - name: Full inventory (known upstream blockers remain in report)
+        run: python3 tools/full_test.py --allow-blocked
+      - run: node --max-old-space-size=192 --test tests/*.test.cjs
       - run: node --check app.js
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: conversion-test-results
+          path: test-results/
+  full-compatibility:
+    name: Full compatibility release gate
+    needs: converted-scope
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/release_gate.py

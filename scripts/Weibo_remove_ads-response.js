@@ -4,7 +4,7 @@ const __settings = (()=>{try{return JSON.parse(typeof $argument==='string'?$argu
 const __finish=$done;
 function __cast(value, fallback){if(value===undefined)return fallback;if(typeof fallback==='boolean')return value===true||value==='true';if(typeof fallback==='number')return Number(value);return value;}
 
-function __original0(__typedArgs,$argument){
+function __original0(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -1599,7 +1599,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original1(__typedArgs,$argument){
+function __original1(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -3194,7 +3194,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original2(__typedArgs,$argument){
+function __original2(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -4789,7 +4789,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original3(__typedArgs,$argument){
+function __original3(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -6384,7 +6384,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original4(__typedArgs,$argument){
+function __original4(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -7979,7 +7979,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original5(__typedArgs,$argument){
+function __original5(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -9574,7 +9574,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original6(__typedArgs,$argument){
+function __original6(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -11169,7 +11169,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original7(__typedArgs,$argument){
+function __original7(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -12764,7 +12764,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original8(__typedArgs,$argument){
+function __original8(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -14359,7 +14359,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original9(__typedArgs,$argument){
+function __original9(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -15954,7 +15954,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original10(__typedArgs,$argument){
+function __original10(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -17549,7 +17549,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original11(__typedArgs,$argument){
+function __original11(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -19144,7 +19144,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original12(__typedArgs,$argument){
+function __original12(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -20739,7 +20739,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original13(__typedArgs,$argument){
+function __original13(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -22334,7 +22334,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original14(__typedArgs,$argument){
+function __original14(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -23929,7 +23929,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original15(__typedArgs,$argument){
+function __original15(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -25524,7 +25524,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original16(__typedArgs,$argument){
+function __original16(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -27119,7 +27119,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original17(__typedArgs,$argument){
+function __original17(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -28714,7 +28714,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original18(__typedArgs,$argument){
+function __original18(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -30309,7 +30309,7 @@ function removeVoteInfo(item) {
   }
 }
 }
-function __original19(__typedArgs,$argument){
+function __original19(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
@@ -31905,27 +31905,54 @@ function removeVoteInfo(item) {
 }
 }
 const __originals=[__original0,__original1,__original2,__original3,__original4,__original5,__original6,__original7,__original8,__original9,__original10,__original11,__original12,__original13,__original14,__original15,__original16,__original17,__original18,__original19];
-function __invoke(index,defaults,literal){const typed={};for(const k of Object.keys(defaults))typed[k]=__cast(__settings[k],defaults[k]);return __originals[index](typed,literal===null?JSON.stringify(typed):literal);}
+
+function __text(body){
+ if(typeof body==='string'||body===undefined)return body;
+ const bytes=body instanceof Uint8Array?body:new Uint8Array(body);
+ if(typeof TextDecoder!=='undefined')return new TextDecoder().decode(bytes);
+ let s='';for(let i=0;i<bytes.length;i+=8192)s+=String.fromCharCode(...bytes.subarray(i,i+8192));
+ return decodeURIComponent(escape(s));
+}
+function __bytes(body){
+ if(body===undefined||body instanceof Uint8Array)return body;
+ if(typeof body!=='string')return new Uint8Array(body);
+ if(typeof TextEncoder!=='undefined')return new TextEncoder().encode(body);
+ const s=unescape(encodeURIComponent(body));return Uint8Array.from(s,c=>c.charCodeAt(0));
+}
+function __message(message,binary,needsBody){
+ if(message===undefined)return undefined;
+ const copy={...message,headers:{...message.headers}};
+ if(needsBody)copy.body=binary?__bytes(copy.body):__text(copy.body);else delete copy.body;
+ return copy;
+}
+function __invoke(index,defaults,literal,binary,needsBody){
+ const typed={};for(const k of Object.keys(defaults))typed[k]=__cast(__settings[k],defaults[k]);
+ const request=__message(typeof $request==='undefined'?undefined:$request,binary,needsBody);
+ const response=__message(typeof $response==='undefined'?undefined:$response,binary,needsBody);
+ const context={...(typeof $script==='undefined'?{}:$script),binaryBodyMode:binary};
+ return __originals[index](typed,literal===null?JSON.stringify(typed):literal,request,response,__finish,context);
+}
+
 const __url=$request.url;let match;
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/(?:checkin/show|client/publisher_list|push/active)","i").exec(__url))){return __invoke(0,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/groups/allgroups/v2\\?","i").exec(__url))){return __invoke(1,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/(?:cardlist|page)","i").exec(__url))){return __invoke(2,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/comments/build_comments\\?","i").exec(__url))){return __invoke(3,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/(?:container/asyn|flowlist|flowpage)","i").exec(__url))){return __invoke(4,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/friendships/(?:create|destroy)","i").exec(__url))){return __invoke(5,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/profile/(?:container_timeline|dealatt|me|statuses/tab|userinfo)","i").exec(__url))){return __invoke(6,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/shproxy/chaohua/discovery/searchactive\\?","i").exec(__url))){return __invoke(7,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/statuses/(?:comments_expand_child|container_detail_comment)","i").exec(__url))){return __invoke(8,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/statuses/(?:container_detail\\?|container_timeline(?:_hot|_topic|_topicpage|_unread)?|repost_timeline|unread_hot_timeline)","i").exec(__url))){return __invoke(9,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/statuses/(?:extend|show)\\?","i").exec(__url))){return __invoke(10,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/video/(?:full_screen_stream|tiny_stream_mid_detail|tiny_stream_video_list)\\?","i").exec(__url))){return __invoke(11,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/!/huati/discovery_home_bottom_channels\\?","i").exec(__url))){return __invoke(12,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/direct_messages/user_list\\?","i").exec(__url))){return __invoke(13,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/messageflow/notice\\?","i").exec(__url))){return __invoke(14,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/search/(?:container_timeline|finder)\\?","i").exec(__url))){return __invoke(15,{},null);}
-if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/searchall\\?","i").exec(__url))){return __invoke(16,{},null);}
-if((true) && (match=new RegExp("^https://bootpreload\\.uve\\.weibo\\.com/v[12]/ad/preload","i").exec(__url))){return __invoke(17,{},null);}
-if((true) && (match=new RegExp("^https://sdkapp\\.uve\\.weibo\\.com/interface/sdk/sdkad\\.php","i").exec(__url))){return __invoke(18,{},null);}
-if((true) && (match=new RegExp("^https://wbapp\\.uve\\.weibo\\.com/(?:preload/get_ad|wbapplua/wbpullad\\.lua)","i").exec(__url))){return __invoke(19,{},null);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/(?:checkin/show|client/publisher_list|push/active)","i").exec(__url))){return __invoke(0,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/groups/allgroups/v2\\?","i").exec(__url))){return __invoke(1,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/(?:cardlist|page)","i").exec(__url))){return __invoke(2,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/comments/build_comments\\?","i").exec(__url))){return __invoke(3,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/(?:container/asyn|flowlist|flowpage)","i").exec(__url))){return __invoke(4,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/friendships/(?:create|destroy)","i").exec(__url))){return __invoke(5,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/profile/(?:container_timeline|dealatt|me|statuses/tab|userinfo)","i").exec(__url))){return __invoke(6,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/shproxy/chaohua/discovery/searchactive\\?","i").exec(__url))){return __invoke(7,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/statuses/(?:comments_expand_child|container_detail_comment)","i").exec(__url))){return __invoke(8,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/statuses/(?:container_detail\\?|container_timeline(?:_hot|_topic|_topicpage|_unread)?|repost_timeline|unread_hot_timeline)","i").exec(__url))){return __invoke(9,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/statuses/(?:extend|show)\\?","i").exec(__url))){return __invoke(10,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/video/(?:full_screen_stream|tiny_stream_mid_detail|tiny_stream_video_list)\\?","i").exec(__url))){return __invoke(11,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/!/huati/discovery_home_bottom_channels\\?","i").exec(__url))){return __invoke(12,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/direct_messages/user_list\\?","i").exec(__url))){return __invoke(13,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/messageflow/notice\\?","i").exec(__url))){return __invoke(14,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/search/(?:container_timeline|finder)\\?","i").exec(__url))){return __invoke(15,{},null,false,true);}
+if((true) && (match=new RegExp("^https://api\\.weibo\\.cn/2/searchall\\?","i").exec(__url))){return __invoke(16,{},null,false,true);}
+if((true) && (match=new RegExp("^https://bootpreload\\.uve\\.weibo\\.com/v[12]/ad/preload","i").exec(__url))){return __invoke(17,{},null,false,true);}
+if((true) && (match=new RegExp("^https://sdkapp\\.uve\\.weibo\\.com/interface/sdk/sdkad\\.php","i").exec(__url))){return __invoke(18,{},null,false,true);}
+if((true) && (match=new RegExp("^https://wbapp\\.uve\\.weibo\\.com/(?:preload/get_ad|wbapplua/wbpullad\\.lua)","i").exec(__url))){return __invoke(19,{},null,false,true);}
 __finish({});
 })();

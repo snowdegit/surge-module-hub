@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=剑网三无界去广告 · Surge
 #!desc=移除热门推送活动，并解决无法在Loon运行时更新和登录的问题。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]

@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=快对去广告 · Surge
 #!desc=移除开屏广告、横幅推广，精简我的页面。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -8,7 +9,7 @@
 DOMAIN, adx.zuoyebang.com, REJECT
 
 [Body Rewrite]
-http-response-jq (?i)^https://www\.kuaiduizuoye\.com/codesearch/aid/home$ 'del(.data.homeBannerList)'
+http-response-jq (?i)^https://www\.kuaiduizuoye\.com/codesearch/aid/home$ '(. as $__original | try del(.data.homeBannerList) catch $__original)'
 
 [Map Local]
 (?i)^https://www\.kuaiduizuoye\.com/init/ad/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"

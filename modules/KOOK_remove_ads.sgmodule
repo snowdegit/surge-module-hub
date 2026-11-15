@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=KOOK去广告 · Surge
 #!desc=移除开屏广告、房间横幅推广、促销活动、精简发现页面频道及我的页面，移除底栏商城入口。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://(m|www)\.kookapp\.cn/api/v\d/user/settings$ 'del(.ad_banner,.advertise_on_off)'
+http-response-jq (?i)^https://(m|www)\.kookapp\.cn/api/v\d/user/settings$ '(. as $__original | try del(.ad_banner) catch $__original) | (. as $__original | try del(.advertise_on_off) catch $__original)'
 http-response-jq (?i)^https://(m|www)\.kookapp\.cn/api/v\d/user/settings$ '.ios_mall_switch = false'
 http-response-jq (?i)^https://www\.kookapp\.cn/api/v3/discover/tab-list\? '.data.items |= map(select(.id == 472 or .id == 473 or .id == 475))'
 

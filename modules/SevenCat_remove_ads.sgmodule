@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=七猫小说去广告 · Surge
 #!desc=移除大部分七猫小说广告，但受限于七猫小说自身对MitM和VPN状态的检测，部分页面广告无法移除。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -10,7 +11,7 @@ DOMAIN, cdn-new-ad.wtzw.com, REJECT
 DOMAIN-SUFFIX, gdt.qq.com, REJECT
 
 [Body Rewrite]
-http-response-jq (?i)^https://xiaoshuo\.wtzw\.com/api/v\d/user/my-center\? 'del(.data.func_area[1],.data.func_area[2])'
+http-response-jq (?i)^https://xiaoshuo\.wtzw\.com/api/v\d/user/my-center\? '(. as $__original | try del(.data.func_area[1]) catch $__original) | (. as $__original | try del(.data.func_area[2]) catch $__original)'
 
 [Map Local]
 (?i)^https://api-cfg\.wtzw\.com/v\d/splash/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"

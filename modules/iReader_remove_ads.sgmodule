@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=掌阅去广告 · Surge
 #!desc=移除开屏广告、悬浮广告、弹窗广告、朗读音色广告及我的页面广告，移除各页面的横幅轮播图。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -8,7 +9,7 @@
 DOMAIN, saad.ms.zhangyue.net, REJECT
 
 [Body Rewrite]
-http-response-jq (?i)^https://(webboot\.zhangyue\.com|ih2\.ireader\.com)/zybook4/iphone/u/p/api\.php\? 'del(.Splash)'
+http-response-jq (?i)^https://(webboot\.zhangyue\.com|ih2\.ireader\.com)/zybook4/iphone/u/p/api\.php\? '(. as $__original | try del(.Splash) catch $__original)'
 http-response-jq (?i)^https://(webboot\.zhangyue\.com|ih2\.ireader\.com)/bookstore/read/visual/channel/list\? '.body.list |= map(select(.id | contains("ad_") | not))'
 
 [Map Local]

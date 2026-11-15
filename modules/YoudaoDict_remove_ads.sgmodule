@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=网易有道词典去广告 · Surge
 #!desc=移除开屏广告、弹窗广告、右上角推广。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -8,7 +9,7 @@
 DOMAIN, ad-sdk-config.youdao.com
 
 [Body Rewrite]
-http-response-jq (?i)^https://dict\.youdao\.com/homepage/toolbar/get/ 'del(.data.vipTag)'
+http-response-jq (?i)^https://dict\.youdao\.com/homepage/toolbar/get/ '(. as $__original | try del(.data.vipTag) catch $__original)'
 
 [Map Local]
 (?i)^https://dict\.youdao\.com/vip/activity/startup/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"

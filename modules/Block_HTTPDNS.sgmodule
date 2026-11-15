@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=HTTPDNS拦截器 · Surge
 #!desc=此插件是所有去广告插件的依赖，拦截常见的HTTPDNS服务，以确保这些请求都能够在Loon的DNS框架下工作。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], VirgilClyne[https://github.com/VirgilClyne]

@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=转转去广告 · Surge
 #!desc=移除开屏广告、应用内悬浮窗、信息流推广、商品推荐、首页弹窗，精简我的页面。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,11 +6,11 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://app\.zhuanzhuan\.com/zz/v2/zzlogic/mycontinenthomepage\? 'del(.respData.topOpera.leftOpera,.respData.topOpera.rightOpera2,.respData.topActBanner,.respData.bmArea)'
-http-response-jq (?i)^https://app\.zhuanzhuan\.com/zzx/transfer/getConfigInfo\? 'del(.respData.freeMarketTabLeadPop,.respData.topOperations)'
+http-response-jq (?i)^https://app\.zhuanzhuan\.com/zz/v2/zzlogic/mycontinenthomepage\? '(. as $__original | try del(.respData.topOpera.leftOpera) catch $__original) | (. as $__original | try del(.respData.topOpera.rightOpera2) catch $__original) | (. as $__original | try del(.respData.topActBanner) catch $__original) | (. as $__original | try del(.respData.bmArea) catch $__original)'
+http-response-jq (?i)^https://app\.zhuanzhuan\.com/zzx/transfer/getConfigInfo\? '(. as $__original | try del(.respData.freeMarketTabLeadPop) catch $__original) | (. as $__original | try del(.respData.topOperations) catch $__original)'
 http-response-jq (?i)^https://app\.zhuanzhuan\.com/zz/v2/zzinfoshow/getfeedflowinfo\? 'if .respData.userRed.campName == "OCD挂件" then del(.respData.userRed) else . end | .respData.infoData |= map(del(.rotateResource,.appRecommendResource,."cargoGroupCardV2"))'
 http-response-jq (?i)^https://app\.zhuanzhuan\.com/zz/transfer/getmymoretools$ 'walk(if type == "object" and .name == "免流量特权" then empty else . end) | del(.respData.groupList[] | select(.groupName == "活动参与" or .groupName == "金融工具"))'
-http-response-jq (?i)^https://app\.zhuanzhuan\.com/zz/transfer/getmyprofilev3$ 'del(.respData.bmNewInfo)'
+http-response-jq (?i)^https://app\.zhuanzhuan\.com/zz/transfer/getmyprofilev3$ '(. as $__original | try del(.respData.bmNewInfo) catch $__original)'
 http-response-jq (?i)^https://app\.zhuanzhuan\.com/zz/transfer/getmyprofilev3$ 'del(.respData.itemGroupList[].itemList[] | select(.name == "天天赚钱" or .name == "借钱")) | del(.respData.itemGroupList[] | select(.groupType == 15))'
 
 [Map Local]

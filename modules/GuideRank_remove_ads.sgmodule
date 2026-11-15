@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=盖得排行去广告 · Surge
 #!desc=精简首页、移除分类横幅推广、单单返猜你喜欢和编辑精选，移除我的页面推广。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,8 +6,8 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://zone\.guiderank-app\.com/guiderank-web/app/home/getHomePageV 'del(.data.countdownBanner,.data.newEvaluations,.data.freeToPayBannerPhotoUrl,.data.groupBuyingList,.data.multiCountdownBanner,.data.banners,.data.multiPlatformBanner,.data.specialSaleBannerPhotoUrl,.data.guide90Evaluation,.data.insurancePromotions)'
-http-response-jq (?i)^https://zone\.guiderank-app\.com/guiderank-web/app/common/getInitData\.do 'del(.data.SpecialSalePageMidTabConfig)'
+http-response-jq (?i)^https://zone\.guiderank-app\.com/guiderank-web/app/home/getHomePageV '(. as $__original | try del(.data.countdownBanner) catch $__original) | (. as $__original | try del(.data.newEvaluations) catch $__original) | (. as $__original | try del(.data.freeToPayBannerPhotoUrl) catch $__original) | (. as $__original | try del(.data.groupBuyingList) catch $__original) | (. as $__original | try del(.data.multiCountdownBanner) catch $__original) | (. as $__original | try del(.data.banners) catch $__original) | (. as $__original | try del(.data.multiPlatformBanner) catch $__original) | (. as $__original | try del(.data.specialSaleBannerPhotoUrl) catch $__original) | (. as $__original | try del(.data.guide90Evaluation) catch $__original) | (. as $__original | try del(.data.insurancePromotions) catch $__original)'
+http-response-jq (?i)^https://zone\.guiderank-app\.com/guiderank-web/app/common/getInitData\.do '(. as $__original | try del(.data.SpecialSalePageMidTabConfig) catch $__original)'
 
 [Map Local]
 (?i)^https://zone\.guiderank-app\.com/guiderank-web/app/common/getWeworkPromotionInfoBySceneType data-type=text data="{}" status-code=200 header="Content-Type:application/json"

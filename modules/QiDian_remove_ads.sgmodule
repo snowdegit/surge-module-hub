@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=起点读书去广告 · Surge
 #!desc=移除起点读书开屏广告、每日导读、各类弹窗、文末广告、搜索填充词，精简我的页面。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,10 +6,10 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://magev6\.if\.qidian\.com/argus/api/v1/client/getconf$ '.Data.WolfEye = [0, 0] | .Data.CloudSetting.TeenShowFreq = [0, 0]'
-http-response-jq (?i)^https://magev6\.if\.qidian\.com/argus/api/v1/client/getconf$ 'del(.Data.ActivityPageBackPushNoticeFrequency,.Data.ActivityIcon,.Data.ActivityPopup,.Data.LuckBag)'
+http-response-jq (?i)^https://magev6\.if\.qidian\.com/argus/api/v1/client/getconf$ '.Data.WolfEye = 0 | .Data.CloudSetting.TeenShowFreq = 0'
+http-response-jq (?i)^https://magev6\.if\.qidian\.com/argus/api/v1/client/getconf$ '(. as $__original | try del(.Data.ActivityPageBackPushNoticeFrequency) catch $__original) | (. as $__original | try del(.Data.ActivityIcon) catch $__original) | (. as $__original | try del(.Data.ActivityPopup) catch $__original) | (. as $__original | try del(.Data.LuckBag) catch $__original)'
 http-response-jq (?i)^https://magev6\.if\.qidian\.com/argus/api/v2/dailyrecommend/getdailyrecommend\? '.Data.Items = "[]"'
-http-response-jq (?i)^https://magev6\.if\.qidian\.com/argus/api/v3/user/getaccountpage\? 'del(.Data.BenefitButtonList)'
+http-response-jq (?i)^https://magev6\.if\.qidian\.com/argus/api/v3/user/getaccountpage\? '(. as $__original | try del(.Data.BenefitButtonList) catch $__original)'
 
 [Map Local]
 (?i)^https://magev6\.if\.qidian\.com/argus/api/v4/client/getsplashscreen\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"

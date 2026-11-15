@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=数字心动去广告 · Surge
 #!desc=移除开屏广告、首页顶部标签、轮播图、悬浮挂件、热门搜索、信息流广告。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -7,7 +8,7 @@
 [Body Rewrite]
 http-response-jq (?i)^https://api-changzheng\.chinaath\.com/changzheng-common-proxy-api/api/advertising/proxy/getOpenScreenAdvertising$ '.data.advertisingList = "[]"'
 http-response-jq (?i)^https://api-changzheng\.chinaath\.com/changzheng-race-proxy-api/api/home/page/getBrand$ '.data |= map(select(.advertisementName == "路跑赛事" or .advertisementName == "线上赛" or .advertisementName == "越野赛事"))'
-http-response-jq (?i)^https://api-changzheng\.chinaath\.com/changzheng-race-proxy-api/api/home/page/get$ 'del(.data.topHotSearchList,.data.bannerListTwo,.data.textAdvertisementList)'
+http-response-jq (?i)^https://api-changzheng\.chinaath\.com/changzheng-race-proxy-api/api/home/page/get$ '(. as $__original | try del(.data.topHotSearchList) catch $__original) | (. as $__original | try del(.data.bannerListTwo) catch $__original) | (. as $__original | try del(.data.textAdvertisementList) catch $__original)'
 http-response-jq (?i)^https://api-changzheng\.chinaath\.com/changzheng-race-proxy-api/api/home/page/get$ '.data.recommendList |= map(select(.raceAdList | not or length == 0))'
 
 [Map Local]

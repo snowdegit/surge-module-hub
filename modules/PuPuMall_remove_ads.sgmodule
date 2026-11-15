@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=朴朴超市去广告 · Surge
 #!desc=移除超市去开屏广告，移除首页顶部轮播图和图标广告、启动小弹图广告、首页右下角悬浮动画、搜索热搜榜、搜索建议词、搜索发现热词、订单页面商，精简我的页面。
 #!author=kelv1n1n[https://github.com/kelv1n1n], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -9,7 +10,7 @@
 (?i)^https://j1\.pupuapi\.com/client/marketing/banner/v7\?position_types=100 data-type=text data="" status-code=404 header="Content-Type:text/plain"
 
 [Script]
-PuPuMall_remove_ads-response = type=http-response, pattern=(?i)(?:^https://j1\.pupuapi\.com/client/marketing/banner/v7)|(?:^https://j1\.pupuapi\.com/client/marketing/banner/search_component_banner)|(?:^https://j1\.pupuapi\.com/client/search/hot_keywords/v3)|(?:^https://j1\.pupuapi\.com/client/app_resource/resource_preload/list_h5_resource)|(?:^https://j1\.pupuapi\.com/client/recommendation/interests/products)|(?:^https://j1\.pupuapi\.com/client/marketing/advertisement/v1), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/PuPuMall_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
+PuPuMall_remove_ads-response = type=http-response, pattern="(?i)(?:^https://j1\\.pupuapi\\.com/client/marketing/banner/v7)|(?:^https://j1\\.pupuapi\\.com/client/marketing/banner/search_component_banner)|(?:^https://j1\\.pupuapi\\.com/client/search/hot_keywords/v3)|(?:^https://j1\\.pupuapi\\.com/client/app_resource/resource_preload/list_h5_resource)|(?:^https://j1\\.pupuapi\\.com/client/recommendation/interests/products)|(?:^https://j1\\.pupuapi\\.com/client/marketing/advertisement/v1)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/PuPuMall_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% j1.pupuapi.com

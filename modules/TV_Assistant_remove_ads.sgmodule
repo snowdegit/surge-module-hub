@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=乐播投屏去广告 · Surge
 #!desc=移除开屏广告、首页横幅推广、全网全网热投榜，移除我的页面横幅推广。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -12,7 +13,7 @@
 (?i)^https://saas\.hpplay\.cn/api/lebo-desk/endpoint/app-resource/app-user-banner data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-TV_Assistant_remove_ads-response = type=http-response, pattern=(?i)(?:^https://saas\.hpplay\.cn/api/lebo-desk/endpoint/app-resource/app_tab_red_dot\?user-tag=1$), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/TV_Assistant_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
+TV_Assistant_remove_ads-response = type=http-response, pattern="(?i)(?:^https://saas\\.hpplay\\.cn/api/lebo-desk/endpoint/app-resource/app_tab_red_dot\\?user-tag=1$)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/TV_Assistant_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% saas.hpplay.cn

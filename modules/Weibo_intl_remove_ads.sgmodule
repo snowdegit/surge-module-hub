@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=微博轻享版去广告 · Surge
 #!desc=移除开屏广告、时间线广告及评论区广告，移除发现页面横幅推广、最常访问、主页访客及热门视频，移除搜索填充词。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,11 +6,11 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://weibointl\.api\.weibo\.cn/portal\.php\?a=trends 'del(.data.banner,.data.user_footprint,.data.profile_accessrecord,.data.native_content)'
+http-response-jq (?i)^https://weibointl\.api\.weibo\.cn/portal\.php\?a=trends '(. as $__original | try del(.data.banner) catch $__original) | (. as $__original | try del(.data.user_footprint) catch $__original) | (. as $__original | try del(.data.profile_accessrecord) catch $__original) | (. as $__original | try del(.data.native_content) catch $__original)'
 http-response-jq (?i)^https://weibointl\.api\.weibo\.cn/portal\.php\?a=trends '.data.discover |= map(select(.schema != "尊享会员"))'
-http-response-jq (?i)^https://api\.weibo\.cn/2/statuses/friends/timeline$ 'del(.advertises,.ad,.ad_version_2_weibo)'
+http-response-jq (?i)^https://api\.weibo\.cn/2/statuses/friends/timeline$ '(. as $__original | try del(.advertises) catch $__original) | (. as $__original | try del(.ad) catch $__original) | (. as $__original | try del(.ad_version_2_weibo) catch $__original)'
 http-response-jq (?i)^https://api\.weibo\.cn/2/statuses/friends/timeline$ '.statuses|=map(select(.ad_marked!=true))'
-http-response-jq (?i)^https://api\.weibo\.cn/2/statuses/unread_hot_timeline$ 'del(.ad,.ad_version_2_weibo)'
+http-response-jq (?i)^https://api\.weibo\.cn/2/statuses/unread_hot_timeline$ '(. as $__original | try del(.ad) catch $__original) | (. as $__original | try del(.ad_version_2_weibo) catch $__original)'
 http-response-jq (?i)^https://api\.weibo\.cn/2/statuses/unread_hot_timeline$ '.statuses|=map(select(.ad_marked!=true))'
 http-response-jq (?i)^https://api\.weibo\.cn/2/comments/build_comments\? '.datas[].data.ad_from_comment? = true'
 http-response-jq (?i)^https://api\.weibo\.cn/2/statuses/container_detail\? '.pageHeader.data.items |= (if . == null then [] else map(select(.data.itemid != "top_searching")) end)'

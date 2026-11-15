@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=贝壳找房去广告 · Surge
 #!desc=移除开屏广告、弹窗广告、悬浮广告、信息流推广、我家页面的装修推荐。移除我的页面的专属推荐、游戏入口、钱包入口。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,8 +6,8 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://apps\.api\.ke\.com/platform/shellapp/homepage/initData/mini\? 'del(.data.bootpage,.data.bottom_bar_activity)'
-http-response-jq (?i)^https://apps\.api\.ke\.com/platform/shellapp/userCenter/info\? 'del(.data.islandModule)'
+http-response-jq (?i)^https://apps\.api\.ke\.com/platform/shellapp/homepage/initData/mini\? '(. as $__original | try del(.data.bootpage) catch $__original) | (. as $__original | try del(.data.bottom_bar_activity) catch $__original)'
+http-response-jq (?i)^https://apps\.api\.ke\.com/platform/shellapp/userCenter/info\? '(. as $__original | try del(.data.islandModule) catch $__original)'
 http-response-jq (?i)^https://apps\.api\.ke\.com/platform/shellapp/userCenter/info\? 'del(.data.mainIcons.list[] | select(.indexKey == "coupon"))'
 http-response-jq (?i)^https://apps\.api\.ke\.com/platform/shellapp/myhome/pagedetail\? '.data.moduleList |= map(select(.tab != "myHomeDecorV4"))'
 http-response-jq (?i)^https://apps\.api\.ke\.com/platform/shellapp/homepage/feed\? '.data.list |= map(select(.cardType == "houseContainer" or .cardType == "houseV2" or .cardType == "houseV3" or .cardType == "rentHouseDiscount" or .cardType == "decorationCase"))'

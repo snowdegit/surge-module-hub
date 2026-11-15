@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=TestFlight地区解锁 · Surge
 #!desc=解除TestFlight的区域限制，支持tvOS。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -10,7 +11,7 @@
 DOMAIN, testflight.apple.com, {{{proxy_policy}}}
 
 [Script]
-TestFlightRegionUnlock-request = type=http-request, pattern=(?i)(?:^https?://testflight\.apple\.com/v\d/accounts/.+?/install$), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/TestFlightRegionUnlock-request.js, requires-body=true, binary-body-mode=false, timeout=10
+TestFlightRegionUnlock-request = type=http-request, pattern="(?i)(?:^https?://testflight\\.apple\\.com/v\\d/accounts/.+?/install$)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/TestFlightRegionUnlock-request.js, requires-body=true, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% testflight.apple.com

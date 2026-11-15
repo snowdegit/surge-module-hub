@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=Telegram重定向 · Surge
 #!desc=适用于安装了多个不同Telegram客户端的用户，用于在指定客户端中打开公开或私有群组及频道的Telegram短链。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -7,7 +8,7 @@
 #!arguments-desc=参数沿用上游默认值；修改后重新启用模块。
 
 [Script]
-TelegramRedirect-request = type=http-request, pattern=(?i)(?:^https://t\.me/([A-Za-z][A-Za-z0-9_]{3,30}[A-Za-z0-9])/?$)|(?:^https://t\.me/\+([A-Za-z0-9_-]+)/?$), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/TelegramRedirect-request.js, requires-body=true, binary-body-mode=false, timeout=10, argument="{\"app\":\"{{{app}}}\"}"
+TelegramRedirect-request = type=http-request, pattern="(?i)(?:^https://t\\.me/([A-Za-z][A-Za-z0-9_]{3,30}[A-Za-z0-9])/?$)|(?:^https://t\\.me/\\+([A-Za-z0-9_-]+)/?$)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/TelegramRedirect-request.js, requires-body=true, binary-body-mode=false, timeout=10, argument="{\"app\":\"{{{app}}}\"}"
 
 [MITM]
 hostname = %APPEND% t.me

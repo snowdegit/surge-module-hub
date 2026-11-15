@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=阅友去广告 · Surge
 #!desc=移除开屏广告、弹窗广告和阅读页面广告，移除底栏福利按钮。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -8,7 +9,7 @@
 DOMAIN, ads.reader.yueyouxs.com, REJECT
 
 [Body Rewrite]
-http-response-jq (?i)^https://goway\.reader\.yueyouxs\.com/assemble/app/basic/getAppInfo\? 'del(.data.isShowDLPopup,.data.isShowGame,.data.touTiaoShowDlPopup,.data.offLineDownload.WatchVideoBtnDesc,.data.readVipFirstCfg,.data.readVipNormalCfg,.data.notifyAd,.data.hotStartSplashTime,.data.hotStartReqSwitch,.data.isShowBFTab,.data.popReqDelayTime,.data.benefitCfg,.data.chestTask,.data.hotStartAd,.data.activeTagList,.data.secondOrderCfg,.data.secondOrderList,.data.blockedWordsCfg,.data.aaReportListCfg,.data.pddAdSwitch,.data.isShowShelfAuthPopup,.data.firstPopUpAmount)'
+http-response-jq (?i)^https://goway\.reader\.yueyouxs\.com/assemble/app/basic/getAppInfo\? '(. as $__original | try del(.data.isShowDLPopup) catch $__original) | (. as $__original | try del(.data.isShowGame) catch $__original) | (. as $__original | try del(.data.touTiaoShowDlPopup) catch $__original) | (. as $__original | try del(.data.offLineDownload.WatchVideoBtnDesc) catch $__original) | (. as $__original | try del(.data.readVipFirstCfg) catch $__original) | (. as $__original | try del(.data.readVipNormalCfg) catch $__original) | (. as $__original | try del(.data.notifyAd) catch $__original) | (. as $__original | try del(.data.hotStartSplashTime) catch $__original) | (. as $__original | try del(.data.hotStartReqSwitch) catch $__original) | (. as $__original | try del(.data.isShowBFTab) catch $__original) | (. as $__original | try del(.data.popReqDelayTime) catch $__original) | (. as $__original | try del(.data.benefitCfg) catch $__original) | (. as $__original | try del(.data.chestTask) catch $__original) | (. as $__original | try del(.data.hotStartAd) catch $__original) | (. as $__original | try del(.data.activeTagList) catch $__original) | (. as $__original | try del(.data.secondOrderCfg) catch $__original) | (. as $__original | try del(.data.secondOrderList) catch $__original) | (. as $__original | try del(.data.blockedWordsCfg) catch $__original) | (. as $__original | try del(.data.aaReportListCfg) catch $__original) | (. as $__original | try del(.data.pddAdSwitch) catch $__original) | (. as $__original | try del(.data.isShowShelfAuthPopup) catch $__original) | (. as $__original | try del(.data.firstPopUpAmount) catch $__original)'
 http-response-jq (?i)^https://goway\.reader\.yueyouxs\.com/assemble/app/basic/getAppInfo\? '.data.isAdClosed = true'
 
 [MITM]

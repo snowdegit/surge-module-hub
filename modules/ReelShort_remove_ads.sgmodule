@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=ReelShort去广告 · Surge
 #!desc=移除开屏广告、为你推荐及各类弹窗，移除搜索栏填充词。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,8 +6,8 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://(v-api\.crazymaplestudios\.com|d1k8g7qaebqd28\.cloudfront\.net)/api/video/book/getBookDetailV2$ 'del(.data.ad_vip)'
-http-response-jq (?i)^https://(v-api\.crazymaplestudios\.com|d1k8g7qaebqd28\.cloudfront\.net)/api/video/hall/infoV3$ 'del(.data.search_keyword_list)'
+http-response-jq (?i)^https://(v-api\.crazymaplestudios\.com|d1k8g7qaebqd28\.cloudfront\.net)/api/video/book/getBookDetailV2$ '(. as $__original | try del(.data.ad_vip) catch $__original)'
+http-response-jq (?i)^https://(v-api\.crazymaplestudios\.com|d1k8g7qaebqd28\.cloudfront\.net)/api/video/hall/infoV3$ '(. as $__original | try del(.data.search_keyword_list) catch $__original)'
 
 [Map Local]
 (?i)^https://(v-api\.crazymaplestudios\.com|d1k8g7qaebqd28\.cloudfront\.net)/api/video/app/getSplashScreenConfig$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"

@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=丰巢去广告 · Surge
 #!desc=移除弹窗，精简首页和生活服务。此插件需要IPA签名方可使用，App Store用户请勿使用此插件，务必点击下方主页链接查看详细教程。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://consumer\.fcbox\.com/v1/dynamicConfig/findTabbarConfig/mainPage$ 'del(.data.lifeService,.data.mall,.data.wash)'
+http-response-jq (?i)^https://consumer\.fcbox\.com/v1/dynamicConfig/findTabbarConfig/mainPage$ '(. as $__original | try del(.data.lifeService) catch $__original) | (. as $__original | try del(.data.mall) catch $__original) | (. as $__original | try del(.data.wash) catch $__original)'
 
 [Map Local]
 (?i)^https://consumer\.fcbox\.com/fcboxactivityweb/api/v\d/clientPage/modulesAggregated\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"

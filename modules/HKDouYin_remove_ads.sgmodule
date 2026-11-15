@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=香港抖音去广告 · Surge
 #!desc=精简左右侧边栏、移除底栏切换，其余内容后续再完善。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -13,10 +14,10 @@ AND, ((IP-CIDR, 220.243.141.0/32, no-resolve), (DEST-PORT, 6443)), REJECT
 AND, ((OR, ((DOMAIN-SUFFIX, bytegecko.com), (DOMAIN-SUFFIX, byteeffecttos.com))), (DOMAIN-KEYWORD, ncdn)), REJECT
 
 [Body Rewrite]
-http-response-jq (?i)^https://((aweme\.snssdk\.com|api5-normal-m\.amemv\.com)|api5-normal-m\.amemv\.com)/aweme/homepage/sidebar_data/\? 'del(.data_map.recently_apps,.data_map.recently_users)'
-http-response-jq (?i)^https://(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)/aweme/homepage/render/\? 'del(.data.tab_config)'
+http-response-jq (?i)^https://((aweme\.snssdk\.com|api5-normal-m\.amemv\.com)|api5-normal-m\.amemv\.com)/aweme/homepage/sidebar_data/\? '(. as $__original | try del(.data_map.recently_apps) catch $__original) | (. as $__original | try del(.data_map.recently_users) catch $__original)'
+http-response-jq (?i)^https://(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)/aweme/homepage/render/\? '(. as $__original | try del(.data.tab_config) catch $__original)'
 http-response-jq (?i)^https://(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)/aweme/homepage/render/\? '.data.tab_list[]? |= (if .extra.side_bar.modules != null then .extra.side_bar.modules[]?.items[]? |= (if .data.first_page_module?.module_title == "常用功能" then .data={} else . end) else . end) | .data.tab_list |= map(if .extra.tab_list != null then .extra.tab_list |= map(select(.tab_id | IN("homepage_tablive", "homepage_follow", "homepage_hot_container"))) else . end) | .data.tab_list |= map(select(.extra.tab_list != null and (.extra.tab_list | length > 0)))'
-http-response-jq (?i)^https://(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)/tfe/api/request_combine/v1/\?need_personal_recommend '.data["/service/settings/v3/"].body.data.settings.homepage_two_session_tab_skin_2025 = [false, false] | .data["/service/settings/v3/"].body.data.settings.homepage_tab_skin_enable = [false, false]'
+http-response-jq (?i)^https://(aweme\.snssdk\.com|api5-normal-m\.amemv\.com)/tfe/api/request_combine/v1/\?need_personal_recommend '.data["/service/settings/v3/"].body.data.settings.homepage_two_session_tab_skin_2025 = false | .data["/service/settings/v3/"].body.data.settings.homepage_tab_skin_enable = false'
 
 [Map Local]
 (?i)^https://api5-normal-lq\.amemv\.com/api/ad/ data-type=text data="" status-code=404 header="Content-Type:text/plain"

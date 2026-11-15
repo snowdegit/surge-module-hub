@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=虎扑去广告 · Surge
 #!desc=移除虎扑开屏广告、首页顶部推广、我的页面多余模块及各类横幅推广。
 #!author=ZenmoFeiShi[https://github.com/ZenmoFeiShi]
@@ -15,7 +16,7 @@
 (?i)^https://games\.mobileapi\.hupu\.com/3/8\.0\.86/bplapi/banner/getLocationBanners data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-HUPU_remove_ads-response = type=http-response, pattern=(?i)(?:^https://fairy\.mobileapi\.hupu\.com/mang/preview/banners)|(?:^https://bbs\.mobileapi\.hupu\.com/\d/\d\.\d\.\d+/bbsallapi/lego/data)|(?:^https://games\.mobileapi\.hupu\.com/\d/\d\.\d\.\d+/buffer/hotList)|(?:^https://games\.mobileapi\.hupu\.com/\d/\d\.\d\.\d+/bplapi/user/v1/more), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/HUPU_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
+HUPU_remove_ads-response = type=http-response, pattern="(?i)(?:^https://fairy\\.mobileapi\\.hupu\\.com/mang/preview/banners)|(?:^https://bbs\\.mobileapi\\.hupu\\.com/\\d/\\d\\.\\d\\.\\d+/bbsallapi/lego/data)|(?:^https://games\\.mobileapi\\.hupu\\.com/\\d/\\d\\.\\d\\.\\d+/buffer/hotList)|(?:^https://games\\.mobileapi\\.hupu\\.com/\\d/\\d\\.\\d\\.\\d+/bplapi/user/v1/more)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/HUPU_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% games.mobileapi.hupu.com, fairy.mobileapi.hupu.com, bbs.mobileapi.hupu.com, goblin.hupu.com

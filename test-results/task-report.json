@@ -1,0 +1,128 @@
+{
+  "scope": "Synthetic task invocation and configuration checks; no external signup or account requests.",
+  "checks": 20,
+  "passed": 20,
+  "failed": 0,
+  "cases": [
+    {
+      "plugin": "FollowRSS_checkin",
+      "line": 19,
+      "variant": "default",
+      "passed": true
+    },
+    {
+      "plugin": "FollowRSS_checkin",
+      "line": 19,
+      "variant": "override",
+      "passed": true
+    },
+    {
+      "plugin": "Sub-Store",
+      "line": 22,
+      "variant": "default",
+      "passed": true
+    },
+    {
+      "plugin": "Sub-Store",
+      "line": 22,
+      "variant": "override",
+      "passed": true
+    },
+    {
+      "plugin": "WARP_Node_Query",
+      "line": 14,
+      "variant": "default",
+      "passed": true
+    },
+    {
+      "plugin": "WARP_Node_Query",
+      "line": 14,
+      "variant": "override",
+      "passed": true
+    },
+    {
+      "plugin": "WPS_checkin",
+      "line": 24,
+      "variant": "default",
+      "passed": true
+    },
+    {
+      "plugin": "WPS_checkin",
+      "line": 24,
+      "variant": "override",
+      "passed": true
+    },
+    {
+      "plugin": "NodeLinkCheck",
+      "line": 14,
+      "variant": "default",
+      "passed": true
+    },
+    {
+      "plugin": "NodeLinkCheck",
+      "line": 14,
+      "variant": "override",
+      "passed": true
+    },
+    {
+      "plugin": "Node_detection_tool",
+      "line": 14,
+      "variant": "default",
+      "passed": true
+    },
+    {
+      "plugin": "Node_detection_tool",
+      "line": 14,
+      "variant": "override",
+      "passed": true
+    },
+    {
+      "plugin": "Node_detection_tool",
+      "line": 15,
+      "variant": "default",
+      "passed": true
+    },
+    {
+      "plugin": "Node_detection_tool",
+      "line": 15,
+      "variant": "override",
+      "passed": true
+    },
+    {
+      "plugin": "Node_detection_tool",
+      "line": 16,
+      "variant": "default",
+      "passed": true
+    },
+    {
+      "plugin": "Node_detection_tool",
+      "line": 16,
+      "variant": "override",
+      "passed": true
+    },
+    {
+      "plugin": "Auto_Join_TF",
+      "line": 26,
+      "variant": "default",
+      "passed": true
+    },
+    {
+      "plugin": "Auto_Join_TF",
+      "line": 26,
+      "variant": "override",
+      "passed": true
+    },
+    {
+      "plugin": "Auto_Join_TF",
+      "line": 27,
+      "variant": "default",
+      "passed": true
+    },
+    {
+      "plugin": "Auto_Join_TF",
+      "line": 27,
+      "variant": "override",
+      "passed": true
+    }
+  ]
+}

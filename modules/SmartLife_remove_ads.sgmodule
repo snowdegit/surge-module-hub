@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=慧生活798去广告 · Surge
 #!desc=移除开屏广告、横幅广告，精简底栏。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://i\.ilife798\.com/api/v\d/acc/login$ 'del(.data.ar,.data.showAd)'
+http-response-jq (?i)^https://i\.ilife798\.com/api/v\d/acc/login$ '(. as $__original | try del(.data.ar) catch $__original) | (. as $__original | try del(.data.showAd) catch $__original)'
 
 [Map Local]
 (?i)^https://i\.ilife798\.com/api/v\d/acc/score/mission-lst$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"

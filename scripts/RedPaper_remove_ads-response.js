@@ -4,7 +4,7 @@ const __settings = (()=>{try{return JSON.parse(typeof $argument==='string'?$argu
 const __finish=$done;
 function __cast(value, fallback){if(value===undefined)return fallback;if(typeof fallback==='boolean')return value===true||value==='true';if(typeof fallback==='number')return Number(value);return value;}
 
-function __original0(__typedArgs,$argument){
+function __original0(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
@@ -414,7 +414,7 @@ function replaceRedIdWithFmz200(obj) {
   }
 }
 }
-function __original1(__typedArgs,$argument){
+function __original1(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
@@ -824,7 +824,7 @@ function replaceRedIdWithFmz200(obj) {
   }
 }
 }
-function __original2(__typedArgs,$argument){
+function __original2(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
@@ -1234,7 +1234,7 @@ function replaceRedIdWithFmz200(obj) {
   }
 }
 }
-function __original3(__typedArgs,$argument){
+function __original3(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
@@ -1644,7 +1644,7 @@ function replaceRedIdWithFmz200(obj) {
   }
 }
 }
-function __original4(__typedArgs,$argument){
+function __original4(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
@@ -2054,7 +2054,7 @@ function replaceRedIdWithFmz200(obj) {
   }
 }
 }
-function __original5(__typedArgs,$argument){
+function __original5(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
@@ -2464,7 +2464,7 @@ function replaceRedIdWithFmz200(obj) {
   }
 }
 }
-function __original6(__typedArgs,$argument){
+function __original6(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
@@ -2874,7 +2874,7 @@ function replaceRedIdWithFmz200(obj) {
   }
 }
 }
-function __original7(__typedArgs,$argument){
+function __original7(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
@@ -3284,7 +3284,7 @@ function replaceRedIdWithFmz200(obj) {
   }
 }
 }
-function __original8(__typedArgs,$argument){
+function __original8(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
@@ -3694,7 +3694,7 @@ function replaceRedIdWithFmz200(obj) {
   }
 }
 }
-function __original9(__typedArgs,$argument){
+function __original9(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
@@ -4104,7 +4104,7 @@ function replaceRedIdWithFmz200(obj) {
   }
 }
 }
-function __original10(__typedArgs,$argument){
+function __original10(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
@@ -4514,7 +4514,7 @@ function replaceRedIdWithFmz200(obj) {
   }
 }
 }
-function __original11(__typedArgs,$argument){
+function __original11(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
@@ -4925,19 +4925,46 @@ function replaceRedIdWithFmz200(obj) {
 }
 }
 const __originals=[__original0,__original1,__original2,__original3,__original4,__original5,__original6,__original7,__original8,__original9,__original10,__original11];
-function __invoke(index,defaults,literal){const typed={};for(const k of Object.keys(defaults))typed[k]=__cast(__settings[k],defaults[k]);return __originals[index](typed,literal===null?JSON.stringify(typed):literal);}
+
+function __text(body){
+ if(typeof body==='string'||body===undefined)return body;
+ const bytes=body instanceof Uint8Array?body:new Uint8Array(body);
+ if(typeof TextDecoder!=='undefined')return new TextDecoder().decode(bytes);
+ let s='';for(let i=0;i<bytes.length;i+=8192)s+=String.fromCharCode(...bytes.subarray(i,i+8192));
+ return decodeURIComponent(escape(s));
+}
+function __bytes(body){
+ if(body===undefined||body instanceof Uint8Array)return body;
+ if(typeof body!=='string')return new Uint8Array(body);
+ if(typeof TextEncoder!=='undefined')return new TextEncoder().encode(body);
+ const s=unescape(encodeURIComponent(body));return Uint8Array.from(s,c=>c.charCodeAt(0));
+}
+function __message(message,binary,needsBody){
+ if(message===undefined)return undefined;
+ const copy={...message,headers:{...message.headers}};
+ if(needsBody)copy.body=binary?__bytes(copy.body):__text(copy.body);else delete copy.body;
+ return copy;
+}
+function __invoke(index,defaults,literal,binary,needsBody){
+ const typed={};for(const k of Object.keys(defaults))typed[k]=__cast(__settings[k],defaults[k]);
+ const request=__message(typeof $request==='undefined'?undefined:$request,binary,needsBody);
+ const response=__message(typeof $response==='undefined'?undefined:$response,binary,needsBody);
+ const context={...(typeof $script==='undefined'?{}:$script),binaryBodyMode:binary};
+ return __originals[index](typed,literal===null?JSON.stringify(typed):literal,request,response,__finish,context);
+}
+
 const __url=$request.url;let match;
-if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v1/note/(?:imagefeed|live_photo/save)","i").exec(__url))){return __invoke(0,{},null);}
-if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v1/system/service/ui/config\\?","i").exec(__url))){return __invoke(1,{},null);}
-if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v1/system_service/config\\?","i").exec(__url))){return __invoke(2,{},null);}
-if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v2/system_service/splash_config","i").exec(__url))){return __invoke(3,{},null);}
-if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v2/(?:note/widgets|user/followings/followfeed)","i").exec(__url))){return __invoke(4,{},null);}
-if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v4/followfeed\\?","i").exec(__url))){return __invoke(5,{},null);}
-if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v5/recommend/user/follow_recommend\\?","i").exec(__url))){return __invoke(6,{},null);}
-if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/(?:v1/interaction/comment/video/download|v5/note/comment/list)","i").exec(__url))){return __invoke(7,{},null);}
-if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/(?:v2/note/feed|v3/note/videofeed)","i").exec(__url))){return __invoke(8,{},null);}
-if((true) && (match=new RegExp("^https://(?:edith|rec)\\.xiaohongshu\\.com/api/sns/v6/homefeed\\?","i").exec(__url))){return __invoke(9,{},null);}
-if((true) && (match=new RegExp("^https://(?:edith|so)\\.xiaohongshu\\.com/api/sns/v10/search/notes\\?","i").exec(__url))){return __invoke(10,{},null);}
-if((true) && (match=new RegExp("^https://(?:edith|rec|www)\\.xiaohongshu\\.com/api/sns/(?:v4/note/videofeed|v10/note/video/save)","i").exec(__url))){return __invoke(11,{},null);}
+if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v1/note/(?:imagefeed|live_photo/save)","i").exec(__url))){return __invoke(0,{},null,false,true);}
+if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v1/system/service/ui/config\\?","i").exec(__url))){return __invoke(1,{},null,false,true);}
+if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v1/system_service/config\\?","i").exec(__url))){return __invoke(2,{},null,false,true);}
+if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v2/system_service/splash_config","i").exec(__url))){return __invoke(3,{},null,false,true);}
+if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v2/(?:note/widgets|user/followings/followfeed)","i").exec(__url))){return __invoke(4,{},null,false,true);}
+if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v4/followfeed\\?","i").exec(__url))){return __invoke(5,{},null,false,true);}
+if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/v5/recommend/user/follow_recommend\\?","i").exec(__url))){return __invoke(6,{},null,false,true);}
+if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/(?:v1/interaction/comment/video/download|v5/note/comment/list)","i").exec(__url))){return __invoke(7,{},null,false,true);}
+if((true) && (match=new RegExp("^https://edith\\.xiaohongshu\\.com/api/sns/(?:v2/note/feed|v3/note/videofeed)","i").exec(__url))){return __invoke(8,{},null,false,true);}
+if((true) && (match=new RegExp("^https://(?:edith|rec)\\.xiaohongshu\\.com/api/sns/v6/homefeed\\?","i").exec(__url))){return __invoke(9,{},null,false,true);}
+if((true) && (match=new RegExp("^https://(?:edith|so)\\.xiaohongshu\\.com/api/sns/v10/search/notes\\?","i").exec(__url))){return __invoke(10,{},null,false,true);}
+if((true) && (match=new RegExp("^https://(?:edith|rec|www)\\.xiaohongshu\\.com/api/sns/(?:v4/note/videofeed|v10/note/video/save)","i").exec(__url))){return __invoke(11,{},null,false,true);}
 __finish({});
 })();

@@ -4,7 +4,7 @@ const __settings = (()=>{try{return JSON.parse(typeof $argument==='string'?$argu
 const __finish=$done;
 function __cast(value, fallback){if(value===undefined)return fallback;if(typeof fallback==='boolean')return value===true||value==='true';if(typeof fallback==='number')return Number(value);return value;}
 
-function __original0(__typedArgs,$argument){
+function __original0(__typedArgs,$argument,$request,$response,$done,$script){
 // 脚本引用 https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js
 // https://www.npmjs.com/package/base-64
 // prettier-ignore
@@ -146,7 +146,7 @@ function jsonStr(json, ...args) {
     }
 }
 }
-function __original1(__typedArgs,$argument){
+function __original1(__typedArgs,$argument,$request,$response,$done,$script){
 // 脚本引用 https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js
 // https://www.npmjs.com/package/base-64
 // prettier-ignore
@@ -288,7 +288,7 @@ function jsonStr(json, ...args) {
     }
 }
 }
-function __original2(__typedArgs,$argument){
+function __original2(__typedArgs,$argument,$request,$response,$done,$script){
 // 脚本引用 https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js
 // https://www.npmjs.com/package/base-64
 // prettier-ignore
@@ -430,7 +430,7 @@ function jsonStr(json, ...args) {
     }
 }
 }
-function __original3(__typedArgs,$argument){
+function __original3(__typedArgs,$argument,$request,$response,$done,$script){
 // 脚本引用 https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js
 // https://www.npmjs.com/package/base-64
 // prettier-ignore
@@ -572,7 +572,7 @@ function jsonStr(json, ...args) {
     }
 }
 }
-function __original4(__typedArgs,$argument){
+function __original4(__typedArgs,$argument,$request,$response,$done,$script){
 // 脚本引用 https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js
 // https://www.npmjs.com/package/base-64
 // prettier-ignore
@@ -714,7 +714,7 @@ function jsonStr(json, ...args) {
     }
 }
 }
-function __original5(__typedArgs,$argument){
+function __original5(__typedArgs,$argument,$request,$response,$done,$script){
 // 脚本引用 https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js
 // https://www.npmjs.com/package/base-64
 // prettier-ignore
@@ -856,7 +856,7 @@ function jsonStr(json, ...args) {
     }
 }
 }
-function __original6(__typedArgs,$argument){
+function __original6(__typedArgs,$argument,$request,$response,$done,$script){
 // 脚本引用 https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js
 // https://www.npmjs.com/package/base-64
 // prettier-ignore
@@ -998,7 +998,7 @@ function jsonStr(json, ...args) {
     }
 }
 }
-function __original7(__typedArgs,$argument){
+function __original7(__typedArgs,$argument,$request,$response,$done,$script){
 // 脚本引用 https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js
 // https://www.npmjs.com/package/base-64
 // prettier-ignore
@@ -1140,7 +1140,7 @@ function jsonStr(json, ...args) {
     }
 }
 }
-function __original8(__typedArgs,$argument){
+function __original8(__typedArgs,$argument,$request,$response,$done,$script){
 // 脚本引用 https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/FanShu/No_Ads.js
 // https://www.npmjs.com/package/base-64
 // prettier-ignore
@@ -1283,16 +1283,43 @@ function jsonStr(json, ...args) {
 }
 }
 const __originals=[__original0,__original1,__original2,__original3,__original4,__original5,__original6,__original7,__original8];
-function __invoke(index,defaults,literal){const typed={};for(const k of Object.keys(defaults))typed[k]=__cast(__settings[k],defaults[k]);return __originals[index](typed,literal===null?JSON.stringify(typed):literal);}
+
+function __text(body){
+ if(typeof body==='string'||body===undefined)return body;
+ const bytes=body instanceof Uint8Array?body:new Uint8Array(body);
+ if(typeof TextDecoder!=='undefined')return new TextDecoder().decode(bytes);
+ let s='';for(let i=0;i<bytes.length;i+=8192)s+=String.fromCharCode(...bytes.subarray(i,i+8192));
+ return decodeURIComponent(escape(s));
+}
+function __bytes(body){
+ if(body===undefined||body instanceof Uint8Array)return body;
+ if(typeof body!=='string')return new Uint8Array(body);
+ if(typeof TextEncoder!=='undefined')return new TextEncoder().encode(body);
+ const s=unescape(encodeURIComponent(body));return Uint8Array.from(s,c=>c.charCodeAt(0));
+}
+function __message(message,binary,needsBody){
+ if(message===undefined)return undefined;
+ const copy={...message,headers:{...message.headers}};
+ if(needsBody)copy.body=binary?__bytes(copy.body):__text(copy.body);else delete copy.body;
+ return copy;
+}
+function __invoke(index,defaults,literal,binary,needsBody){
+ const typed={};for(const k of Object.keys(defaults))typed[k]=__cast(__settings[k],defaults[k]);
+ const request=__message(typeof $request==='undefined'?undefined:$request,binary,needsBody);
+ const response=__message(typeof $response==='undefined'?undefined:$response,binary,needsBody);
+ const context={...(typeof $script==='undefined'?{}:$script),binaryBodyMode:binary};
+ return __originals[index](typed,literal===null?JSON.stringify(typed):literal,request,response,__finish,context);
+}
+
 const __url=$request.url;let match;
-if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/chief-orch/home/bookPortal/v105/category","i").exec(__url))){return __invoke(0,{},null);}
-if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/abtest-front/banner-modular/get","i").exec(__url))){return __invoke(1,{},null);}
-if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/resource-orchestration-system/book/channel/v100/info","i").exec(__url))){return __invoke(2,{},null);}
-if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/fs-member/user/profile/v100/detail","i").exec(__url))){return __invoke(3,{},null);}
-if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/chief-orch/home/bookPortal/v111/forApp","i").exec(__url))){return __invoke(4,{},null);}
-if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/sns-orchestration-system/homePage/api/v100/myPage","i").exec(__url))){return __invoke(5,{},null);}
-if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/task-orchestration/taskCenter/api/v101/taskList","i").exec(__url))){return __invoke(6,{},null);}
-if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/resource-orchestration-system/book/v101/content","i").exec(__url))){return __invoke(7,{},null);}
-if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/user-orchestration/user/api/v101/ceiltip","i").exec(__url))){return __invoke(8,{},null);}
+if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/chief-orch/home/bookPortal/v105/category","i").exec(__url))){return __invoke(0,{},null,false,true);}
+if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/abtest-front/banner-modular/get","i").exec(__url))){return __invoke(1,{},null,false,true);}
+if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/resource-orchestration-system/book/channel/v100/info","i").exec(__url))){return __invoke(2,{},null,false,true);}
+if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/fs-member/user/profile/v100/detail","i").exec(__url))){return __invoke(3,{},null,false,true);}
+if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/chief-orch/home/bookPortal/v111/forApp","i").exec(__url))){return __invoke(4,{},null,false,true);}
+if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/sns-orchestration-system/homePage/api/v100/myPage","i").exec(__url))){return __invoke(5,{},null,false,true);}
+if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/task-orchestration/taskCenter/api/v101/taskList","i").exec(__url))){return __invoke(6,{},null,false,true);}
+if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/resource-orchestration-system/book/v101/content","i").exec(__url))){return __invoke(7,{},null,false,true);}
+if((true) && (match=new RegExp("^https?://g[a-z0-9-]+\\.dushu365\\.com/user-orchestration/user/api/v101/ceiltip","i").exec(__url))){return __invoke(8,{},null,false,true);}
 __finish({});
 })();

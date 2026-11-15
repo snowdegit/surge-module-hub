@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=Reddit去广告 · Surge
 #!desc=过滤应用内推广，阻止NSFW提示。
 #!author=xream[https://github.com/xream]

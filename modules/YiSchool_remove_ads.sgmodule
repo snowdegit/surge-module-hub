@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=易校园去广告 · Surge
 #!desc=移除开屏广告、横幅广告、弹窗广告、悬浮广告、文末广告、消息广告、校园头条，精简首页金刚位和我的页面。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://compus\.xiaofubao\.com/compus/user/getUserExt$ 'del(.data.adPopSwitch,.data.adSplashSwitch)'
+http-response-jq (?i)^https://compus\.xiaofubao\.com/compus/user/getUserExt$ '(. as $__original | try del(.data.adPopSwitch) catch $__original) | (. as $__original | try del(.data.adSplashSwitch) catch $__original)'
 http-response-jq (?i)^https://compus\.xiaofubao\.com/compus/application/getHomeAppList$ '.rows|=map(select(.appCode=="kechengbiao_app1" or .appCode=="siliuji" or .appCode=="NEWJIAOFEIDATING"))'
 
 [Map Local]

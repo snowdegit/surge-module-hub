@@ -1,0 +1,7 @@
+{
+  "iQiYi_Video_remove_ads:28": {"base":{"statistics":{"ad_str":"advert"}},"cards":[{"alias_name":"entrence_focus"},{"alias_name":"normal","keep":true}]},
+  "Tieba_remove_ads:25": {"index_tab_info":[{"tab_name":"推荐"},{"tab_name":"其他"}],"top_level_navi":{"推荐":{"keep":true},"侧边栏":[],"关注":[],"广告":[]}},
+  "2bulu_remove_ads:14": {"configData":"{\"adPlatform\":\"advert\",\"adsConfig\":{},\"keep\":true}"},
+  "CatEarFM_remove_ads:22": {"info":{"cronet":"{\"quic\":true,\"keep\":true}"}},
+  "CSG_remove_ads:14": {"info":"RUBIK-TRACEID:fixture","scene":{"page":{"areas":[{"areaId":"kingkong_home"},{"areaId":"advert"}]}}}
+}

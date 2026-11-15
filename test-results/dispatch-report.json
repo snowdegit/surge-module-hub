@@ -1,0 +1,4124 @@
+{
+  "scope": "Generated dispatcher with upstream bodies replaced by probes; tests routes and adapters, not upstream application algorithms.",
+  "checks": 588,
+  "passed": 588,
+  "failed": 0,
+  "cases": [
+    {
+      "plugin": "1.1.1.1",
+      "line": 14,
+      "variant": "default",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "1.1.1.1",
+      "line": 14,
+      "variant": "override",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "1.1.1.1",
+      "line": 14,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "1.1.1.1",
+      "line": 16,
+      "variant": "default",
+      "passed": true,
+      "selected": 16
+    },
+    {
+      "plugin": "1.1.1.1",
+      "line": 16,
+      "variant": "override",
+      "passed": true,
+      "selected": 16
+    },
+    {
+      "plugin": "1.1.1.1",
+      "line": 16,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "1.1.1.1",
+      "line": 15,
+      "variant": "default",
+      "passed": true,
+      "selected": 15
+    },
+    {
+      "plugin": "1.1.1.1",
+      "line": 15,
+      "variant": "override",
+      "passed": true,
+      "selected": 15
+    },
+    {
+      "plugin": "1.1.1.1",
+      "line": 15,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "1.1.1.1",
+      "line": 17,
+      "variant": "default",
+      "passed": true,
+      "selected": 17
+    },
+    {
+      "plugin": "1.1.1.1",
+      "line": 17,
+      "variant": "override",
+      "passed": true,
+      "selected": 17
+    },
+    {
+      "plugin": "1.1.1.1",
+      "line": 17,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "12306_remove_ads",
+      "line": 21,
+      "variant": "default",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "12306_remove_ads",
+      "line": 21,
+      "variant": "override",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "12306_remove_ads",
+      "line": 21,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "AliYunDrive_remove_ads",
+      "line": 22,
+      "variant": "default",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "AliYunDrive_remove_ads",
+      "line": 22,
+      "variant": "override",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "AliYunDrive_remove_ads",
+      "line": 22,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "AliYunDrive_remove_ads",
+      "line": 23,
+      "variant": "default",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "AliYunDrive_remove_ads",
+      "line": 23,
+      "variant": "override",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "AliYunDrive_remove_ads",
+      "line": 23,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "AppleWeatherEnhancer",
+      "line": 31,
+      "variant": "default",
+      "passed": true,
+      "selected": 31
+    },
+    {
+      "plugin": "AppleWeatherEnhancer",
+      "line": 31,
+      "variant": "override",
+      "passed": true,
+      "selected": 31
+    },
+    {
+      "plugin": "AppleWeatherEnhancer",
+      "line": 31,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "AppleWeatherEnhancer",
+      "line": 33,
+      "variant": "default",
+      "passed": true,
+      "selected": 33
+    },
+    {
+      "plugin": "AppleWeatherEnhancer",
+      "line": 33,
+      "variant": "override",
+      "passed": true,
+      "selected": 33
+    },
+    {
+      "plugin": "AppleWeatherEnhancer",
+      "line": 33,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Auto_Join_TF",
+      "line": 25,
+      "variant": "default",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Auto_Join_TF",
+      "line": 25,
+      "variant": "override",
+      "passed": true,
+      "selected": 25
+    },
+    {
+      "plugin": "Auto_Join_TF",
+      "line": 25,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 53,
+      "variant": "default",
+      "passed": true,
+      "selected": 53
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 53,
+      "variant": "override",
+      "passed": true,
+      "selected": 53
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 53,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 55,
+      "variant": "default",
+      "passed": true,
+      "selected": 55
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 55,
+      "variant": "override",
+      "passed": true,
+      "selected": 55
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 55,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 57,
+      "variant": "default",
+      "passed": true,
+      "selected": 57
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 57,
+      "variant": "override",
+      "passed": true,
+      "selected": 57
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 57,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 59,
+      "variant": "default",
+      "passed": true,
+      "selected": 59
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 59,
+      "variant": "override",
+      "passed": true,
+      "selected": 59
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 59,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 61,
+      "variant": "default",
+      "passed": true,
+      "selected": 61
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 61,
+      "variant": "override",
+      "passed": true,
+      "selected": 61
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 61,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 63,
+      "variant": "default",
+      "passed": true,
+      "selected": 63
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 63,
+      "variant": "override",
+      "passed": true,
+      "selected": 63
+    },
+    {
+      "plugin": "AutoHome_remove_ads",
+      "line": 63,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "BabyTree_remove_ads",
+      "line": 21,
+      "variant": "default",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "BabyTree_remove_ads",
+      "line": 21,
+      "variant": "override",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "BabyTree_remove_ads",
+      "line": 21,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "BabyTree_remove_ads",
+      "line": 22,
+      "variant": "default",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "BabyTree_remove_ads",
+      "line": 22,
+      "variant": "override",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "BabyTree_remove_ads",
+      "line": 22,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "BabyTree_remove_ads",
+      "line": 23,
+      "variant": "default",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "BabyTree_remove_ads",
+      "line": 23,
+      "variant": "override",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "BabyTree_remove_ads",
+      "line": 23,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Baidu_input_method_remove_ads",
+      "line": 24,
+      "variant": "default",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "Baidu_input_method_remove_ads",
+      "line": 24,
+      "variant": "override",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "Baidu_input_method_remove_ads",
+      "line": 24,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "BaiduSearchWebpage_remove_ads",
+      "line": 14,
+      "variant": "default",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "BaiduSearchWebpage_remove_ads",
+      "line": 14,
+      "variant": "override",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "BaiduSearchWebpage_remove_ads",
+      "line": 14,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Bilibili_remove_ads",
+      "line": 68,
+      "variant": "default",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Bilibili_remove_ads",
+      "line": 68,
+      "variant": "override",
+      "passed": true,
+      "selected": 68
+    },
+    {
+      "plugin": "Bilibili_remove_ads",
+      "line": 68,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Bilibili_remove_ads",
+      "line": 70,
+      "variant": "default",
+      "passed": true,
+      "selected": 70
+    },
+    {
+      "plugin": "Bilibili_remove_ads",
+      "line": 70,
+      "variant": "override",
+      "passed": true,
+      "selected": 70
+    },
+    {
+      "plugin": "Bilibili_remove_ads",
+      "line": 70,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Bilibili_remove_ads",
+      "line": 72,
+      "variant": "default",
+      "passed": true,
+      "selected": 72
+    },
+    {
+      "plugin": "Bilibili_remove_ads",
+      "line": 72,
+      "variant": "override",
+      "passed": true,
+      "selected": 72
+    },
+    {
+      "plugin": "Bilibili_remove_ads",
+      "line": 72,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Bilibili_remove_ads",
+      "line": 74,
+      "variant": "default",
+      "passed": true,
+      "selected": 74
+    },
+    {
+      "plugin": "Bilibili_remove_ads",
+      "line": 74,
+      "variant": "override",
+      "passed": true,
+      "selected": 74
+    },
+    {
+      "plugin": "Bilibili_remove_ads",
+      "line": 74,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "BiliComic_remove_ads",
+      "line": 27,
+      "variant": "default",
+      "passed": true,
+      "selected": 27
+    },
+    {
+      "plugin": "BiliComic_remove_ads",
+      "line": 27,
+      "variant": "override",
+      "passed": true,
+      "selected": 27
+    },
+    {
+      "plugin": "BiliComic_remove_ads",
+      "line": 27,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "BiliComic_remove_ads",
+      "line": 28,
+      "variant": "default",
+      "passed": true,
+      "selected": 28
+    },
+    {
+      "plugin": "BiliComic_remove_ads",
+      "line": 28,
+      "variant": "override",
+      "passed": true,
+      "selected": 28
+    },
+    {
+      "plugin": "BiliComic_remove_ads",
+      "line": 28,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Bixin_remove_ads",
+      "line": 46,
+      "variant": "default",
+      "passed": true,
+      "selected": 46
+    },
+    {
+      "plugin": "Bixin_remove_ads",
+      "line": 46,
+      "variant": "override",
+      "passed": true,
+      "selected": 46
+    },
+    {
+      "plugin": "Bixin_remove_ads",
+      "line": 46,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Bixin_remove_ads",
+      "line": 48,
+      "variant": "default",
+      "passed": true,
+      "selected": 48
+    },
+    {
+      "plugin": "Bixin_remove_ads",
+      "line": 48,
+      "variant": "override",
+      "passed": true,
+      "selected": 48
+    },
+    {
+      "plugin": "Bixin_remove_ads",
+      "line": 48,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "BooHee_remove_ads",
+      "line": 33,
+      "variant": "default",
+      "passed": true,
+      "selected": 33
+    },
+    {
+      "plugin": "BooHee_remove_ads",
+      "line": 33,
+      "variant": "override",
+      "passed": true,
+      "selected": 33
+    },
+    {
+      "plugin": "BooHee_remove_ads",
+      "line": 33,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "BoxJs",
+      "line": 17,
+      "variant": "default",
+      "passed": true,
+      "selected": 17
+    },
+    {
+      "plugin": "BoxJs",
+      "line": 17,
+      "variant": "override",
+      "passed": true,
+      "selected": 17
+    },
+    {
+      "plugin": "BoxJs",
+      "line": 17,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 24,
+      "variant": "default",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 24,
+      "variant": "override",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 24,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 26,
+      "variant": "default",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 26,
+      "variant": "override",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 26,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 28,
+      "variant": "default",
+      "passed": true,
+      "selected": 28
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 28,
+      "variant": "override",
+      "passed": true,
+      "selected": 28
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 28,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 30,
+      "variant": "default",
+      "passed": true,
+      "selected": 30
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 30,
+      "variant": "override",
+      "passed": true,
+      "selected": 30
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 30,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 32,
+      "variant": "default",
+      "passed": true,
+      "selected": 32
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 32,
+      "variant": "override",
+      "passed": true,
+      "selected": 32
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 32,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 33,
+      "variant": "default",
+      "passed": true,
+      "selected": 33
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 33,
+      "variant": "override",
+      "passed": true,
+      "selected": 33
+    },
+    {
+      "plugin": "CaixinMedia_remove_ads",
+      "line": 33,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Chelaile_remove_ads",
+      "line": 34,
+      "variant": "default",
+      "passed": true,
+      "selected": 34
+    },
+    {
+      "plugin": "Chelaile_remove_ads",
+      "line": 34,
+      "variant": "override",
+      "passed": true,
+      "selected": 34
+    },
+    {
+      "plugin": "Chelaile_remove_ads",
+      "line": 34,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "ColorfulClouds_remove_ads",
+      "line": 23,
+      "variant": "default",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "ColorfulClouds_remove_ads",
+      "line": 23,
+      "variant": "override",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "ColorfulClouds_remove_ads",
+      "line": 23,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "DjDuoDuo_remove_ads",
+      "line": 14,
+      "variant": "default",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "DjDuoDuo_remove_ads",
+      "line": 14,
+      "variant": "override",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "DjDuoDuo_remove_ads",
+      "line": 14,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Douyu_remove_ads",
+      "line": 30,
+      "variant": "default",
+      "passed": true,
+      "selected": 30
+    },
+    {
+      "plugin": "Douyu_remove_ads",
+      "line": 30,
+      "variant": "override",
+      "passed": true,
+      "selected": 30
+    },
+    {
+      "plugin": "Douyu_remove_ads",
+      "line": 30,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "DubbingShow_remove_ads",
+      "line": 23,
+      "variant": "default",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "DubbingShow_remove_ads",
+      "line": 23,
+      "variant": "override",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "DubbingShow_remove_ads",
+      "line": 23,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Fileball_mount",
+      "line": 14,
+      "variant": "default",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "Fileball_mount",
+      "line": 14,
+      "variant": "override",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "Fileball_mount",
+      "line": 14,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "FlyerTea_remove_ads",
+      "line": 20,
+      "variant": "default",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "FlyerTea_remove_ads",
+      "line": 20,
+      "variant": "override",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "FlyerTea_remove_ads",
+      "line": 20,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "FlyerTea_remove_ads",
+      "line": 21,
+      "variant": "default",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "FlyerTea_remove_ads",
+      "line": 21,
+      "variant": "override",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "FlyerTea_remove_ads",
+      "line": 21,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "HUPU_remove_ads",
+      "line": 24,
+      "variant": "default",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "HUPU_remove_ads",
+      "line": 24,
+      "variant": "override",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "HUPU_remove_ads",
+      "line": 24,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "HUPU_remove_ads",
+      "line": 25,
+      "variant": "default",
+      "passed": true,
+      "selected": 25
+    },
+    {
+      "plugin": "HUPU_remove_ads",
+      "line": 25,
+      "variant": "override",
+      "passed": true,
+      "selected": 25
+    },
+    {
+      "plugin": "HUPU_remove_ads",
+      "line": 25,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "HUPU_remove_ads",
+      "line": 26,
+      "variant": "default",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "HUPU_remove_ads",
+      "line": 26,
+      "variant": "override",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "HUPU_remove_ads",
+      "line": 26,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "HUPU_remove_ads",
+      "line": 27,
+      "variant": "default",
+      "passed": true,
+      "selected": 27
+    },
+    {
+      "plugin": "HUPU_remove_ads",
+      "line": 27,
+      "variant": "override",
+      "passed": true,
+      "selected": 27
+    },
+    {
+      "plugin": "HUPU_remove_ads",
+      "line": 27,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "iMaiCai_remove_ads",
+      "line": 23,
+      "variant": "default",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "iMaiCai_remove_ads",
+      "line": 23,
+      "variant": "override",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "iMaiCai_remove_ads",
+      "line": 23,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "IPATool",
+      "line": 14,
+      "variant": "default",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "IPATool",
+      "line": 14,
+      "variant": "override",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "IPATool",
+      "line": 14,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "IPATool",
+      "line": 16,
+      "variant": "default",
+      "passed": true,
+      "selected": 16
+    },
+    {
+      "plugin": "IPATool",
+      "line": 16,
+      "variant": "override",
+      "passed": true,
+      "selected": 16
+    },
+    {
+      "plugin": "IPATool",
+      "line": 16,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "IThome_remove_ads",
+      "line": 21,
+      "variant": "default",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "IThome_remove_ads",
+      "line": 21,
+      "variant": "override",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "IThome_remove_ads",
+      "line": 21,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "iWallBiZhi_remove_ads",
+      "line": 19,
+      "variant": "default",
+      "passed": true,
+      "selected": 19
+    },
+    {
+      "plugin": "iWallBiZhi_remove_ads",
+      "line": 19,
+      "variant": "override",
+      "passed": true,
+      "selected": 19
+    },
+    {
+      "plugin": "iWallBiZhi_remove_ads",
+      "line": 19,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "iWallBiZhi_remove_ads",
+      "line": 21,
+      "variant": "default",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "iWallBiZhi_remove_ads",
+      "line": 21,
+      "variant": "override",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "iWallBiZhi_remove_ads",
+      "line": 21,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "iWallBiZhi_remove_ads",
+      "line": 23,
+      "variant": "default",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "iWallBiZhi_remove_ads",
+      "line": 23,
+      "variant": "override",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "iWallBiZhi_remove_ads",
+      "line": 23,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "JD_Price",
+      "line": 14,
+      "variant": "default",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "JD_Price",
+      "line": 14,
+      "variant": "override",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "JD_Price",
+      "line": 14,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "JD_Price",
+      "line": 16,
+      "variant": "default",
+      "passed": true,
+      "selected": 16
+    },
+    {
+      "plugin": "JD_Price",
+      "line": 16,
+      "variant": "override",
+      "passed": true,
+      "selected": 16
+    },
+    {
+      "plugin": "JD_Price",
+      "line": 16,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "JD_remove_ads",
+      "line": 22,
+      "variant": "default",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "JD_remove_ads",
+      "line": 22,
+      "variant": "override",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "JD_remove_ads",
+      "line": 22,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 25,
+      "variant": "default",
+      "passed": true,
+      "selected": 25
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 25,
+      "variant": "override",
+      "passed": true,
+      "selected": 25
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 25,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 26,
+      "variant": "default",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 26,
+      "variant": "override",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 26,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 27,
+      "variant": "default",
+      "passed": true,
+      "selected": 27
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 27,
+      "variant": "override",
+      "passed": true,
+      "selected": 27
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 27,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 28,
+      "variant": "default",
+      "passed": true,
+      "selected": 28
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 28,
+      "variant": "override",
+      "passed": true,
+      "selected": 28
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 28,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 29,
+      "variant": "default",
+      "passed": true,
+      "selected": 29
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 29,
+      "variant": "override",
+      "passed": true,
+      "selected": 29
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 29,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 30,
+      "variant": "default",
+      "passed": true,
+      "selected": 30
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 30,
+      "variant": "override",
+      "passed": true,
+      "selected": 30
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 30,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 31,
+      "variant": "default",
+      "passed": true,
+      "selected": 31
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 31,
+      "variant": "override",
+      "passed": true,
+      "selected": 31
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 31,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 32,
+      "variant": "default",
+      "passed": true,
+      "selected": 32
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 32,
+      "variant": "override",
+      "passed": true,
+      "selected": 32
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 32,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 33,
+      "variant": "default",
+      "passed": true,
+      "selected": 33
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 33,
+      "variant": "override",
+      "passed": true,
+      "selected": 33
+    },
+    {
+      "plugin": "KebidaDushu_remove_ads",
+      "line": 33,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KuaiKanComic_remove_ads",
+      "line": 51,
+      "variant": "default",
+      "passed": true,
+      "selected": 51
+    },
+    {
+      "plugin": "KuaiKanComic_remove_ads",
+      "line": 51,
+      "variant": "override",
+      "passed": true,
+      "selected": 51
+    },
+    {
+      "plugin": "KuaiKanComic_remove_ads",
+      "line": 51,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KuaiKanComic_remove_ads",
+      "line": 53,
+      "variant": "default",
+      "passed": true,
+      "selected": 53
+    },
+    {
+      "plugin": "KuaiKanComic_remove_ads",
+      "line": 53,
+      "variant": "override",
+      "passed": true,
+      "selected": 53
+    },
+    {
+      "plugin": "KuaiKanComic_remove_ads",
+      "line": 53,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KuaiKanComic_remove_ads",
+      "line": 55,
+      "variant": "default",
+      "passed": true,
+      "selected": 55
+    },
+    {
+      "plugin": "KuaiKanComic_remove_ads",
+      "line": 55,
+      "variant": "override",
+      "passed": true,
+      "selected": 55
+    },
+    {
+      "plugin": "KuaiKanComic_remove_ads",
+      "line": 55,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "KuaiKanComic_remove_ads",
+      "line": 57,
+      "variant": "default",
+      "passed": true,
+      "selected": 57
+    },
+    {
+      "plugin": "KuaiKanComic_remove_ads",
+      "line": 57,
+      "variant": "override",
+      "passed": true,
+      "selected": 57
+    },
+    {
+      "plugin": "KuaiKanComic_remove_ads",
+      "line": 57,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "MaiMai_remove_ads",
+      "line": 23,
+      "variant": "default",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "MaiMai_remove_ads",
+      "line": 23,
+      "variant": "override",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "MaiMai_remove_ads",
+      "line": 23,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "MeituMYXJ_remove_ads",
+      "line": 24,
+      "variant": "default",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "MeituMYXJ_remove_ads",
+      "line": 24,
+      "variant": "override",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "MeituMYXJ_remove_ads",
+      "line": 24,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "MKZ_remove_ads",
+      "line": 23,
+      "variant": "default",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "MKZ_remove_ads",
+      "line": 23,
+      "variant": "override",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "MKZ_remove_ads",
+      "line": 23,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "mobileClouds_remove_ads",
+      "line": 14,
+      "variant": "default",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "mobileClouds_remove_ads",
+      "line": 14,
+      "variant": "override",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "mobileClouds_remove_ads",
+      "line": 14,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "mobileClouds_remove_ads",
+      "line": 16,
+      "variant": "default",
+      "passed": true,
+      "selected": 16
+    },
+    {
+      "plugin": "mobileClouds_remove_ads",
+      "line": 16,
+      "variant": "override",
+      "passed": true,
+      "selected": 16
+    },
+    {
+      "plugin": "mobileClouds_remove_ads",
+      "line": 16,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "MotorFans_remove_ads",
+      "line": 30,
+      "variant": "default",
+      "passed": true,
+      "selected": 30
+    },
+    {
+      "plugin": "MotorFans_remove_ads",
+      "line": 30,
+      "variant": "override",
+      "passed": true,
+      "selected": 30
+    },
+    {
+      "plugin": "MotorFans_remove_ads",
+      "line": 30,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 49,
+      "variant": "default",
+      "passed": true,
+      "selected": 49
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 49,
+      "variant": "override",
+      "passed": true,
+      "selected": 49
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 49,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 50,
+      "variant": "default",
+      "passed": true,
+      "selected": 50
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 50,
+      "variant": "override",
+      "passed": true,
+      "selected": 50
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 50,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 51,
+      "variant": "default",
+      "passed": true,
+      "selected": 51
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 51,
+      "variant": "override",
+      "passed": true,
+      "selected": 51
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 51,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 52,
+      "variant": "default",
+      "passed": true,
+      "selected": 52
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 52,
+      "variant": "override",
+      "passed": true,
+      "selected": 52
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 52,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 53,
+      "variant": "default",
+      "passed": true,
+      "selected": 53
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 53,
+      "variant": "override",
+      "passed": true,
+      "selected": 53
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 53,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 54,
+      "variant": "default",
+      "passed": true,
+      "selected": 54
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 54,
+      "variant": "override",
+      "passed": true,
+      "selected": 54
+    },
+    {
+      "plugin": "NeteaseCloudMusic_remove_ads",
+      "line": 54,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "NetEaseGodlike_remove_ads",
+      "line": 26,
+      "variant": "default",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "NetEaseGodlike_remove_ads",
+      "line": 26,
+      "variant": "override",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "NetEaseGodlike_remove_ads",
+      "line": 26,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "NeteaseNews_remove_ads",
+      "line": 27,
+      "variant": "default",
+      "passed": true,
+      "selected": 27
+    },
+    {
+      "plugin": "NeteaseNews_remove_ads",
+      "line": 27,
+      "variant": "override",
+      "passed": true,
+      "selected": 27
+    },
+    {
+      "plugin": "NeteaseNews_remove_ads",
+      "line": 27,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "NeteaseNews_remove_ads",
+      "line": 29,
+      "variant": "default",
+      "passed": true,
+      "selected": 29
+    },
+    {
+      "plugin": "NeteaseNews_remove_ads",
+      "line": 29,
+      "variant": "override",
+      "passed": true,
+      "selected": 29
+    },
+    {
+      "plugin": "NeteaseNews_remove_ads",
+      "line": 29,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "NeteaseNews_remove_ads",
+      "line": 31,
+      "variant": "default",
+      "passed": true,
+      "selected": 31
+    },
+    {
+      "plugin": "NeteaseNews_remove_ads",
+      "line": 31,
+      "variant": "override",
+      "passed": true,
+      "selected": 31
+    },
+    {
+      "plugin": "NeteaseNews_remove_ads",
+      "line": 31,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "PICC_Insurance_remove_ads",
+      "line": 19,
+      "variant": "default",
+      "passed": true,
+      "selected": 19
+    },
+    {
+      "plugin": "PICC_Insurance_remove_ads",
+      "line": 19,
+      "variant": "override",
+      "passed": true,
+      "selected": 19
+    },
+    {
+      "plugin": "PICC_Insurance_remove_ads",
+      "line": 19,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "PICC_Insurance_remove_ads",
+      "line": 21,
+      "variant": "default",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "PICC_Insurance_remove_ads",
+      "line": 21,
+      "variant": "override",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "PICC_Insurance_remove_ads",
+      "line": 21,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "PinDuoDuo_remove_ads",
+      "line": 72,
+      "variant": "default",
+      "passed": true,
+      "selected": 72
+    },
+    {
+      "plugin": "PinDuoDuo_remove_ads",
+      "line": 72,
+      "variant": "override",
+      "passed": true,
+      "selected": 72
+    },
+    {
+      "plugin": "PinDuoDuo_remove_ads",
+      "line": 72,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 18,
+      "variant": "default",
+      "passed": true,
+      "selected": 18
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 18,
+      "variant": "override",
+      "passed": true,
+      "selected": 18
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 18,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 19,
+      "variant": "default",
+      "passed": true,
+      "selected": 19
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 19,
+      "variant": "override",
+      "passed": true,
+      "selected": 19
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 19,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 20,
+      "variant": "default",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 20,
+      "variant": "override",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 20,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 21,
+      "variant": "default",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 21,
+      "variant": "override",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 21,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 22,
+      "variant": "default",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 22,
+      "variant": "override",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 22,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 23,
+      "variant": "default",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 23,
+      "variant": "override",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "PuPuMall_remove_ads",
+      "line": 23,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Qbb_remove_ads",
+      "line": 33,
+      "variant": "default",
+      "passed": true,
+      "selected": 33
+    },
+    {
+      "plugin": "Qbb_remove_ads",
+      "line": 33,
+      "variant": "override",
+      "passed": true,
+      "selected": 33
+    },
+    {
+      "plugin": "Qbb_remove_ads",
+      "line": 33,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Qbb_remove_ads",
+      "line": 35,
+      "variant": "default",
+      "passed": true,
+      "selected": 35
+    },
+    {
+      "plugin": "Qbb_remove_ads",
+      "line": 35,
+      "variant": "override",
+      "passed": true,
+      "selected": 35
+    },
+    {
+      "plugin": "Qbb_remove_ads",
+      "line": 35,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 31,
+      "variant": "default",
+      "passed": true,
+      "selected": 31
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 31,
+      "variant": "override",
+      "passed": true,
+      "selected": 31
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 31,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 33,
+      "variant": "default",
+      "passed": true,
+      "selected": 33
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 33,
+      "variant": "override",
+      "passed": true,
+      "selected": 33
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 33,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 35,
+      "variant": "default",
+      "passed": true,
+      "selected": 35
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 35,
+      "variant": "override",
+      "passed": true,
+      "selected": 35
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 35,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 37,
+      "variant": "default",
+      "passed": true,
+      "selected": 37
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 37,
+      "variant": "override",
+      "passed": true,
+      "selected": 37
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 37,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 39,
+      "variant": "default",
+      "passed": true,
+      "selected": 39
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 39,
+      "variant": "override",
+      "passed": true,
+      "selected": 39
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 39,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 41,
+      "variant": "default",
+      "passed": true,
+      "selected": 41
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 41,
+      "variant": "override",
+      "passed": true,
+      "selected": 41
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 41,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 43,
+      "variant": "default",
+      "passed": true,
+      "selected": 43
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 43,
+      "variant": "override",
+      "passed": true,
+      "selected": 43
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 43,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 45,
+      "variant": "default",
+      "passed": true,
+      "selected": 45
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 45,
+      "variant": "override",
+      "passed": true,
+      "selected": 45
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 45,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 47,
+      "variant": "default",
+      "passed": true,
+      "selected": 47
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 47,
+      "variant": "override",
+      "passed": true,
+      "selected": 47
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 47,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 49,
+      "variant": "default",
+      "passed": true,
+      "selected": 49
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 49,
+      "variant": "override",
+      "passed": true,
+      "selected": 49
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 49,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 51,
+      "variant": "default",
+      "passed": true,
+      "selected": 51
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 51,
+      "variant": "override",
+      "passed": true,
+      "selected": 51
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 51,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 53,
+      "variant": "default",
+      "passed": true,
+      "selected": 53
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 53,
+      "variant": "override",
+      "passed": true,
+      "selected": 53
+    },
+    {
+      "plugin": "RedPaper_remove_ads",
+      "line": 53,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "RiskBird_remove_ads",
+      "line": 19,
+      "variant": "default",
+      "passed": true,
+      "selected": 19
+    },
+    {
+      "plugin": "RiskBird_remove_ads",
+      "line": 19,
+      "variant": "override",
+      "passed": true,
+      "selected": 19
+    },
+    {
+      "plugin": "RiskBird_remove_ads",
+      "line": 19,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Script-Hub",
+      "line": 20,
+      "variant": "default",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "Script-Hub",
+      "line": 20,
+      "variant": "override",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "Script-Hub",
+      "line": 20,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Script-Hub",
+      "line": 22,
+      "variant": "default",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "Script-Hub",
+      "line": 22,
+      "variant": "override",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "Script-Hub",
+      "line": 22,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Script-Hub",
+      "line": 24,
+      "variant": "default",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "Script-Hub",
+      "line": 24,
+      "variant": "override",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "Script-Hub",
+      "line": 24,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Script-Hub",
+      "line": 26,
+      "variant": "default",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "Script-Hub",
+      "line": 26,
+      "variant": "override",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "Script-Hub",
+      "line": 26,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "ShoujiDesk_remove_ads",
+      "line": 19,
+      "variant": "default",
+      "passed": true,
+      "selected": 19
+    },
+    {
+      "plugin": "ShoujiDesk_remove_ads",
+      "line": 19,
+      "variant": "override",
+      "passed": true,
+      "selected": 19
+    },
+    {
+      "plugin": "ShoujiDesk_remove_ads",
+      "line": 19,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "ShuQiCenterReader_remove_ads",
+      "line": 24,
+      "variant": "default",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "ShuQiCenterReader_remove_ads",
+      "line": 24,
+      "variant": "override",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "ShuQiCenterReader_remove_ads",
+      "line": 24,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "SodaMusic_remove_ads",
+      "line": 48,
+      "variant": "default",
+      "passed": true,
+      "selected": 48
+    },
+    {
+      "plugin": "SodaMusic_remove_ads",
+      "line": 48,
+      "variant": "override",
+      "passed": true,
+      "selected": 48
+    },
+    {
+      "plugin": "SodaMusic_remove_ads",
+      "line": 48,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Soul_remove_ads",
+      "line": 38,
+      "variant": "default",
+      "passed": true,
+      "selected": 38
+    },
+    {
+      "plugin": "Soul_remove_ads",
+      "line": 38,
+      "variant": "override",
+      "passed": true,
+      "selected": 38
+    },
+    {
+      "plugin": "Soul_remove_ads",
+      "line": 38,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 16,
+      "variant": "default",
+      "passed": true,
+      "selected": 16
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 16,
+      "variant": "override",
+      "passed": true,
+      "selected": 16
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 16,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 17,
+      "variant": "default",
+      "passed": true,
+      "selected": 17
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 17,
+      "variant": "override",
+      "passed": true,
+      "selected": 17
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 17,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 14,
+      "variant": "default",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 14,
+      "variant": "override",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 14,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 19,
+      "variant": "default",
+      "passed": true,
+      "selected": 19
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 19,
+      "variant": "override",
+      "passed": true,
+      "selected": 19
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 19,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 20,
+      "variant": "default",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 20,
+      "variant": "override",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 20,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 22,
+      "variant": "default",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 22,
+      "variant": "override",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 22,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 23,
+      "variant": "default",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 23,
+      "variant": "override",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "Spotify_lyrics_translation",
+      "line": 23,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Spotify_remove_ads",
+      "line": 26,
+      "variant": "default",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "Spotify_remove_ads",
+      "line": 26,
+      "variant": "override",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "Spotify_remove_ads",
+      "line": 26,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Sub-Store",
+      "line": 20,
+      "variant": "default",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "Sub-Store",
+      "line": 20,
+      "variant": "override",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "Sub-Store",
+      "line": 20,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Sub-Store",
+      "line": 21,
+      "variant": "default",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "Sub-Store",
+      "line": 21,
+      "variant": "override",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "Sub-Store",
+      "line": 21,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Taobao_remove_ads",
+      "line": 35,
+      "variant": "default",
+      "passed": true,
+      "selected": 35
+    },
+    {
+      "plugin": "Taobao_remove_ads",
+      "line": 35,
+      "variant": "override",
+      "passed": true,
+      "selected": 35
+    },
+    {
+      "plugin": "Taobao_remove_ads",
+      "line": 35,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Taobao_remove_ads",
+      "line": 37,
+      "variant": "default",
+      "passed": true,
+      "selected": 37
+    },
+    {
+      "plugin": "Taobao_remove_ads",
+      "line": 37,
+      "variant": "override",
+      "passed": true,
+      "selected": 37
+    },
+    {
+      "plugin": "Taobao_remove_ads",
+      "line": 37,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Tencent_Video_remove_ads",
+      "line": 35,
+      "variant": "default",
+      "passed": true,
+      "selected": 35
+    },
+    {
+      "plugin": "Tencent_Video_remove_ads",
+      "line": 35,
+      "variant": "override",
+      "passed": true,
+      "selected": 35
+    },
+    {
+      "plugin": "Tencent_Video_remove_ads",
+      "line": 35,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Tieba_remove_ads",
+      "line": 49,
+      "variant": "default",
+      "passed": true,
+      "selected": 49
+    },
+    {
+      "plugin": "Tieba_remove_ads",
+      "line": 49,
+      "variant": "override",
+      "passed": true,
+      "selected": 49
+    },
+    {
+      "plugin": "Tieba_remove_ads",
+      "line": 49,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "TV_Assistant_remove_ads",
+      "line": 21,
+      "variant": "default",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "TV_Assistant_remove_ads",
+      "line": 21,
+      "variant": "override",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "TV_Assistant_remove_ads",
+      "line": 21,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Uki_remove_ads",
+      "line": 22,
+      "variant": "default",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "Uki_remove_ads",
+      "line": 22,
+      "variant": "override",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "Uki_remove_ads",
+      "line": 22,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Uki_remove_ads",
+      "line": 24,
+      "variant": "default",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "Uki_remove_ads",
+      "line": 24,
+      "variant": "override",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "Uki_remove_ads",
+      "line": 24,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Uki_remove_ads",
+      "line": 26,
+      "variant": "default",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "Uki_remove_ads",
+      "line": 26,
+      "variant": "override",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "Uki_remove_ads",
+      "line": 26,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Uki_remove_ads",
+      "line": 28,
+      "variant": "default",
+      "passed": true,
+      "selected": 28
+    },
+    {
+      "plugin": "Uki_remove_ads",
+      "line": 28,
+      "variant": "override",
+      "passed": true,
+      "selected": 28
+    },
+    {
+      "plugin": "Uki_remove_ads",
+      "line": 28,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Umetrip_remove_ads",
+      "line": 17,
+      "variant": "default",
+      "passed": true,
+      "selected": 17
+    },
+    {
+      "plugin": "Umetrip_remove_ads",
+      "line": 17,
+      "variant": "override",
+      "passed": true,
+      "selected": 17
+    },
+    {
+      "plugin": "Umetrip_remove_ads",
+      "line": 17,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 14,
+      "variant": "default",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 14,
+      "variant": "override",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 14,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 16,
+      "variant": "default",
+      "passed": true,
+      "selected": 16
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 16,
+      "variant": "override",
+      "passed": true,
+      "selected": 16
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 16,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 18,
+      "variant": "default",
+      "passed": true,
+      "selected": 18
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 18,
+      "variant": "override",
+      "passed": true,
+      "selected": 18
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 18,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 20,
+      "variant": "default",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 20,
+      "variant": "override",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 20,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 22,
+      "variant": "default",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 22,
+      "variant": "override",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "VVebo_repair",
+      "line": 22,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 45,
+      "variant": "default",
+      "passed": true,
+      "selected": 45
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 45,
+      "variant": "override",
+      "passed": true,
+      "selected": 45
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 45,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 47,
+      "variant": "default",
+      "passed": true,
+      "selected": 47
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 47,
+      "variant": "override",
+      "passed": true,
+      "selected": 47
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 47,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 49,
+      "variant": "default",
+      "passed": true,
+      "selected": 49
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 49,
+      "variant": "override",
+      "passed": true,
+      "selected": 49
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 49,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 51,
+      "variant": "default",
+      "passed": true,
+      "selected": 51
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 51,
+      "variant": "override",
+      "passed": true,
+      "selected": 51
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 51,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 53,
+      "variant": "default",
+      "passed": true,
+      "selected": 53
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 53,
+      "variant": "override",
+      "passed": true,
+      "selected": 53
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 53,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 55,
+      "variant": "default",
+      "passed": true,
+      "selected": 55
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 55,
+      "variant": "override",
+      "passed": true,
+      "selected": 55
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 55,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 57,
+      "variant": "default",
+      "passed": true,
+      "selected": 57
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 57,
+      "variant": "override",
+      "passed": true,
+      "selected": 57
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 57,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 59,
+      "variant": "default",
+      "passed": true,
+      "selected": 59
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 59,
+      "variant": "override",
+      "passed": true,
+      "selected": 59
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 59,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 61,
+      "variant": "default",
+      "passed": true,
+      "selected": 61
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 61,
+      "variant": "override",
+      "passed": true,
+      "selected": 61
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 61,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 63,
+      "variant": "default",
+      "passed": true,
+      "selected": 63
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 63,
+      "variant": "override",
+      "passed": true,
+      "selected": 63
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 63,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 65,
+      "variant": "default",
+      "passed": true,
+      "selected": 65
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 65,
+      "variant": "override",
+      "passed": true,
+      "selected": 65
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 65,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 67,
+      "variant": "default",
+      "passed": true,
+      "selected": 67
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 67,
+      "variant": "override",
+      "passed": true,
+      "selected": 67
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 67,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 69,
+      "variant": "default",
+      "passed": true,
+      "selected": 69
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 69,
+      "variant": "override",
+      "passed": true,
+      "selected": 69
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 69,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 71,
+      "variant": "default",
+      "passed": true,
+      "selected": 71
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 71,
+      "variant": "override",
+      "passed": true,
+      "selected": 71
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 71,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 73,
+      "variant": "default",
+      "passed": true,
+      "selected": 73
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 73,
+      "variant": "override",
+      "passed": true,
+      "selected": 73
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 73,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 75,
+      "variant": "default",
+      "passed": true,
+      "selected": 75
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 75,
+      "variant": "override",
+      "passed": true,
+      "selected": 75
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 75,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 77,
+      "variant": "default",
+      "passed": true,
+      "selected": 77
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 77,
+      "variant": "override",
+      "passed": true,
+      "selected": 77
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 77,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 79,
+      "variant": "default",
+      "passed": true,
+      "selected": 79
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 79,
+      "variant": "override",
+      "passed": true,
+      "selected": 79
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 79,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 81,
+      "variant": "default",
+      "passed": true,
+      "selected": 81
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 81,
+      "variant": "override",
+      "passed": true,
+      "selected": 81
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 81,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 83,
+      "variant": "default",
+      "passed": true,
+      "selected": 83
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 83,
+      "variant": "override",
+      "passed": true,
+      "selected": 83
+    },
+    {
+      "plugin": "Weibo_remove_ads",
+      "line": 83,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weidian_remove_ads",
+      "line": 39,
+      "variant": "default",
+      "passed": true,
+      "selected": 39
+    },
+    {
+      "plugin": "Weidian_remove_ads",
+      "line": 39,
+      "variant": "override",
+      "passed": true,
+      "selected": 39
+    },
+    {
+      "plugin": "Weidian_remove_ads",
+      "line": 39,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weidian_remove_ads",
+      "line": 41,
+      "variant": "default",
+      "passed": true,
+      "selected": 41
+    },
+    {
+      "plugin": "Weidian_remove_ads",
+      "line": 41,
+      "variant": "override",
+      "passed": true,
+      "selected": 41
+    },
+    {
+      "plugin": "Weidian_remove_ads",
+      "line": 41,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "Weixin_external_links_unlock",
+      "line": 14,
+      "variant": "default",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "Weixin_external_links_unlock",
+      "line": 14,
+      "variant": "override",
+      "passed": true,
+      "selected": 14
+    },
+    {
+      "plugin": "Weixin_external_links_unlock",
+      "line": 14,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 213,
+      "variant": "default",
+      "passed": true,
+      "selected": 213
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 213,
+      "variant": "override",
+      "passed": true,
+      "selected": 213
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 213,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 215,
+      "variant": "default",
+      "passed": true,
+      "selected": 215
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 215,
+      "variant": "override",
+      "passed": true,
+      "selected": 215
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 215,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 217,
+      "variant": "default",
+      "passed": true,
+      "selected": 217
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 217,
+      "variant": "override",
+      "passed": true,
+      "selected": 217
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 217,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 219,
+      "variant": "default",
+      "passed": true,
+      "selected": 219
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 219,
+      "variant": "override",
+      "passed": true,
+      "selected": 219
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 219,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 221,
+      "variant": "default",
+      "passed": true,
+      "selected": 221
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 221,
+      "variant": "override",
+      "passed": true,
+      "selected": 221
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 221,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 223,
+      "variant": "default",
+      "passed": true,
+      "selected": 223
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 223,
+      "variant": "override",
+      "passed": true,
+      "selected": 223
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 223,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 225,
+      "variant": "default",
+      "passed": true,
+      "selected": 225
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 225,
+      "variant": "override",
+      "passed": true,
+      "selected": 225
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 225,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 227,
+      "variant": "default",
+      "passed": true,
+      "selected": 227
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 227,
+      "variant": "override",
+      "passed": true,
+      "selected": 227
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 227,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 229,
+      "variant": "default",
+      "passed": true,
+      "selected": 229
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 229,
+      "variant": "override",
+      "passed": true,
+      "selected": 229
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 229,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 231,
+      "variant": "default",
+      "passed": true,
+      "selected": 231
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 231,
+      "variant": "override",
+      "passed": true,
+      "selected": 231
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 231,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 233,
+      "variant": "default",
+      "passed": true,
+      "selected": 233
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 233,
+      "variant": "override",
+      "passed": true,
+      "selected": 233
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 233,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 235,
+      "variant": "default",
+      "passed": true,
+      "selected": 235
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 235,
+      "variant": "override",
+      "passed": true,
+      "selected": 235
+    },
+    {
+      "plugin": "WexinMiniPrograms_Remove_ads",
+      "line": 235,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WPS_checkin",
+      "line": 22,
+      "variant": "default",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "WPS_checkin",
+      "line": 22,
+      "variant": "override",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "WPS_checkin",
+      "line": 22,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTube_remove_ads",
+      "line": 23,
+      "variant": "default",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "YouTube_remove_ads",
+      "line": 23,
+      "variant": "override",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "YouTube_remove_ads",
+      "line": 23,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTube_remove_ads",
+      "line": 25,
+      "variant": "default",
+      "passed": true,
+      "selected": 25
+    },
+    {
+      "plugin": "YouTube_remove_ads",
+      "line": 25,
+      "variant": "override",
+      "passed": true,
+      "selected": 25
+    },
+    {
+      "plugin": "YouTube_remove_ads",
+      "line": 25,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTube_remove_ads",
+      "line": 21,
+      "variant": "default",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "YouTube_remove_ads",
+      "line": 21,
+      "variant": "override",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "YouTube_remove_ads",
+      "line": 21,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 20,
+      "variant": "default",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 20,
+      "variant": "override",
+      "passed": true,
+      "selected": 20
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 20,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 22,
+      "variant": "default",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 22,
+      "variant": "override",
+      "passed": true,
+      "selected": 22
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 22,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 25,
+      "variant": "default",
+      "passed": true,
+      "selected": 25
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 25,
+      "variant": "override",
+      "passed": true,
+      "selected": 25
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 25,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 29,
+      "variant": "default",
+      "passed": true,
+      "selected": 29
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 29,
+      "variant": "override",
+      "passed": true,
+      "selected": 29
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 29,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 30,
+      "variant": "default",
+      "passed": true,
+      "selected": 30
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 30,
+      "variant": "override",
+      "passed": true,
+      "selected": 30
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 30,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 21,
+      "variant": "default",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 21,
+      "variant": "override",
+      "passed": true,
+      "selected": 21
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 21,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 23,
+      "variant": "default",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 23,
+      "variant": "override",
+      "passed": true,
+      "selected": 23
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 23,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 24,
+      "variant": "default",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 24,
+      "variant": "override",
+      "passed": true,
+      "selected": 24
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 24,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 26,
+      "variant": "default",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 26,
+      "variant": "override",
+      "passed": true,
+      "selected": 26
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 26,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 27,
+      "variant": "default",
+      "passed": true,
+      "selected": 27
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 27,
+      "variant": "override",
+      "passed": true,
+      "selected": 27
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 27,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 31,
+      "variant": "default",
+      "passed": true,
+      "selected": 31
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 31,
+      "variant": "override",
+      "passed": true,
+      "selected": 31
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 31,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 32,
+      "variant": "default",
+      "passed": true,
+      "selected": 32
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 32,
+      "variant": "override",
+      "passed": true,
+      "selected": 32
+    },
+    {
+      "plugin": "YouTubeSubtitlesTranslation",
+      "line": 32,
+      "variant": "negative",
+      "passed": true,
+      "selected": null
+    }
+  ]
+}

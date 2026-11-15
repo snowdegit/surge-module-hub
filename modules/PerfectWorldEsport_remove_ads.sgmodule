@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=完美世界电竞去广告 · Surge
 #!desc=移除开屏广告，精简搜索页。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://api\.wmpvp\.com/api/v1/config/promote$ 'del(.data.ad)'
+http-response-jq (?i)^https://api\.wmpvp\.com/api/v1/config/promote$ '(. as $__original | try del(.data.ad) catch $__original)'
 
 [Map Local]
 (?i)^https://appactivity\.wmpvp\.com/hotsearch/all\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"

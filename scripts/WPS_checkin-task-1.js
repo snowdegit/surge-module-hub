@@ -1,9 +1,10 @@
+(function(){
 // Generated compatibility/dispatch layer. Original authors retained below.
 const __settings = (()=>{try{return JSON.parse(typeof $argument==='string'?$argument:'{}')}catch(e){console.log('Module argument JSON invalid: '+e);return {}}})();
 const __finish=$done;
 function __cast(value, fallback){if(value===undefined)return fallback;if(typeof fallback==='boolean')return value===true||value==='true';if(typeof fallback==='number')return Number(value);return value;}
 
-function __original0(__typedArgs,$argument){
+function __original0(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 脚本作者：小白脸
 更新时间：2024-10-13 17:59:33
@@ -294,7 +295,7 @@ function ToolClient(t,e){class MyPromise extends Promise{static withResolvers(){
 
 return this.msgName=t,this.msgKey=e,this.fetch=s.fetch,this.defaultMsg=s.defaultMsg,this.msg.bind(this)}msg(t='',e='',s='',r={}){'string'==typeof r&&(r={$open:r});const{$open:i,$media:o='',$copy:n='',...a}=r,h=t+'\n'+e+'\n'+s,g={Bark:()=>this.fetch(`https://api.day.app/${this.msgKey}/${h}?url=${i}&icon=${o}`),PushDeer:()=>this.fetch(`https://api2.pushdeer.com/message/push?pushkey=${this.msgKey}&text=${h}`)},{mime:c,base64:l}=this.#o(o);return g[this.msgName]?.()??this.defaultMsg(`${t}`,`${e}`,`${s}`,{action:n?'clipboard':'open-url','open-url':i,openUrl:i,url:i,mediaUrl:o,'media-url':o,'media-base64':l,'media-base64-mime':c,text:n,'update-pasteboard':n,clipboard:n,...a})}#o(t){if(!t||t.startsWith('http'))return{};if(t.startsWith('data:')){const[,e,,s]=t.split(/:|;|,/g);return{mime:e,base64:s}}const e=Notify.signatures[Object.keys(Notify.signatures).find((e=>t.startsWith(e)))]?.[1];return e?{mime:e,base64:t}:{}}}class ScriptManager{static#n=[];static#a={dayjs:'https://cdn.jsdelivr.net/npm/dayjs/dayjs.min.js',md5:'https://cdn.jsdelivr.net/npm/crypto-js/md5.min.js',crypto:'https://cdn.jsdelivr.net/npm/crypto-js/crypto-js.min.js',base64:'https://cdn.jsdelivr.net/npm/js-base64@3.7.5/base64.min.js'};constructor(t){this.tool=t}getScript(t){const e=ScriptManager.#a[t]??t,s=this.getCacheName(e),r=this.tool.read(s),i=(r?Promise.resolve(r):this.tool.fetch(e)).then((t=>{const e=t.body??t;globalThis.eval(e),r||this.tool.write(e,s)})).catch((t=>{throw`${e}: ${t}`}));ScriptManager.#n.push(i)}getCacheName(t){return t.replace(/(\.min|\.js$)/g,'').split('/').at(-1)}async runScripts(){await Promise.all(ScriptManager.#n)}}class Log{static#h={debug:0,info:1,warn:2,error:3,log:4};static#g='\n';static#c=[];static#l=Log.#u('info');static#u(t){if(!Log.#h.hasOwnProperty(t))throw new Error(`无效的日志级别-${t}`);return Log.#h[t]}static setLogLevel(t){Log.#l=Log.#u(t)}static logWithLevel(t,e){if(Log.#l>Log.#u(t))return;const s='log'===t?'':`[${t}]`;console.log(`${s} ${Log.#p(e)}`)}static#p(t){return t.length&&Log.#c.push(...t),t.map(Log.#m).join(Log.#g)}static#m(t){return t&&'object'==typeof t?t.stack?`${t.name}: ${t.message}\n${t.stack}`:JSON.stringify(t,null,4):String(t)}}return ToolClient=class{constructor(t,e){this.#d(),this.fetch=new Fetch(this),this.msg=this.getMsg(t,e),this.script=new ScriptManager(this)}$env(t){const e={'$environment.surge-build':'Surge',$task:'Qx',$loon:'Loon','$environment.stash-version':'Stash',$rocket:'Shadowrocket'};for(const[s,r]of Object.entries(e))if(s.split('.').reduce(((t,e)=>t?.[e]),globalThis))return this.$env=t=>t?t===r:r,this.$env(t);throw new Error('环境不支持')}#d(){const t=this.$env('Qx');this.read=t?$prefs.valueForKey:$persistentStore.read,this.write=t?$prefs.setValueForKey:$persistentStore.write,this.defaultMsg=t?$notify:$notification.post}toStr(t){return JSON.stringify(t,null,2)}toJson(t){return JSON.parse(t)}readJson(t){return this.toJson(this.read(t))}writeJson(t,e){return this.write(JSON.stringify(t),e)}setResponse(t){return Fetch.setResponse(t),this.fetch}httpApi(t,e='GET',s=null){const{promise:r,resolve:i}=MyPromise.withResolvers();return $httpAPI(e,t,s,i),r}getMsg(t,e){return new Notify(t,e,this)}getScript([t]){this.script.getScript(t)}async runScript(){await this.script.runScripts()}setLogLevel(t){Log.setLogLevel(t)}debug(...t){Log.logWithLevel('debug',t)}info(...t){Log.logWithLevel('info',t)}warn(...t){Log.logWithLevel('warn',t)}error(...t){Log.logWithLevel('error',t)}log(...t){Log.logWithLevel('log',t)}notifyAndLog({message:t=[],...e}){Object.keys(e).forEach((s=>{e[s]&&this[s](...t)}))}parseArgument(){return __typedArgs?'object'==typeof $argument?$argument:Object.fromEntries(Object.entries(__typedArgs).map(([k,v])=>k+'='+String(v)).map((t=>t.split('=')))):{}}},new ToolClient(t,e)}
 }
-function __original1(__typedArgs,$argument){
+function __original1(__typedArgs,$argument,$request,$response,$done,$script){
 /*
 脚本作者：小白脸
 更新时间：2024-10-13 17:59:33
@@ -586,5 +587,34 @@ function ToolClient(t,e){class MyPromise extends Promise{static withResolvers(){
 return this.msgName=t,this.msgKey=e,this.fetch=s.fetch,this.defaultMsg=s.defaultMsg,this.msg.bind(this)}msg(t='',e='',s='',r={}){'string'==typeof r&&(r={$open:r});const{$open:i,$media:o='',$copy:n='',...a}=r,h=t+'\n'+e+'\n'+s,g={Bark:()=>this.fetch(`https://api.day.app/${this.msgKey}/${h}?url=${i}&icon=${o}`),PushDeer:()=>this.fetch(`https://api2.pushdeer.com/message/push?pushkey=${this.msgKey}&text=${h}`)},{mime:c,base64:l}=this.#o(o);return g[this.msgName]?.()??this.defaultMsg(`${t}`,`${e}`,`${s}`,{action:n?'clipboard':'open-url','open-url':i,openUrl:i,url:i,mediaUrl:o,'media-url':o,'media-base64':l,'media-base64-mime':c,text:n,'update-pasteboard':n,clipboard:n,...a})}#o(t){if(!t||t.startsWith('http'))return{};if(t.startsWith('data:')){const[,e,,s]=t.split(/:|;|,/g);return{mime:e,base64:s}}const e=Notify.signatures[Object.keys(Notify.signatures).find((e=>t.startsWith(e)))]?.[1];return e?{mime:e,base64:t}:{}}}class ScriptManager{static#n=[];static#a={dayjs:'https://cdn.jsdelivr.net/npm/dayjs/dayjs.min.js',md5:'https://cdn.jsdelivr.net/npm/crypto-js/md5.min.js',crypto:'https://cdn.jsdelivr.net/npm/crypto-js/crypto-js.min.js',base64:'https://cdn.jsdelivr.net/npm/js-base64@3.7.5/base64.min.js'};constructor(t){this.tool=t}getScript(t){const e=ScriptManager.#a[t]??t,s=this.getCacheName(e),r=this.tool.read(s),i=(r?Promise.resolve(r):this.tool.fetch(e)).then((t=>{const e=t.body??t;globalThis.eval(e),r||this.tool.write(e,s)})).catch((t=>{throw`${e}: ${t}`}));ScriptManager.#n.push(i)}getCacheName(t){return t.replace(/(\.min|\.js$)/g,'').split('/').at(-1)}async runScripts(){await Promise.all(ScriptManager.#n)}}class Log{static#h={debug:0,info:1,warn:2,error:3,log:4};static#g='\n';static#c=[];static#l=Log.#u('info');static#u(t){if(!Log.#h.hasOwnProperty(t))throw new Error(`无效的日志级别-${t}`);return Log.#h[t]}static setLogLevel(t){Log.#l=Log.#u(t)}static logWithLevel(t,e){if(Log.#l>Log.#u(t))return;const s='log'===t?'':`[${t}]`;console.log(`${s} ${Log.#p(e)}`)}static#p(t){return t.length&&Log.#c.push(...t),t.map(Log.#m).join(Log.#g)}static#m(t){return t&&'object'==typeof t?t.stack?`${t.name}: ${t.message}\n${t.stack}`:JSON.stringify(t,null,4):String(t)}}return ToolClient=class{constructor(t,e){this.#d(),this.fetch=new Fetch(this),this.msg=this.getMsg(t,e),this.script=new ScriptManager(this)}$env(t){const e={'$environment.surge-build':'Surge',$task:'Qx',$loon:'Loon','$environment.stash-version':'Stash',$rocket:'Shadowrocket'};for(const[s,r]of Object.entries(e))if(s.split('.').reduce(((t,e)=>t?.[e]),globalThis))return this.$env=t=>t?t===r:r,this.$env(t);throw new Error('环境不支持')}#d(){const t=this.$env('Qx');this.read=t?$prefs.valueForKey:$persistentStore.read,this.write=t?$prefs.setValueForKey:$persistentStore.write,this.defaultMsg=t?$notify:$notification.post}toStr(t){return JSON.stringify(t,null,2)}toJson(t){return JSON.parse(t)}readJson(t){return this.toJson(this.read(t))}writeJson(t,e){return this.write(JSON.stringify(t),e)}setResponse(t){return Fetch.setResponse(t),this.fetch}httpApi(t,e='GET',s=null){const{promise:r,resolve:i}=MyPromise.withResolvers();return $httpAPI(e,t,s,i),r}getMsg(t,e){return new Notify(t,e,this)}getScript([t]){this.script.getScript(t)}async runScript(){await this.script.runScripts()}setLogLevel(t){Log.setLogLevel(t)}debug(...t){Log.logWithLevel('debug',t)}info(...t){Log.logWithLevel('info',t)}warn(...t){Log.logWithLevel('warn',t)}error(...t){Log.logWithLevel('error',t)}log(...t){Log.logWithLevel('log',t)}notifyAndLog({message:t=[],...e}){Object.keys(e).forEach((s=>{e[s]&&this[s](...t)}))}parseArgument(){return __typedArgs?'object'==typeof $argument?$argument:Object.fromEntries(Object.entries(__typedArgs).map(([k,v])=>k+'='+String(v)).map((t=>t.split('=')))):{}}},new ToolClient(t,e)}
 }
 const __originals=[__original0,__original1];
-function __invoke(index,defaults,literal){const typed={};for(const k of Object.keys(defaults))typed[k]=__cast(__settings[k],defaults[k]);return __originals[index](typed,literal===null?JSON.stringify(typed):literal);}
-__invoke(1,{"AK": "", "SK": "", "MAX_RETRIES": "5"},null);
+
+function __text(body){
+ if(typeof body==='string'||body===undefined)return body;
+ const bytes=body instanceof Uint8Array?body:new Uint8Array(body);
+ if(typeof TextDecoder!=='undefined')return new TextDecoder().decode(bytes);
+ let s='';for(let i=0;i<bytes.length;i+=8192)s+=String.fromCharCode(...bytes.subarray(i,i+8192));
+ return decodeURIComponent(escape(s));
+}
+function __bytes(body){
+ if(body===undefined||body instanceof Uint8Array)return body;
+ if(typeof body!=='string')return new Uint8Array(body);
+ if(typeof TextEncoder!=='undefined')return new TextEncoder().encode(body);
+ const s=unescape(encodeURIComponent(body));return Uint8Array.from(s,c=>c.charCodeAt(0));
+}
+function __message(message,binary,needsBody){
+ if(message===undefined)return undefined;
+ const copy={...message,headers:{...message.headers}};
+ if(needsBody)copy.body=binary?__bytes(copy.body):__text(copy.body);else delete copy.body;
+ return copy;
+}
+function __invoke(index,defaults,literal,binary,needsBody){
+ const typed={};for(const k of Object.keys(defaults))typed[k]=__cast(__settings[k],defaults[k]);
+ const request=__message(typeof $request==='undefined'?undefined:$request,binary,needsBody);
+ const response=__message(typeof $response==='undefined'?undefined:$response,binary,needsBody);
+ const context={...(typeof $script==='undefined'?{}:$script),binaryBodyMode:binary};
+ return __originals[index](typed,literal===null?JSON.stringify(typed):literal,request,response,__finish,context);
+}
+
+
+return __invoke(1,{"AK": "", "SK": "", "MAX_RETRIES": "5"},null,false,false);
+})();

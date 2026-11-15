@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=YY去广告 · Surge
 #!desc=移除开屏广告、应用内弹窗，精简底栏和我的页面。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -11,7 +12,7 @@ DOMAIN, ysad.yy.com, REJECT
 
 [Body Rewrite]
 http-response-jq (?i)^https://yyapp-idx\.yy\.com/mobyy/nav/index/idx\? '.data[].modules |= map(select(.name != "新版本滚动条" and .name != "通栏轮播" and .name != "新静默位"))'
-http-response-jq (?i)^https://tab\.yy\.com/tabs\? 'del(.data.tabsForSelect)'
+http-response-jq (?i)^https://tab\.yy\.com/tabs\? '(. as $__original | try del(.data.tabsForSelect) catch $__original)'
 http-response-jq (?i)^https://tab\.yy\.com/tabs\? '.data.tabs |= map(select(.alias == "follow" or .alias == "im" or .alias == "me"))'
 http-response-jq (?i)^https://personal-center\.yy\.com/personalCenter/list\? '.data.modules |= map(select(.moduleName != "Banner轮播")) | .data.modules |= map(if has("entrances") then .entrances |= map(select(.bizCode|IN("jishijiedaikuan","duxiaoman2","chongzhi","freeData")|not)) else . end)'
 

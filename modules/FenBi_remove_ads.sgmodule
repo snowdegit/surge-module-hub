@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=粉笔去广告 · Surge
 #!desc=移除开屏广告、弹窗广告、悬浮广告、热门搜索，移除底栏皮肤，精简我的页面。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,8 +6,8 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://hera-webapp\.fenbi\.com/(iphone|ipad)/recommend/info\? 'del(.data.rollingBanner)'
-http-response-jq (?i)^https://ke\.fenbi\.com/(iphone|ipad)/v3/apps/config\? 'del(.data.bottomIconInfos.position.iconDefaultUrl,.data.bottomIconInfos.position.iconSelectedUrl,.data.bottomIconInfos.position.nightModeIconDefaultUrl,.data.bottomIconInfos.position.nightModeIconSelectedUrl)'
+http-response-jq (?i)^https://hera-webapp\.fenbi\.com/(iphone|ipad)/recommend/info\? '(. as $__original | try del(.data.rollingBanner) catch $__original)'
+http-response-jq (?i)^https://ke\.fenbi\.com/(iphone|ipad)/v3/apps/config\? '(. as $__original | try del(.data.bottomIconInfos.position.iconDefaultUrl) catch $__original) | (. as $__original | try del(.data.bottomIconInfos.position.iconSelectedUrl) catch $__original) | (. as $__original | try del(.data.bottomIconInfos.position.nightModeIconDefaultUrl) catch $__original) | (. as $__original | try del(.data.bottomIconInfos.position.nightModeIconSelectedUrl) catch $__original)'
 
 [Map Local]
 (?i)^https://keapi\.fenbi\.com/app/(iphone|ipad)/position_resource/get_banners\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"

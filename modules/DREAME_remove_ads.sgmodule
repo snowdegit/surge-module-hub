@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=DREAME去广告 · Surge
 #!desc=移除开屏广告、首页大图推广、横幅推广，精简底栏，阻止桌面图标替换。仅支持2.5.1版。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://cn\.iot\.dreame\.tech:13267/dreame-system/dreame-app/setting/query$ 'del(.data.appIconConfig)'
+http-response-jq (?i)^https://cn\.iot\.dreame\.tech:13267/dreame-system/dreame-app/setting/query$ '(. as $__original | try del(.data.appIconConfig) catch $__original)'
 
 [Map Local]
 (?i)^https://cn\.iot\.dreame\.tech:\d+/dreame-product/public/advertisement/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"

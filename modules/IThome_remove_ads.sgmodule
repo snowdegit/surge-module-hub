@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=IT之家去广告 · Surge
 #!desc=过滤IT之家信息流广告和文末广告，自定义移除置顶和轮播图，自定义移除项需在插件配置。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -10,7 +11,7 @@
 (?i)^https?://dat\.ruanmei\.com/ithome/money/acd\.json$ data-type=text data="" status-code=404 header="Content-Type:text/plain"
 
 [Script]
-IThome_remove_ads-response = type=http-response, pattern=(?i)(?:^https://napi\.ithome\.com/api/(news/indexv2/iphone/\d+|topmenu/getfeeds\?)), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/IThome_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10, argument="{\"removePinnedArticles\":\"{{{removePinnedArticles}}}\",\"removeAllBanners\":\"{{{removeAllBanners}}}\"}"
+IThome_remove_ads-response = type=http-response, pattern="(?i)(?:^https://napi\\.ithome\\.com/api/(news/indexv2/iphone/\\d+|topmenu/getfeeds\\?))", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/IThome_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10, argument="{\"removePinnedArticles\":\"{{{removePinnedArticles}}}\",\"removeAllBanners\":\"{{{removeAllBanners}}}\"}"
 
 [MITM]
 hostname = %APPEND% napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com

@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=百度地图去广告 · Surge
 #!desc=移除开屏广告、出行页面推广、周边页面推广、打车页面推广，精简我的页面。此插件需要IPA签名方可使用，App Store用户请勿使用此插件，务必点击下方主页链接查看详细教程。
 #!author=可莉🅥[https://getupnote.com/share/notes/zSn1ShBmzNYISKcTgjXE5oHMrNf2/34bf3aad-7872-497d-b239-198e27e8c84c]
@@ -5,11 +6,11 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://newclient\.map\.baidu\.com/feed/govui/rich_content 'del(.data)'
-http-response-jq (?i)^https://newclient\.map\.baidu\.com/client/noticebar/get\? 'del(.content.multi_data)'
+http-response-jq (?i)^https://newclient\.map\.baidu\.com/feed/govui/rich_content '(. as $__original | try del(.data) catch $__original)'
+http-response-jq (?i)^https://newclient\.map\.baidu\.com/client/noticebar/get\? '(. as $__original | try del(.content.multi_data) catch $__original)'
 http-response-jq (?i)^https://newclient\.map\.baidu\.com/(client/)?usersystem/mine/page\? '.data = "{}"'
-http-response-jq (?i)^https://newclient\.map\.baidu\.com/client/phpui2/\?qt=ads&type=user_home_new_service 'del(.ads)'
-http-response-jq (?i)^https://newclient\.map\.baidu\.com/living/nearby/api\? 'del(.Result.cards[1],.Result.cards[4],.Result.cards[5],.Result.cards[9])'
+http-response-jq (?i)^https://newclient\.map\.baidu\.com/client/phpui2/\?qt=ads&type=user_home_new_service '(. as $__original | try del(.ads) catch $__original)'
+http-response-jq (?i)^https://newclient\.map\.baidu\.com/living/nearby/api\? '(. as $__original | try del(.Result.cards[1]) catch $__original) | (. as $__original | try del(.Result.cards[4]) catch $__original) | (. as $__original | try del(.Result.cards[5]) catch $__original) | (. as $__original | try del(.Result.cards[9]) catch $__original)'
 
 [Map Local]
 (?i)^https://afd\.baidu\.com/afd/entry\?action=(update|query) data-type=text data="{}" status-code=200 header="Content-Type:application/json"

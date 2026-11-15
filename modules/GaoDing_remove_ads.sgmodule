@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=稿定设计去广告 · Surge
 #!desc=移除稿定设计开屏广告、首页轮播图和弹窗，移除功能入口角标。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]

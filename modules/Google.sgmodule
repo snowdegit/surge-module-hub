@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=Google搜索重定向 · Surge
 #!desc=将Google搜索重定向至.com域名，如遇频繁跳转请禁用本插件。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Script]
-Google-request = type=http-request, pattern=(?i)(?:^https?://(www.)?(g|google)\.cn)|(?:^https?://(ditu|maps).google\.cn), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Google-request.js, requires-body=true, binary-body-mode=false, timeout=10
+Google-request = type=http-request, pattern="(?i)(?:^https?://(www.)?(g|google)\\.cn)|(?:^https?://(ditu|maps).google\\.cn)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Google-request.js, requires-body=true, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% www.google.cn

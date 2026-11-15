@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=Soul去广告 · Surge
 #!desc=移除开屏广告、移除话题页面热Soul话题、移除评论区礼物榜、移除更新提示、移除青少年弹窗、移除我的页面推广、移除悬浮部件。
 #!author=ZenmoFeiShi[https://github.com/ZenmoFeiShi], RuCu6[https://github.com/RuCu6], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -21,14 +22,14 @@ IP-CIDR, 120.27.235.201/32, REJECT, no-resolve
 IP-CIDR, 121.196.197.147/32, REJECT, no-resolve
 
 [Body Rewrite]
-http-response-jq (?i)^https://(?:api-\w+|gateway-mobile-gray|post)\.soulapp\.cn/(?:furion/position/content|hot/soul/rank|mobile/app/version/queryIos|official/scene/module|teenager/config|v2/post/gift/list|v\d/post/homepage/guide/card) 'del(.data)'
+http-response-jq (?i)^https://(?:api-\w+|gateway-mobile-gray|post)\.soulapp\.cn/(?:furion/position/content|hot/soul/rank|mobile/app/version/queryIos|official/scene/module|teenager/config|v2/post/gift/list|v\d/post/homepage/guide/card) '(. as $__original | try del(.data) catch $__original)'
 
 [Map Local]
 (?i)^https://ssp\.soulapp\.cn/api/q data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 (?i)^https://chat-live\.soulapp\.cn/live/planet/recListV2 data-type=text data="" status-code=200 header="Content-Type:text/plain"
 
 [Script]
-Soul_remove_ads-response = type=http-response, pattern=(?i)(?:^https://(?:api-\w+|chat-live|post)\.soulapp\.cn/(?:chat/limitInfo|chatroom/chatClassifyRoomList|homepage/diamond/position/info|v2/post/recSquare/subTabs|v6/planet/config)), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Soul_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
+Soul_remove_ads-response = type=http-response, pattern="(?i)(?:^https://(?:api-\\w+|chat-live|post)\\.soulapp\\.cn/(?:chat/limitInfo|chatroom/chatClassifyRoomList|homepage/diamond/position/info|v2/post/recSquare/subTabs|v6/planet/config))", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/Soul_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% api*.soulapp.cn, gateway-mobile-gray.soulapp.cn, post.soulapp.cn, ssp.soulapp.cn

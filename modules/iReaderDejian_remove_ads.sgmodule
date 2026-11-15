@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=得间小说去广告 · Surge
 #!desc=移除开屏广告、章末广告，移除扉页广告提示、听书界面广告提示、搜索栏填充词。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -9,8 +10,8 @@ DOMAIN, smad.ms.zhangyue.net, REJECT
 DOMAIN, saad.ms.zhangyue.net, REJECT
 
 [Body Rewrite]
-http-response-jq (?i)^https://dj\.palmestore\.com/zybk/api/powerup/userGroup\? 'del(.body.sevenDaysAd,.body.shortPlayShow,.body.sdkShortPlayAB)'
-http-response-jq (?i)^https://dj\.palmestore\.com/zybk/api/search/index\? 'del(.body.keywords)'
+http-response-jq (?i)^https://dj\.palmestore\.com/zybk/api/powerup/userGroup\? '(. as $__original | try del(.body.sevenDaysAd) catch $__original) | (. as $__original | try del(.body.shortPlayShow) catch $__original) | (. as $__original | try del(.body.sdkShortPlayAB) catch $__original)'
+http-response-jq (?i)^https://dj\.palmestore\.com/zybk/api/search/index\? '(. as $__original | try del(.body.keywords) catch $__original)'
 
 [Map Local]
 (?i)^https://dj\.palmestore\.com/djad/ data-type=text data="{}" status-code=200 header="Content-Type:application/json"

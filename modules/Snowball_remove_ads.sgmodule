@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=雪球去广告 · Surge
 #!desc=移除开屏广告、各类横幅广告、信息流广告、帖内广告、新用户定向广告、各类弹窗、股票精选推荐、基金精选推荐、聪明的投资者推荐、私募推荐、直播推荐。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,7 +6,7 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://open\.xueqiu\.com/mpaas/config/content\?.*timeline_tab_name 'del(.data.im_notice_show,.data.request_notice_show,.data.timeline_tab_name,.data.profileMenuConfig_anonymous_V12,.data.trade_open_account_promotion_url,.data.trade_unify_open_account_list,.data.community_ad_download_msg,.data.home_tab_dynamic,.data.home_tab_dynamic_before,.data.home_tab_dynamic_after,.data.isitor_page_login_config,.data.open_wechat_mini_app_config,.data.user_guide_contact_config,.data.brokers_router_config,.data.my_page_right_items)'
+http-response-jq (?i)^https://open\.xueqiu\.com/mpaas/config/content\?.*timeline_tab_name '(. as $__original | try del(.data.im_notice_show) catch $__original) | (. as $__original | try del(.data.request_notice_show) catch $__original) | (. as $__original | try del(.data.timeline_tab_name) catch $__original) | (. as $__original | try del(.data.profileMenuConfig_anonymous_V12) catch $__original) | (. as $__original | try del(.data.trade_open_account_promotion_url) catch $__original) | (. as $__original | try del(.data.trade_unify_open_account_list) catch $__original) | (. as $__original | try del(.data.community_ad_download_msg) catch $__original) | (. as $__original | try del(.data.home_tab_dynamic) catch $__original) | (. as $__original | try del(.data.home_tab_dynamic_before) catch $__original) | (. as $__original | try del(.data.home_tab_dynamic_after) catch $__original) | (. as $__original | try del(.data.isitor_page_login_config) catch $__original) | (. as $__original | try del(.data.open_wechat_mini_app_config) catch $__original) | (. as $__original | try del(.data.user_guide_contact_config) catch $__original) | (. as $__original | try del(.data.brokers_router_config) catch $__original) | (. as $__original | try del(.data.my_page_right_items) catch $__original)'
 
 [Map Local]
 (?i)^https://api\.xueqiu\.com/snowpard/launch_strategy/query\.json\? data-type=text data="{}" status-code=200 header="Content-Type:application/json"

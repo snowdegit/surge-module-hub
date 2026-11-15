@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=京东去广告 · Surge
 #!desc=移除京东开屏广告，精简我的页面产品推广。
 #!author=RuCu6[https://github.com/RuCu6], Maasea[https://github.com/Maasea]
@@ -8,13 +9,13 @@
 URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 
 [Body Rewrite]
-http-response-jq (?i)^https://api\.m\.jd\.com/client\.action\?functionId=basicConfig '.data.JDMessage.socketmonitor.isSocketEstablishedAhead = [0, 0, 0] | .data.JDMessage.socketmonitor.isSocketReport = [0, 0, 0] | .data.JDHttpToolKit.httpdns.httpdns = [0, 0, 0]'
+http-response-jq (?i)^https://api\.m\.jd\.com/client\.action\?functionId=basicConfig '.data.JDMessage.socketmonitor.isSocketEstablishedAhead = 0 | .data.JDMessage.socketmonitor.isSocketReport = 0 | .data.JDHttpToolKit.httpdns.httpdns = 0'
 
 [Map Local]
 (?i)^https://api\.m\.jd\.com/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) data-type=text data="{}" status-code=200 header="Content-Type:application/json"
 
 [Script]
-JD_remove_ads-response = type=http-response, pattern=(?i)(?:^https://api\.m\.jd\.com/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome)), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/JD_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
+JD_remove_ads-response = type=http-response, pattern="(?i)(?:^https://api\\.m\\.jd\\.com/client\\.action\\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome))", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/JD_remove_ads-response.js, requires-body=true, binary-body-mode=false, timeout=10
 
 [MITM]
 hostname = %APPEND% api.m.jd.com

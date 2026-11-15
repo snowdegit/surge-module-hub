@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=虎嗅去广告 · Surge
 #!desc=移除广告配置、信息流直播预约横幅、相关文章推荐、48小时热文推荐，精简搜索页面。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -8,7 +9,7 @@
 DOMAIN, api-ad-product.huxiu.com, REJECT
 
 [Body Rewrite]
-http-response-jq (?i)^https://api-ms-feed\.huxiu\.com/v1/media/recommend$ 'del(.data.live)'
+http-response-jq (?i)^https://api-ms-feed\.huxiu\.com/v1/media/recommend$ '(. as $__original | try del(.data.live) catch $__original)'
 
 [Map Local]
 (?i)^https://api-ms-config\.huxiu\.com/v1/adConfig$ data-type=text data="{}" status-code=200 header="Content-Type:application/json"

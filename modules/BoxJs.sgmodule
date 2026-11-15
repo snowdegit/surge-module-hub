@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=BoxJs · Surge
 #!desc=JavaScript数据管理器，用于管理脚本储存的数据。使用前请在本插件的详情页面为[PROXY]项分配代理策略。
 #!author=chavyleung[https://github.com/chavyleung]
@@ -10,7 +11,7 @@
 DOMAIN-SUFFIX, jsdelivr.net, {{{proxy_policy}}}
 
 [Script]
-BoxJs-request = type=http-request, pattern=(?i)(?:^https?://(.+\.)?boxjs\.(com|net)), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/BoxJs-request.js, requires-body=true, binary-body-mode=false, timeout=120
+BoxJs-request = type=http-request, pattern="(?i)(?:^https?://(.+\\.)?boxjs\\.(com|net))", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/BoxJs-request.js, requires-body=true, binary-body-mode=false, timeout=120
 
 [MITM]
 hostname = %APPEND% boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net

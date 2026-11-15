@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=WPS每日签到 · Surge
 #!desc=WPS每日签到并兑换会员，需要进入此插件的主页链接，阅读使用说明操作。
 #!author=小白脸
@@ -7,8 +8,8 @@
 #!arguments-desc=参数沿用上游默认值；修改后重新启用模块。
 
 [Script]
-WPS_checkin-request = type=http-request, pattern=(?i)(?:^https://moapi\.wps\.cn/app/ios/v1/app$), script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/WPS_checkin-request.js, requires-body=true, binary-body-mode=false, timeout=10, argument="{\"CaptureCookie\":\"{{{CaptureCookie}}}\",\"AK\":\"{{{AK}}}\",\"SK\":\"{{{SK}}}\",\"DAY\":\"{{{DAY}}}\",\"MAX_RETRIES\":\"{{{MAX_RETRIES}}}\",\"CRONEXP\":\"{{{CRONEXP}}}\"}"
-WPS_checkin-task-1 = type=cron, script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/WPS_checkin-task-1.js, timeout=120, cronexp="0 8 * * *", argument="{\"CaptureCookie\":\"{{{CaptureCookie}}}\",\"AK\":\"{{{AK}}}\",\"SK\":\"{{{SK}}}\",\"DAY\":\"{{{DAY}}}\",\"MAX_RETRIES\":\"{{{MAX_RETRIES}}}\",\"CRONEXP\":\"{{{CRONEXP}}}\"}"
+WPS_checkin-request = type=http-request, pattern="(?i)(?:^https://moapi\\.wps\\.cn/app/ios/v1/app$)", script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/WPS_checkin-request.js, requires-body=true, binary-body-mode=false, timeout=10, argument="{\"CaptureCookie\":\"{{{CaptureCookie}}}\",\"AK\":\"{{{AK}}}\",\"SK\":\"{{{SK}}}\",\"DAY\":\"{{{DAY}}}\",\"MAX_RETRIES\":\"{{{MAX_RETRIES}}}\",\"CRONEXP\":\"{{{CRONEXP}}}\"}"
+WPS_checkin-task-1 = type=cron, script-path=https://raw.githubusercontent.com/snowdegit/surge-module-hub/main/scripts/WPS_checkin-task-1.js, timeout=120, cronexp="{{{CRONEXP}}}", argument="{\"CaptureCookie\":\"{{{CaptureCookie}}}\",\"AK\":\"{{{AK}}}\",\"SK\":\"{{{SK}}}\",\"DAY\":\"{{{DAY}}}\",\"MAX_RETRIES\":\"{{{MAX_RETRIES}}}\",\"CRONEXP\":\"{{{CRONEXP}}}\"}"
 
 [MITM]
 hostname = %APPEND% moapi.wps.cn

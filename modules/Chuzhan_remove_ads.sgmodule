@@ -1,3 +1,4 @@
+#!version=2026.11.15.2
 #!name=触站去广告 · Surge
 #!desc=移除开屏广告、弹窗广告、各页面横幅推广，移除首页悬浮挂件。
 #!author=可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
@@ -5,8 +6,8 @@
 # Generated port; device validation pending. See catalog compatibility notes.
 
 [Body Rewrite]
-http-response-jq (?i)^https://app\.huashi6\.com/app/common/config$ '.data.disableAd = [true, false] | .data.showTopFloatAdvanceTips = [true, false]'
-http-response-jq (?i)^https://app\.huashi6\.com/app/common/config$ 'del(.data.adsConfigIOS,.data.adsConfigAndroid,.data.url.tabMarket)'
+http-response-jq (?i)^https://app\.huashi6\.com/app/common/config$ '.data.disableAd = true | .data.showTopFloatAdvanceTips = false'
+http-response-jq (?i)^https://app\.huashi6\.com/app/common/config$ '(. as $__original | try del(.data.adsConfigIOS) catch $__original) | (. as $__original | try del(.data.adsConfigAndroid) catch $__original) | (. as $__original | try del(.data.url.tabMarket) catch $__original)'
 http-response-jq (?i)^https://app\.huashi6\.com/app/common/layouts$ '.data |= {CZ_MINE_MENUS: .CZ_MINE_MENUS}'
 http-response-jq (?i)^https://app\.huashi6\.com/app/common/themeConfig$ '.data.tabbars |= map(select(.title != "商城"))'
 

@@ -74,7 +74,7 @@ def jq_path(path):
    token=path[i:j]
    result+='.'+token if re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*',token) else '['+json.dumps(token)+']'
    i=j
- return result or '.'
+ return ('.'+result if result.startswith('[') else result) or '.'
 def native_pattern(p,f):return ('(?i)' if 'i' in f else '')+p
 
 def build(item):
@@ -86,7 +86,9 @@ def build(item):
   elif re.fullmatch(r'\[[\w ]+\]',line):section=line.strip('[]').lower();sections[section]=[]
   elif line and not line.startswith('#'):sections.setdefault(section,[]).append(line)
  for line in sections.get('argument',[]):
-  key,rest=line.split('=',1);args[key.strip()]=value(fields(rest)[1])
+  key,rest=line.split('=',1);parts=fields(rest);default=value(parts[1])
+  if parts[0].strip()=='switch':default=str(default).lower()=='true'
+  args[key.strip()]=default
  def substitute(s):
   return re.sub(r'\$\{([^}]+)\}',lambda m:json.dumps(args[m[1]],ensure_ascii=False) if m[1] in args else m[0],s)
  out={k:[] for k in ['General','Rule','URL Rewrite','Header Rewrite','Body Rewrite','Map Local','Script','MITM']};jqtests=[];dispatch={'request':[],'response':[]};orig=[];script_count=0;source_count=0;converted=0
@@ -109,9 +111,12 @@ def build(item):
     if name.endswith('.jq'):expr=vals[0]
     elif name.endswith('.jq_file'):expr=jq_minify(asset(vals[0]))
     elif name.endswith('.delete'):
-     paths=vals[0] if isinstance(vals[0],list) else [vals[0]];expr='del('+','.join(jq_path(p) for p in paths)+')'
+     paths=vals[0] if isinstance(vals[0],list) else [vals[0]];expr=' | '.join('(. as $__original | try del('+jq_path(p)+') catch $__original)' for p in paths)
     else:
-     paths=vals[0] if isinstance(vals[0],list) else [vals[0]];expr=' | '.join(jq_path(p)+' = '+json.dumps(vals[1],ensure_ascii=False) for p in paths)
+     paths=vals[0] if isinstance(vals[0],list) else [vals[0]]
+     replacements=vals[1] if isinstance(vals[0],list) else [vals[1]]
+     if len(paths)!=len(replacements):raise ValueError('JSON batch argument length mismatch')
+     expr=' | '.join(jq_path(path)+' = '+json.dumps(replacement,ensure_ascii=False) for path,replacement in zip(paths,replacements))
     if not expr.strip():expr='.';notes.append('上游空jq保留为无操作')
     if 'else .end;' in expr:expr=expr.replace('else .end;','else . end;');notes.append('修复上游jq的.end语法错误')
     if pat=='http-response':raise ValueError('上游条件与JSON路径疑似错误，不能推断原意')
@@ -142,8 +147,9 @@ def build(item):
       elif alias and key.startswith(alias+'.'):pieces.append('(match['+key.split('.')[-1]+'] || "")')
       else:raise ValueError('未知插值 '+key)
       last=variable.end()
-     pieces.append(json.dumps(target[last:],ensure_ascii=False));expr=' + '.join(pieces)
-     code='return __finish({response:{status:'+str(vals[0])+',headers:{Location:'+expr+'},body:""}});' if name=='redirect' else 'return __finish({url:'+expr+'});'
+     pieces.append(json.dumps(target[last:],ensure_ascii=False));replacement=' + '.join(pieces)
+     expr='__url.slice(0,match.index) + ('+replacement+') + __url.slice(match.index+match[0].length)'
+     code='return __finish({response:{status:'+str(vals[0])+',headers:{Location:'+expr+'},body:""}});' if name=='redirect' else 'const url='+expr+';const headers={...$request.headers};const hostKey=Object.keys(headers).find(k=>k.toLowerCase()==="host")||"Host";headers[hostKey]=new URL(url).host;return __finish({url,headers});'
     elif name.endswith('body.replace'):
      regex,fl=parse_regex(rawargs[0]);replacement=value(rawargs[1]);obj='$request' if direction=='request' else '$response'
      code='return __finish({body:String('+obj+'.body || "").replace(new RegExp('+json.dumps(regex)+','+json.dumps(fl)+'),'+json.dumps(replacement,ensure_ascii=False)+')});'
@@ -173,13 +179,16 @@ def build(item):
    if re.search(r"\$argument\.split\(['\"]&['\"]\)",source):
     source=re.sub(r"\$argument\.split\(['\"]&['\"]\)", "Object.entries(__typedArgs).map(([k,v])=>k+'='+String(v))",source)
    index=len(orig);orig.append(source)
-   code='return __invoke('+str(index)+','+json.dumps(defaultarg,ensure_ascii=False)+','+json.dumps(literal)+');'
+   code='return __invoke('+str(index)+','+json.dumps(defaultarg,ensure_ascii=False)+','+json.dumps(literal)+','+str(opt.get('binary_body_mode')=='true').lower()+','+str(opt.get('requires_body')=='true').lower()+');'
    entry={'code':code,'enabled':enabled,'argnames':names,'url':url,'index':index,'options':opt}
    if left.startswith(('request if','response if')):
     direction,pat,flags,alias=pattern(left);entry.update(pattern=pat,flags=flags);dispatch[direction].append(entry)
    else:
     kind='cron' if left.startswith('cron ') else 'generic';entry['kind']=kind
-    if kind=='cron':entry['cron']=value(substitute(left[5:])).replace('?', '*')
+    if kind=='cron':
+     cron_key=re.fullmatch(r'\$\{([^}]+)\}',left[5:]);entry['cron_key']=cron_key[1] if cron_key else None
+     if cron_key:args[cron_key[1]]=str(args[cron_key[1]]).replace('?','*')
+     entry['cron']=value(substitute(left[5:])).replace('?', '*')
     script_count+=1;entry['name']='task-'+str(script_count)
     dispatch.setdefault('tasks',[]).append(entry)
    converted+=1
@@ -195,8 +204,36 @@ const __finish=$done;
 function __cast(value, fallback){if(value===undefined)return fallback;if(typeof fallback==='boolean')return value===true||value==='true';if(typeof fallback==='number')return Number(value);return value;}
 '''
  functions=[]
- for i,s in enumerate(orig):functions.append('function __original'+str(i)+'(__typedArgs,$argument){\n'+s+'\n}')
- functions.append('const __originals=['+','.join('__original'+str(i) for i in range(len(orig)))+'];\nfunction __invoke(index,defaults,literal){const typed={};for(const k of Object.keys(defaults))typed[k]=__cast(__settings[k],defaults[k]);return __originals[index](typed,literal===null?JSON.stringify(typed):literal);}')
+ for i,s in enumerate(orig):functions.append('function __original'+str(i)+'(__typedArgs,$argument,$request,$response,$done,$script){\n'+s+'\n}')
+ functions.append('const __originals=['+','.join('__original'+str(i) for i in range(len(orig)))+'];')
+ functions.append('''
+function __text(body){
+ if(typeof body==='string'||body===undefined)return body;
+ const bytes=body instanceof Uint8Array?body:new Uint8Array(body);
+ if(typeof TextDecoder!=='undefined')return new TextDecoder().decode(bytes);
+ let s='';for(let i=0;i<bytes.length;i+=8192)s+=String.fromCharCode(...bytes.subarray(i,i+8192));
+ return decodeURIComponent(escape(s));
+}
+function __bytes(body){
+ if(body===undefined||body instanceof Uint8Array)return body;
+ if(typeof body!=='string')return new Uint8Array(body);
+ if(typeof TextEncoder!=='undefined')return new TextEncoder().encode(body);
+ const s=unescape(encodeURIComponent(body));return Uint8Array.from(s,c=>c.charCodeAt(0));
+}
+function __message(message,binary,needsBody){
+ if(message===undefined)return undefined;
+ const copy={...message,headers:{...message.headers}};
+ if(needsBody)copy.body=binary?__bytes(copy.body):__text(copy.body);else delete copy.body;
+ return copy;
+}
+function __invoke(index,defaults,literal,binary,needsBody){
+ const typed={};for(const k of Object.keys(defaults))typed[k]=__cast(__settings[k],defaults[k]);
+ const request=__message(typeof $request==='undefined'?undefined:$request,binary,needsBody);
+ const response=__message(typeof $response==='undefined'?undefined:$response,binary,needsBody);
+ const context={...(typeof $script==='undefined'?{}:$script),binaryBodyMode:binary};
+ return __originals[index](typed,literal===null?JSON.stringify(typed):literal,request,response,__finish,context);
+}
+''')
  for direction in ['request','response']:
   entries=dispatch[direction]
   if not entries:continue
@@ -213,21 +250,25 @@ function __cast(value, fallback){if(value===undefined)return fallback;if(typeof 
   binary=any(e.get('options',{}).get('binary_body_mode')=='true' for e in entries)
   needsbody=any(e.get('options',{}).get('requires_body')=='true' or 'body' in e['code'] for e in entries)
   timeout=max([int(e.get('options',{}).get('timeout','10')) for e in entries]+[10])
-  out['Script'].append(f'{item["id"]}-{direction} = type=http-{direction}, pattern={"(?i)"+"|".join(patterns)}, script-path={BASE}/scripts/{filename}, requires-body={str(needsbody).lower()}, binary-body-mode={str(binary).lower()}, timeout={timeout}'+(', argument='+json.dumps(argument) if args else ''))
+  out['Script'].append(f'{item["id"]}-{direction} = type=http-{direction}, pattern={json.dumps("(?i)"+"|".join(patterns))}, script-path={BASE}/scripts/{filename}, requires-body={str(needsbody).lower()}, binary-body-mode={str(binary).lower()}, timeout={timeout}'+(', argument='+json.dumps(argument) if args else ''))
  for e in dispatch.get('tasks',[]):
-  filename=item['id']+'-'+e['name']+'.js';code=prefix+'\n'+'\n'.join(functions)+'\n'+e['code'].replace('return ','',1)
+  filename=item['id']+'-'+e['name']+'.js'
+  gate=e['options'].get('enable','true');gate_key=re.fullmatch(r'\$\{([^}]+)\}',gate)
+  guard='if(!__cast(__settings['+json.dumps(gate_key[1])+'],'+json.dumps(args[gate_key[1]])+'))return __finish({});' if gate_key else ''
+  code='(function(){\n'+prefix+'\n'+'\n'.join(functions)+'\n'+guard+'\n'+e['code']+'\n})();'
   (P/'scripts'/filename).write_text(code)
   line=f'{item["id"]}-{e["name"]} = type={e["kind"]}, script-path={BASE}/scripts/{filename}, timeout={e["options"].get("timeout","30")}'
-  if e['kind']=='cron':line+=', cronexp='+json.dumps(e['cron'])
+  if e['kind']=='cron':line+=', cronexp='+json.dumps('{{{'+namesmap[e['cron_key']]+'}}}' if e.get('cron_key') else e['cron'])
   if args:line+=', argument='+json.dumps(argument)
   # Surge offers enabled on script entries; preserve explicit optional tasks disabled by default.
-  if not e['enabled'] or e['enabled']=='false':line='# 默认关闭；调整本行以启用\n# '+line
+  if gate_key:line="#!REQUIREMENT '{{{"+namesmap[gate_key[1]]+"}}}'=='true' "+line
+  elif not e['enabled'] or e['enabled']=='false':line='# 默认关闭；调整本行以启用\n# '+line
   out['Script'].append(line)
  for line in sections.get('mitm',[]):
   if line.startswith('hostname'):out['MITM'].append('hostname = %APPEND% '+line.split('=',1)[1].strip())
   elif line.startswith(('h2','skip-server-cert-verify')):out['MITM'].append(line)
  if out['MITM']:out['MITM'].append('h2 = true')
- header=['#!name='+item['name']+' · Surge','#!desc='+meta.get('desc',item.get('desc','')).replace('\n','\\n'),'#!author='+meta.get('author','可莉及各原作者'),'# Source: '+item['url'],'# Generated port; device validation pending. See catalog compatibility notes.']
+ header=['#!version=2026.11.15.2','#!name='+item['name']+' · Surge','#!desc='+meta.get('desc',item.get('desc','')).replace('\n','\\n'),'#!author='+meta.get('author','可莉及各原作者'),'# Source: '+item['url'],'# Generated port; device validation pending. See catalog compatibility notes.']
  argdecl=[]
  for k,v in settings.items():argdecl.append(k+':'+str(v).lower() if isinstance(v,bool) else k+':'+str(v))
  if '{{{proxy_policy}}}' in '\n'.join(out['Rule']):argdecl.append('proxy_policy:PROXY');notes.append('安装时把proxy_policy设为现有代理策略名')
